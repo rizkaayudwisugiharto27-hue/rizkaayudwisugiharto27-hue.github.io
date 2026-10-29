@@ -3,649 +3,691 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Rizka Ayu Dwi Sugiharto — Portfolio</title>
-<meta name="description" content="Portfolio of Rizka Ayu Dwi Sugiharto — International Economics graduate (GPA 3.84) with internships in strategic planning, finance and supply chain at Pelindo, Kemenimipas and Pertamina.">
-<meta property="og:title" content="Rizka Ayu Dwi Sugiharto — Portfolio">
-<meta property="og:description" content="Strategic Planning & Finance. Internships at Pelindo Sinergi Lokaseva, Ministry of Immigration and Corrections, and Pertamina Training & Consulting.">
+<script>document.documentElement.classList.add('js')</script>
+<title>Rizka Ayu Dwi Sugiharto — Strategic Planning &amp; Finance</title>
+<meta name="description" content="Portfolio of Rizka Ayu Dwi Sugiharto — International Economics graduate (GPA 3.84) with internships in strategic planning, finance and supply chain at Pelindo Sinergi Lokaseva, Kemenimipas and Pertamina Training & Consulting.">
+<link rel="canonical" href="https://rizkaayudwisugiharto27-hue.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Rizka Ayu Dwi Sugiharto — Strategic Planning & Finance">
+<meta property="og:description" content="Internships in strategic planning, finance and supply chain at Pelindo, Kemenimipas and Pertamina. GPA 3.84.">
 <meta property="og:image" content="https://rizkaayudwisugiharto27-hue.github.io/assets/rizka-hero.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
 <style>
-/* ===== Colors & fonts (monochrome grey, following the Canva deck) ===== */
+/* ===== Tokens: monochrome grey, following the Canva deck ===== */
 :root{
-  --bg:#ececee; --surface:#ffffff; --panel:#545454; --panel-2:#3b3b3d; --panel-3:#2a2a2c;
-  --ink:#1c1c1e; --ink-2:#48484c; --ink-3:#7c7c82; --line:#d4d4d9;
-  --on-dark:#ffffff; --on-dark-2:#d6d6da; --on-dark-3:#a5a5ab;
-  --bar:#545454; --bar-2:#a9a9ae; --good:#2f6b4f;
-  --f-display:"Bebas Neue","Arial Narrow",Impact,sans-serif;
-  --f-body:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --max:1160px; --r:22px;
+  --g-950:#1d1d1f; --g-900:#29292c; --g-850:#313135; --g-800:#3a3a3e; --g-700:#4a4a4f; --g-600:#545454; --g-500:#6e6e74; --g-300:#b9b9bf; --g-200:#d9d9de; --g-100:#ececef; --g-50:#f5f5f6;
+  --ink:#1c1c1e; --ink-2:#55555b; --ink-3:#86868c; --line:#dcdce1;
+  --on-dark:#f4f4f5; --on-dark-2:#c2c2c8; --on-dark-3:#94949a; --line-dark:#4a4a4f;
+  --accent:#545454; --bar:#545454; --bar-2:#a9a9ae; --good:#2f6b4f;
+  --f:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --max:1120px; --gutter:20px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--g-50);color:var(--ink);font-family:var(--f);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit}
-h1,h2,h3,h4,p,ul{margin:0}
-ul{padding:0;list-style:none}
-:focus-visible{outline:3px solid #8a8a90;outline-offset:3px;border-radius:6px}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+h1,h2,h3,h4,p,ul,ol,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+:focus-visible{outline:3px solid #8a8a90;outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 [hidden]{display:none!important}
+.ico{width:1em;height:1em;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
 /* ===== Nav ===== */
-.nav{position:sticky;top:0;z-index:50;height:68px;padding:8px 0}
-.nav-in{display:flex;align-items:center;gap:16px;background:rgba(59,59,61,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--on-dark);border-radius:999px;height:52px;padding:0 8px 0 22px;line-height:1}
-.brand{font-family:var(--f-display);font-size:1.5rem;letter-spacing:.06em;text-decoration:none;white-space:nowrap}
-.menu{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}
-.menu a{font-size:.82rem;font-weight:600;text-decoration:none;padding:7px 13px;border-radius:999px;color:var(--on-dark-2)}
-.menu a:hover,.menu a.on{background:#fff;color:var(--panel-2)}
-.menu a.cv{border:1.5px solid rgba(255,255,255,.55);color:#fff;margin-left:4px}
-.burger{display:none;margin-left:auto;background:none;border:0;color:#fff;font:inherit;font-weight:700;font-size:.85rem;padding:8px 14px;border-radius:999px;cursor:pointer;border:1.5px solid rgba(255,255,255,.5)}
-@media (max-width:880px){
-  .burger{display:block}
-  .menu{display:none;position:absolute;left:20px;right:20px;top:62px;flex-direction:column;background:var(--panel-2);border-radius:18px;padding:10px;box-shadow:0 16px 40px rgba(0,0,0,.25)}
-  .menu.open{display:flex}
-  .menu a{padding:11px 14px;font-size:.95rem}
-}
+.nav{position:sticky;top:0;z-index:50;background:rgba(29,29,31,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--on-dark);border-bottom:1px solid var(--g-800)}
+.nav .wrap{display:flex;align-items:center;gap:20px;height:60px}
+.brand{font-weight:800;font-size:1rem;text-decoration:none;white-space:nowrap;letter-spacing:-.01em}
+.brand i{display:inline-block;width:8px;height:8px;background:var(--g-300);margin-left:4px}
+.nav ul{display:flex;gap:4px;margin-left:auto}
+.nav ul a{display:block;font-size:.8rem;font-weight:600;color:var(--on-dark-2);text-decoration:none;padding:6px 10px;border-radius:6px}
+.nav ul a:hover,.nav ul a.on{color:#fff;background:var(--g-800)}
+.nav-cv{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;text-decoration:none;border:1.5px solid var(--g-300);border-radius:999px;padding:6px 14px;white-space:nowrap}
+.nav-cv:hover{background:#fff;color:var(--g-950)}
+.menu-btn{display:none;margin-left:auto;background:none;border:1.5px solid var(--g-500);color:#fff;font:inherit;font-weight:700;font-size:.8rem;border-radius:8px;padding:7px 12px;cursor:pointer}
+
+/* ===== Buttons ===== */
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 18px;border-radius:999px;border:1.5px solid currentColor;font:inherit;font-weight:700;font-size:.88rem;text-decoration:none;cursor:pointer;background:transparent;color:inherit;transition:background .2s,color .2s}
+.btn:hover{background:rgba(255,255,255,.1)}
+.btn.primary{background:#fff;color:var(--g-950);border-color:#fff}
+.btn.primary:hover{background:var(--g-200);border-color:var(--g-200)}
+.light .btn:hover{background:var(--g-100)}
+.btn.solid{background:var(--g-800);color:#fff;border-color:var(--g-800)}
+.btn.solid:hover{background:var(--g-950)}
 
 /* ===== Hero ===== */
-.hero{position:relative;margin-top:-68px;padding-top:68px;min-height:min(820px,100svh);color:#fff;overflow:hidden;
-  background:radial-gradient(120% 80% at 80% 10%,#9c9ca1 0%,transparent 55%),radial-gradient(90% 70% at 10% 90%,#8a8a8f 0%,transparent 60%),linear-gradient(160deg,#6b6b70 0%,#4a4a4e 55%,#5d5d62 100%)}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.18) 42%,transparent 54%),linear-gradient(140deg,transparent 55%,rgba(255,255,255,.12) 64%,transparent 74%);pointer-events:none}
-.hero-in{position:relative;display:grid;place-items:center;min-height:min(752px,calc(100svh - 68px));padding-top:20px}
-.hero-title{position:absolute;top:44%;left:50%;transform:translate(-50%,-50%);text-align:left}
-.hero-word{font-family:var(--f-display);font-size:clamp(5.5rem,22vw,19rem);line-height:.8;letter-spacing:.01em;white-space:nowrap;color:#fff;text-shadow:0 6px 30px rgba(0,0,0,.18);user-select:none}
-.hero-eyebrow{margin:0 0 .2em .3em;font-weight:700;font-size:clamp(.85rem,1.6vw,1.15rem);letter-spacing:.02em}
-.hero-photo{position:relative;align-self:end;width:clamp(210px,27vw,350px);filter:drop-shadow(0 20px 40px rgba(0,0,0,.35))}
-.hero-photo img{width:100%;height:auto}
-.hero-tag{position:absolute;bottom:clamp(28px,6vh,60px);left:50%;transform:translateX(-50%);background:rgba(255,255,255,.92);color:#3b3b3d;border-radius:999px;padding:9px 22px;font-size:clamp(.85rem,1.5vw,1.05rem);white-space:nowrap;box-shadow:0 10px 30px rgba(0,0,0,.2)}
-.hero-tag b{font-weight:800}
-@media (max-width:640px){
-  .hero{min-height:auto}
-  .hero-in{min-height:620px}
-  .hero-title{top:22%;text-align:center}
-  .hero-eyebrow{margin-left:0}
-  .hero-photo{width:min(58vw,235px)}
-  .hero-tag{white-space:normal;text-align:center;width:max-content;max-width:calc(100% - 40px)}
-}
+.hero{position:relative;background:var(--g-900);color:var(--on-dark);padding:56px 0 0;overflow:hidden}
+.hero-bg{position:absolute;inset:0 0 auto auto;width:62%;height:420px;background-image:linear-gradient(var(--g-800) 1px,transparent 1px),linear-gradient(90deg,var(--g-800) 1px,transparent 1px);background-size:56px 56px;-webkit-mask:linear-gradient(90deg,transparent,#000 40%);mask:linear-gradient(90deg,transparent,#000 40%);opacity:.55}
+.hero-top{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:48px;align-items:center}
+.kicker{color:var(--on-dark-2);font-size:.98rem;font-weight:500;margin-bottom:10px}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4rem);font-weight:900;line-height:1.02;letter-spacing:-.03em}
+.tagline{font-size:1.08rem;color:var(--on-dark);margin:16px 0 26px;max-width:32ch}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.portrait{position:relative;width:100%;aspect-ratio:1;justify-self:end}
+.portrait::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:2px dotted var(--g-500)}
+.portrait .pring{position:absolute;inset:0;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 50% 35%,#a3a3a9,#5d5d62 70%);border:6px solid var(--g-800)}
+.portrait img{position:absolute;left:50%;top:9%;width:70%;transform:translateX(-50%)}
+.portrait figcaption{position:absolute;left:50%;bottom:6px;transform:translateX(-50%);display:flex;align-items:center;gap:8px;background:var(--g-950);color:#fff;font-size:.8rem;font-weight:700;padding:6px 14px;border-radius:999px;white-space:nowrap;border:1px solid var(--g-700)}
+.portrait figcaption::before{content:"";width:9px;height:9px;border-radius:50%;background:#41b883;box-shadow:0 0 0 3px rgba(65,184,131,.25)}
+.deco{position:absolute;right:-40px;top:30px;width:58%;height:300px;pointer-events:none;opacity:.8}
+
+/* Career timeline (2021–2026, 72 months; --s/--e = month index from Jan 2021) */
+.life{margin-top:44px;padding:22px 0 30px;border-top:1px solid var(--line-dark)}
+.life-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px;align-items:baseline;margin-bottom:12px}
+.life-head h2{font-size:1.2rem;font-weight:800}
+.life-head p{color:var(--on-dark-2);font-size:.8rem}
+.life-axis,.lane{display:grid;grid-template-columns:10.5rem minmax(0,1fr)}
+.years{display:grid;grid-template-columns:repeat(6,1fr);color:var(--on-dark-3);font-size:.78rem;font-variant-numeric:tabular-nums}
+.years span{padding-left:6px;border-left:1px solid var(--line-dark)}
+.lane{min-height:50px;border-top:1px solid #38383c}
+.lane.tall{min-height:68px}
+.lane-name{align-self:center;color:var(--on-dark-2);font-size:.8rem;padding-right:12px}
+.track{position:relative;background-image:linear-gradient(to right,var(--line-dark) 1px,transparent 1px);background-size:calc(100% / 6) 100%}
+.track li{position:absolute;top:0;bottom:0;left:calc(var(--s) / 72 * 100%);width:calc((var(--e) - var(--s)) / 72 * 100%)}
+.track a{position:absolute;inset:0;text-decoration:none;color:var(--on-dark)}
+.track .bar{position:absolute;left:0;right:0;bottom:9px;height:12px;min-width:8px;border-radius:3px;background:var(--g-500);transform-origin:left center}
+.lane-work .bar{background:#e9e9ec;height:16px;bottom:7px}
+.lane-edu .bar{background:linear-gradient(90deg,transparent,var(--g-500) 4%,var(--g-500) 96%,transparent)}
+.track .lbl{position:absolute;left:0;top:4px;white-space:nowrap;font-size:.78rem;font-weight:700}
+.track .row2 .lbl{top:24px}
+.track .end .lbl{left:auto;right:0}
+.track .lbl small{font-weight:500;color:var(--on-dark-2)}
+.track a:hover .lbl,.track a:focus-visible .lbl{text-decoration:underline}
+.track .ms .bar{width:12px;min-width:0;height:12px;left:-6px;right:auto;border-radius:2px;background:#e9e9ec;transform:rotate(45deg)}
+.lanes{position:relative}
+.lanes-inner{position:absolute;top:0;bottom:0;left:10.5rem;right:0;pointer-events:none}
+.now{position:absolute;top:0;bottom:0;left:calc(69.9 / 72 * 100%);border-left:2px dashed #41b883}
+.js .track .bar{animation:grow .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--s) * 12ms + .2s)}
+.js .track .ms .bar{animation:fade .5s both;animation-delay:calc(var(--s) * 12ms + .2s)}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.stripe{height:12px;background:repeating-linear-gradient(-45deg,var(--g-600) 0 14px,var(--g-300) 14px 28px)}
 
 /* ===== Sections ===== */
-section{padding:88px 0}
-.sec-head{display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:36px}
-.title{font-family:var(--f-display);font-weight:400;font-size:clamp(3rem,7vw,5rem);line-height:.92;letter-spacing:.01em;color:var(--panel)}
-.lede{max-width:560px;color:var(--ink-2)}
-.kicker{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:10px}
-.dark{background:var(--panel);color:var(--on-dark)}
-.dark .title{color:#fff}
-.dark .lede{color:var(--on-dark-2)}
-.dark .kicker{color:var(--on-dark-3)}
-.pill{display:inline-block;border:1.5px solid currentColor;border-radius:999px;padding:4px 14px;font-size:.8rem;font-weight:600}
-.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:.9rem;padding:12px 22px;border-radius:999px;background:var(--panel-2);color:#fff;border:0;cursor:pointer;font-family:inherit}
-.btn:hover{background:var(--panel-3)}
-.btn.light{background:#fff;color:var(--panel-2)}
-.btn.light:hover{background:#e8e8ea}
-.btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
+section{padding:72px 0}
+.light{background:var(--g-50)}
+.dark{background:var(--g-900);color:var(--on-dark)}
+.sec-head{margin-bottom:32px;max-width:760px}
+.sec-head h2{font-size:clamp(1.9rem,4vw,2.5rem);font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.sec-head h2::before{content:"";display:block;width:44px;height:6px;background:var(--accent);margin-bottom:14px}
+.dark .sec-head h2::before{background:var(--g-300)}
+.sec-head p{margin-top:10px;color:var(--ink-2);max-width:64ch}
+.dark .sec-head p{color:var(--on-dark-2)}
+.sub-h{font-size:1.35rem;font-weight:800;margin:48px 0 18px;letter-spacing:-.01em}
+.link{font-weight:700;text-underline-offset:3px;text-decoration-thickness:2px}
+.dark .link{color:#fff}
 
 /* ===== About ===== */
-.about-card{display:grid;grid-template-columns:1fr 280px;gap:32px;align-items:end;background:var(--panel);color:#fff;border-radius:34px;padding:44px 44px 0;overflow:hidden}
-.about-card .hi{font-weight:800;font-size:clamp(3rem,6vw,4.4rem);line-height:1;float:left;margin:4px 18px 0 0}
-.about-card .intro{font-size:1.05rem;margin-bottom:12px}
-.about-card .bio{font-weight:600;color:var(--on-dark-2);line-height:1.75}
-.about-text{padding-bottom:44px}
-.about-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;clear:both}
-.about-photo img{width:100%;height:auto;margin-top:auto}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
-.stat{background:var(--surface);border-radius:var(--r);padding:22px 20px;text-align:center;border:1px solid var(--line)}
-.stat b{display:block;font-size:clamp(2rem,4vw,2.8rem);font-weight:800;line-height:1.05;color:var(--panel-2);font-variant-numeric:tabular-nums}
-.stat span{font-size:.82rem;color:var(--ink-3);font-weight:600}
-.touch{display:grid;grid-template-columns:auto repeat(4,1fr);gap:14px;margin-top:18px;align-items:stretch}
-.touch h3{font-weight:800;font-size:2rem;line-height:1.05;color:var(--panel);align-self:center;padding-right:8px}
-.tcard{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:16px;min-height:118px;background:var(--panel);color:#fff;border-radius:18px;padding:16px 18px;text-decoration:none;transition:transform .2s ease,background .2s}
-.tcard:hover{transform:translateY(-3px);background:var(--panel-2)}
-.tcard svg{width:30px;height:30px}
-.tcard .arrow{position:absolute;top:14px;right:16px;font-weight:700;font-size:1.2rem}
-.tcard small{font-size:.74rem;font-weight:600;word-break:break-all;color:var(--on-dark-2);border-top:2px solid rgba(255,255,255,.75);padding-top:8px}
-@media (max-width:900px){
-  .about-card{grid-template-columns:1fr;padding:32px 24px 0}
-  .about-photo{max-width:260px;margin:0 auto}
-  .about-text{padding-bottom:0}
-  .touch{grid-template-columns:1fr 1fr}
-  .touch h3{grid-column:1/-1}
-}
-@media (max-width:480px){.touch{grid-template-columns:1fr}.stat{padding:16px 6px}.stat span{font-size:.72rem}}
+.about{display:grid;grid-template-columns:1.1fr 1fr;gap:48px}
+.prose p{color:var(--ink-2);margin-bottom:16px}
+.prose b{color:var(--ink)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px}
+.fact{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.fact b{display:block;font-size:1.7rem;font-weight:800;line-height:1.1;color:var(--g-800);font-variant-numeric:tabular-nums}
+.fact span{font-size:.78rem;color:var(--ink-3);font-weight:600}
+.ready-title{font-size:1.05rem;font-weight:800;margin-bottom:12px}
+.focus li{background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:8px;padding:16px 18px;margin-bottom:12px}
+.focus b{display:block;font-size:1.02rem;font-weight:800}
+.focus span{display:block;color:var(--ink-2);font-size:.86rem;margin-top:4px}
+.focus .proof{color:var(--ink-3);font-size:.8rem;margin-top:8px}
+.focus .proof a{color:var(--ink);font-weight:700}
 
-/* ===== Education ===== */
-.edu{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
-.edu-list li{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:22px 0;border-bottom:2px solid rgba(255,255,255,.85)}
-.edu-list li:first-child{padding-top:0}
-.edu-dot{width:58px;height:58px;border-radius:50%;background:#fff;color:var(--panel);display:grid;place-items:center;font-family:var(--f-display);font-size:1.4rem}
-.edu-list .yr{display:inline-block;background:#fff;color:var(--panel);font-weight:800;font-size:.8rem;border-radius:999px;padding:2px 12px;margin-bottom:6px}
-.edu-list p{font-size:1.02rem;color:var(--on-dark-2)}
-.edu-list p b{color:#fff}
-.edu-side{display:flex;flex-direction:column;gap:16px}
-.gpa{background:var(--panel-2);border-radius:28px;padding:30px}
-.gpa b{display:block;font-family:var(--f-display);font-size:6rem;line-height:.9;font-weight:400}
-.gpa span{color:var(--on-dark-2);font-weight:600}
-.interest{background:var(--panel-2);border-radius:28px;padding:26px 30px}
-.interest h4{font-family:var(--f-display);font-weight:400;font-size:2rem;margin-bottom:8px}
-.interest li{position:relative;padding-left:18px;color:var(--on-dark-2);font-weight:500}
-.interest li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;border-radius:50%;background:#fff}
-@media (max-width:860px){.edu{grid-template-columns:1fr;gap:32px}}
+/* ===== Experience log ===== */
+.log{display:grid;grid-template-columns:180px minmax(0,1fr);gap:32px;padding:36px 0;border-top:1px solid var(--line)}
+.log:first-of-type{border-top:0;padding-top:4px}
+.log-meta{display:flex;flex-direction:column;gap:6px;font-size:.8rem;color:var(--ink-2)}
+.when{align-self:flex-start;background:var(--g-900);color:#fff;font-weight:700;font-size:.8rem;border-radius:999px;padding:4px 12px;white-space:nowrap}
+.where{display:flex;gap:6px;align-items:flex-start}
+.where .ico{margin-top:3px}
+.log-body{max-width:760px}
+.log-body h3{font-size:1.45rem;font-weight:800;letter-spacing:-.01em;line-height:1.25}
+.role{color:var(--g-700);font-weight:700;margin:4px 0 16px}
+.lead{border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#fff;margin-bottom:8px}
+.lead img{width:100%;aspect-ratio:var(--ratio,16/9);object-fit:cover;object-position:var(--focus,50% 0)}
+.lead.contain{background:var(--g-100);padding:18px}
+.lead.contain img{object-fit:contain;max-height:420px}
+.lead-cap{font-size:.78rem;color:var(--ink-3);margin-bottom:16px}
+.log-body ul.pts li{position:relative;padding-left:20px;margin-bottom:8px;color:var(--ink)}
+.log-body ul.pts li::before{content:"";position:absolute;left:2px;top:.65em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.result{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--g-300);border-radius:8px;padding:8px 14px;font-weight:700;font-size:.88rem;margin:10px 0 4px}
+.thumbs{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.thumb{width:140px;height:96px;padding:0;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff;cursor:zoom-in}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .3s}
+.thumb.contain{background:var(--g-100)}
+.thumb.contain img{object-fit:contain;padding:4px}
+.thumb:hover img{transform:scale(1.05)}
+.lead-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.lead-kpis div{background:#fff;padding:18px 16px}
+.lead-kpis b{display:block;font-size:1.4rem;font-weight:800;color:var(--g-800);line-height:1.15}
+.lead-kpis span{font-size:.76rem;color:var(--ink-2);line-height:1.4;display:block;margin-top:4px}
+.lead-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;background:var(--g-900);color:#fff;padding:12px 16px;font-size:.82rem;font-weight:700}
+.lead-head a{color:#fff}
+.org-logo{display:flex;align-items:center;gap:14px;margin:6px 0 4px;color:var(--ink-2);font-size:.9rem}
+.org-logo span{display:grid;place-items:center;width:56px;height:56px;border-radius:10px;background:#fff;border:1px solid var(--line);font-weight:800;color:var(--g-700);font-size:.8rem}
 
-/* ===== Experience timeline ===== */
-.xp{display:grid;grid-template-columns:320px 1fr;gap:48px}
-.xp-intro p{color:var(--ink-2)}
-.xp-intro .stats{grid-template-columns:repeat(3,1fr);gap:10px}
-.xp-intro .stat{background:var(--panel);border:0;padding:16px 8px}
-.xp-intro .stat b{color:#fff;font-size:2rem}
-.xp-intro .stat span{color:var(--on-dark-2);font-size:.72rem}
-.tools{margin-top:16px;font-weight:700;font-size:.9rem;color:var(--ink-2)}
-.tl{position:relative;padding-left:0}
-.tl li{display:grid;grid-template-columns:160px 28px 1fr;align-items:start;gap:0}
-.tl .when{text-align:right;font-weight:700;font-size:.82rem;color:var(--ink-2);padding:16px 12px 0 0}
-.tl .rail{position:relative;align-self:stretch}
-.tl .rail::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--ink-3);transform:translateX(-50%)}
-.tl li:first-child .rail::before{top:20px}
-.tl li:last-child .rail::before{bottom:auto;height:22px}
-.tl .rail::after{content:"";position:absolute;left:50%;top:16px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--ink-2);transform:translateX(-50%)}
-.tl a.item{display:block;background:var(--panel);color:#fff;border-radius:16px;padding:12px 18px;margin:6px 0 10px;text-decoration:none;transition:background .2s}
-.tl a.item:hover{background:var(--panel-2)}
-.tl .item b{font-weight:800}
-.tl .item small{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:.88rem;color:var(--on-dark-2);font-weight:500}
-.tl .item small::before{content:"";flex:none;width:18px;height:18px;border:2px solid var(--on-dark-2);border-radius:4px}
-@media (max-width:900px){.xp{grid-template-columns:1fr;gap:28px}}
-@media (max-width:560px){
-  .tl li{grid-template-columns:22px 1fr}
-  .tl .when{grid-column:2;grid-row:1;text-align:left;padding:10px 0 0}
-  .tl .rail{grid-column:1;grid-row:1/3}
-  .tl .item{grid-column:2}
-  .tl .rail::after{top:14px}
-}
+/* ===== Cases (dark) ===== */
+.case{padding:8px 0 40px;margin-bottom:40px;border-bottom:1px solid var(--line-dark)}
+.case:last-of-type{border-bottom:0;margin-bottom:0}
+.case h3{font-size:clamp(1.4rem,2.6vw,1.75rem);font-weight:800;letter-spacing:-.01em;line-height:1.2;max-width:24ch}
+.case .lede{color:var(--on-dark);max-width:68ch;margin:12px 0}
+.case .note{border-left:3px solid var(--g-500);padding:4px 0 4px 14px;color:var(--on-dark-2);font-style:italic;font-size:.92rem;max-width:68ch;margin:14px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}
+.chip{border:1px solid var(--line-dark);color:var(--on-dark-2);border-radius:999px;padding:4px 12px;font-size:.78rem;font-weight:600}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tab{font:inherit;font-weight:700;font-size:.84rem;padding:9px 16px;border-radius:6px;border:1px solid var(--line-dark);background:transparent;color:#fff;cursor:pointer}
+.tab[aria-selected="true"]{background:#fff;color:var(--g-950);border-color:#fff}
+.panel{background:#fff;color:var(--ink);border-radius:10px;padding:26px;border:8px solid #fff;box-shadow:0 0 0 1px var(--line-dark)}
+.panel .desc{color:var(--ink-2);font-size:.92rem;margin-bottom:18px;max-width:72ch}
+.cap{margin-top:12px;color:var(--on-dark);font-size:.9rem}
+.cap b{color:#fff}
+.find-h{font-size:1.15rem;font-weight:800;margin:30px 0 10px}
+.findings{width:100%;border-collapse:collapse;font-size:.88rem}
+.findings th{text-align:left;font-size:.78rem;color:var(--on-dark-2);font-weight:700;padding:8px 12px 8px 0;border-bottom:1px solid var(--line-dark)}
+.findings td{padding:12px 12px 12px 0;border-bottom:1px solid var(--line-dark);vertical-align:top;color:var(--on-dark-2)}
+.findings td:first-child{color:#fff;font-weight:700;width:16%}
+.findings td:nth-child(2){width:42%}
+.findings b{color:#fff}
+.more{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mcard{background:var(--g-850);border:1px solid var(--line-dark);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.mcard .k{font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-3)}
+.mcard h4{font-size:1.15rem;font-weight:800;line-height:1.3}
+.mcard p{color:var(--on-dark-2);font-size:.92rem}
+.mcard .btn{align-self:flex-start;margin-top:auto}
+.mock{background:#f4f4f6;border-radius:10px;padding:12px;display:grid;grid-template-columns:44px 1fr;gap:8px}
+.mock .side{background:#1f3550;border-radius:8px}
+.mock .main{display:flex;flex-direction:column;gap:6px}
+.mock .row{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.mock .row div{background:#fff;border-radius:6px;height:30px;border:1px solid #e1e1e6;position:relative}
+.mock .row div::after{content:"";position:absolute;left:7px;top:8px;width:14px;height:14px;border-radius:4px;background:var(--c)}
+.mock .big{display:grid;grid-template-columns:1fr 1.4fr;gap:6px}
+.mock .big div{background:#fff;border:1px solid #e1e1e6;border-radius:6px;height:76px;display:grid;place-items:center}
+.ring{width:50px;height:50px;border-radius:50%;background:conic-gradient(#f2a33a 0 50%,#3cb371 50% 80%,#5b8def 80% 100%);-webkit-mask:radial-gradient(circle,transparent 13px,#000 14px);mask:radial-gradient(circle,transparent 13px,#000 14px)}
+.spark{width:86%;height:44px}
 
-/* ===== Detail cards (internship / organization / volunteer) ===== */
-.cards{display:flex;flex-direction:column;gap:22px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:28px;overflow:hidden}
-.card-head{background:var(--panel);color:#fff;padding:26px 30px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:start}
-.card-head h3{font-weight:800;font-size:clamp(1.25rem,2.4vw,1.65rem);line-height:1.25}
-.card-head .role{margin-top:8px}
-.card-head .meta{text-align:right;font-size:.85rem;color:var(--on-dark-2);font-weight:600}
-.card-head .meta .type{display:inline-block;background:#fff;color:var(--panel);border-radius:999px;padding:2px 12px;font-weight:800;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
-.card-body{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;padding:28px 30px}
-.card-body.one{grid-template-columns:1fr}
-.bul li{position:relative;padding-left:22px;margin-bottom:9px;color:var(--ink-2)}
-.bul li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--panel)}
-.sub{font-weight:800;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin:0 0 12px}
-.proof{background:var(--bg);border-radius:18px;padding:18px 20px}
-.proof h4{font-weight:800;font-size:1.02rem}
-.proof .em{font-style:italic;font-size:.85rem;color:var(--ink-3);margin:2px 0 8px}
-.proof p{color:var(--ink-2);font-size:.93rem}
-.card-body .btn{align-self:flex-start}
-.tags{display:flex;flex-wrap:wrap;gap:8px}
-.tag{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:5px 13px;font-size:.8rem;font-weight:600;color:var(--ink-2)}
-.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:14px}
-.shot{padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;cursor:zoom-in;aspect-ratio:16/9}
-.shot img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .3s}
-.shot:hover img{transform:scale(1.04)}
-.shot.doc{background:#f1f1f3}
-.shot.doc img{object-fit:contain;padding:6px}
-.proof .shots{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
-.minis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
-.mini{background:var(--bg);border-radius:14px;padding:12px;text-align:center}
-.mini b{display:block;font-size:1.5rem;font-weight:800;color:var(--panel-2);line-height:1.1}
-.mini span{font-size:.74rem;color:var(--ink-3);font-weight:600}
-@media (max-width:820px){.card-body{grid-template-columns:1fr;padding:22px}.card-head{padding:22px}.card-head .meta{text-align:left}}
-
-/* ===== Work samples & charts ===== */
-.ws-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-.ws{background:var(--surface);border-radius:28px;padding:28px;border:1px solid var(--line);color:var(--ink)}
-.ws.wide{grid-column:1/-1}
-.ws,.ws-split>*,.p3-charts>*,.p3,.pcard{min-width:0}
-.ws .label{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
-.ws h3{font-weight:800;font-size:1.3rem;line-height:1.3;margin:6px 0 6px}
-.ws .desc{color:var(--ink-2);font-size:.93rem;margin-bottom:18px}
-.ws .src{font-size:.75rem;color:var(--ink-3);margin-top:14px}
+/* ===== Charts (inside white panels) ===== */
 .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
-.kpi{background:var(--bg);border-radius:16px;padding:14px 16px}
-.kpi b{display:block;font-size:1.45rem;font-weight:800;color:var(--panel-2);line-height:1.15;font-variant-numeric:tabular-nums}
+.kpi{background:var(--g-100);border-radius:10px;padding:14px 16px}
+.kpi b{display:block;font-size:1.35rem;font-weight:800;color:var(--g-800);line-height:1.15;font-variant-numeric:tabular-nums}
 .kpi span{font-size:.78rem;color:var(--ink-2);line-height:1.4;display:block;margin-top:4px}
-.ws-split{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:start}
-/* horizontal bars */
+.kpi.hl{background:var(--g-800)}.kpi.hl b{color:#fff}.kpi.hl span{color:var(--on-dark-2)}
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:start}
+.split>*,.p-charts>*,.panel{min-width:0}
+.chart-title{font-weight:700;font-size:.9rem;margin-bottom:12px}
+.chart-title span{display:block;font-weight:500;font-size:.78rem;color:var(--ink-3)}
 .hbars{display:flex;flex-direction:column;gap:7px}
 .hbar{display:grid;grid-template-columns:132px 1fr;align-items:center;gap:10px;font-size:.84rem}
 .hbar .n{font-weight:600;color:var(--ink-2);text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .hbar .t{position:relative;height:22px;margin-right:46px}
 .hbar .f{display:block;height:100%;width:var(--w);background:var(--bar);border-radius:0 5px 5px 0;transition:width .9s cubic-bezier(.2,.7,.2,1)}
-.hbar .v{position:absolute;top:50%;transform:translateY(-50%);left:calc(var(--w) + 8px);font-weight:700;font-size:.8rem;color:var(--ink);font-variant-numeric:tabular-nums}
-.chart-title{font-weight:700;font-size:.9rem;margin-bottom:12px;color:var(--ink)}
-.chart-title span{display:block;font-weight:500;font-size:.78rem;color:var(--ink-3)}
-/* table */
+.hbar .f.alt{background:var(--bar-2)}
+.hbar .v{position:absolute;top:50%;transform:translateY(-50%);left:calc(var(--w) + 8px);font-weight:700;font-size:.8rem;font-variant-numeric:tabular-nums}
+.src{font-size:.75rem;color:var(--ink-3);margin-top:14px}
 .tbl{width:100%;border-collapse:collapse;font-size:.85rem}
 .tbl th,.tbl td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-.tbl th{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);font-weight:700;background:var(--bg)}
+.tbl th{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);font-weight:700;background:var(--g-100)}
 .tbl td.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
-.tbl-wrap{overflow-x:auto;border-radius:14px;border:1px solid var(--line)}
-.ok{display:inline-block;background:#e3efe8;color:var(--good);border-radius:999px;padding:1px 9px;font-weight:700;font-size:.75rem;white-space:nowrap}
-/* vertical grouped bars */
-.vchart{display:grid;grid-template-columns:repeat(var(--cols),1fr);gap:14px;align-items:end;height:220px;border-bottom:2px solid var(--ink-3);padding:0 4px}
+.tbl-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--line)}
+.ok{display:inline-block;background:#e3efe8;color:var(--good);border-radius:999px;padding:2px 10px;font-weight:700;font-size:.78rem}
+.vchart{display:grid;grid-template-columns:repeat(var(--cols),1fr);gap:14px;align-items:end;height:210px;border-bottom:2px solid var(--ink-3);padding:0 4px}
 .vgroup{display:flex;align-items:end;justify-content:center;gap:5px;height:100%}
-.vbar{position:relative;width:min(34px,40%);height:var(--h);background:var(--bar);border-radius:6px 6px 0 0;transition:height .9s cubic-bezier(.2,.7,.2,1)}
+.vbar{position:relative;width:min(34px,40%);height:var(--h);background:var(--bar);border-radius:5px 5px 0 0;transition:height .9s cubic-bezier(.2,.7,.2,1)}
 .vbar.alt{background:var(--bar-2)}
-.vbar i{position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);font-style:normal;font-size:.7rem;font-weight:700;white-space:nowrap;color:var(--ink);font-variant-numeric:tabular-nums}
+.vbar i{position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);font-style:normal;font-size:.7rem;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
 .vlabels{display:grid;grid-template-columns:repeat(var(--cols),1fr);gap:14px;padding:8px 4px 0;font-size:.78rem;font-weight:600;color:var(--ink-2);text-align:center}
 .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:.78rem;color:var(--ink-2);font-weight:600;margin-bottom:26px}
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .legend span::before{content:"";width:12px;height:12px;border-radius:3px;background:var(--bar)}
 .legend span.alt::before{background:var(--bar-2)}
-.is-out .hbar .f{width:0}.is-out .hbar .v{opacity:0}
-.is-out .vbar{height:0}.is-out .vbar i{opacity:0}
-.callout{background:var(--panel);color:#fff;border-radius:16px;padding:16px 18px;font-weight:600;font-size:.92rem;margin-top:16px}
-.shift{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:6px 0 4px}
-.shift b{font-family:var(--f-display);font-weight:400;font-size:4.4rem;line-height:.9;color:var(--panel-2)}
+.is-out .hbar .f{width:0}.is-out .hbar .v{opacity:0}.is-out .vbar{height:0}.is-out .vbar i{opacity:0}
+.callout{background:var(--g-800);color:#fff;border-radius:10px;padding:14px 18px;font-weight:600;font-size:.9rem;margin-top:16px}
+.shift{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:6px 0}
+.shift b{font-weight:900;font-size:3.6rem;line-height:1;color:var(--g-800);letter-spacing:-.03em}
 .shift .arr{font-size:2rem;color:var(--ink-3)}
-.shift small{display:block;font-family:var(--f-body);font-size:.78rem;color:var(--ink-3);font-weight:600}
-@media (max-width:900px){.ws-grid{grid-template-columns:1fr}.ws-split{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}}
-@media (max-width:480px){.ws{padding:20px}.hbar{grid-template-columns:104px 1fr;font-size:.76rem}.vchart,.vlabels{gap:6px}}
-
-/* ===== Projects ===== */
-.proj{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-bottom:22px}
-.pcard{background:var(--panel-2);border-radius:28px;padding:30px;display:flex;flex-direction:column;gap:14px}
-.pcard .num{font-family:var(--f-display);font-size:1.3rem;letter-spacing:.08em;color:var(--on-dark-3)}
-.pcard h3{font-weight:800;font-size:1.35rem;line-height:1.3}
-.pcard p{color:var(--on-dark-2)}
-.pcard .tags .tag{background:transparent;border-color:rgba(255,255,255,.3);color:var(--on-dark-2)}
-.pcard .btn{align-self:flex-start;margin-top:auto}
-.mock{background:#f4f4f6;border-radius:16px;padding:14px;display:grid;grid-template-columns:52px 1fr;gap:10px;color:var(--ink)}
-.mock .side{background:#1f3550;border-radius:10px}
-.mock .main{display:flex;flex-direction:column;gap:8px}
-.mock .row{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
-.mock .row div{background:#fff;border-radius:8px;height:34px;border:1px solid #e1e1e6;position:relative}
-.mock .row div::after{content:"";position:absolute;left:8px;top:9px;width:16px;height:16px;border-radius:5px;background:var(--c)}
-.mock .big{display:grid;grid-template-columns:1fr 1.4fr;gap:6px}
-.mock .big div{background:#fff;border:1px solid #e1e1e6;border-radius:8px;height:86px;display:grid;place-items:center}
-.ring{width:56px;height:56px;border-radius:50%;background:conic-gradient(#f2a33a 0 50%,#3cb371 50% 80%,#5b8def 80% 100%);-webkit-mask:radial-gradient(circle,transparent 15px,#000 16px);mask:radial-gradient(circle,transparent 15px,#000 16px)}
-.spark{width:86%;height:50px}
-.p3{background:var(--surface);color:var(--ink);border-radius:28px;padding:30px;border:1px solid var(--line)}
-.p3-head{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:start;margin-bottom:22px}
-.p3-head h3{font-weight:800;font-size:1.45rem;line-height:1.3;max-width:720px}
-.p3-head p{color:var(--ink-2);font-size:.92rem;margin-top:6px;max-width:720px}
-.p3 .kpis .kpi:last-child{background:var(--panel);color:#fff}
-.p3 .kpis .kpi:last-child b{color:#fff}
-.p3 .kpis .kpi:last-child span{color:var(--on-dark-2)}
-.p3-charts{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:26px}
-.p3-charts .note{font-size:.76rem;color:var(--ink-3);margin-top:10px}
-@media (max-width:980px){.p3-charts{grid-template-columns:1fr}.proj{grid-template-columns:1fr}}
-@media (max-width:480px){.p3,.pcard{padding:22px}}
+.shift small{display:block;font-size:.78rem;color:var(--ink-3);font-weight:600;letter-spacing:0}
+.p-charts{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:26px}
+.p-charts .nt{font-size:.76rem;color:var(--ink-3);margin-top:10px}
 
 /* ===== Skills ===== */
-.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-.cv-box{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
-.sk{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:30px}
-.sk h3{font-family:var(--f-display);font-weight:400;font-size:2.4rem;line-height:1;color:var(--panel);margin-bottom:16px}
-.chips{display:flex;flex-wrap:wrap;gap:10px}
-.chip{border-radius:999px;padding:8px 16px;font-weight:700;font-size:.86rem;background:var(--panel);color:#fff}
-.chip.o{background:transparent;color:var(--panel);border:2px solid var(--panel)}
-@media (max-width:760px){.skills{grid-template-columns:1fr}}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sk{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px}
+.sk h3{font-size:1.02rem;font-weight:800;margin-bottom:12px}
+.sk .tags{display:flex;flex-wrap:wrap;gap:8px}
+.sk .tags span{border-radius:999px;padding:6px 12px;font-weight:700;font-size:.8rem;background:var(--g-800);color:#fff}
+.sk .tags span.o{background:transparent;color:var(--g-800);box-shadow:inset 0 0 0 1.5px var(--g-800)}
+.sk .used{font-size:.78rem;color:var(--ink-3);margin-top:12px}
+.sk-wide{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.sk p{color:var(--ink-2);font-size:.9rem}
 
-/* ===== Certificates ===== */
-.cert-groups{display:flex;flex-direction:column;gap:44px}
-.cg-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:16px;border-bottom:2px solid var(--panel);padding-bottom:8px}
-.cg-head h3{font-family:var(--f-display);font-weight:400;font-size:2.2rem;line-height:1;color:var(--panel)}
-.cg-head span{color:var(--ink-3);font-weight:700;font-size:.8rem;white-space:nowrap}
-.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
-.ccard{display:flex;flex-direction:column;padding:0;border:1px solid var(--line);background:var(--surface);border-radius:18px;overflow:hidden;cursor:zoom-in;text-align:left;font:inherit;color:inherit;transition:transform .2s ease,box-shadow .2s ease}
-.ccard:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.12)}
-.ccard .im{position:relative;display:block;aspect-ratio:4/3;background:#ececef}
-.ccard img{position:absolute;inset:12px;width:calc(100% - 24px);height:calc(100% - 24px);object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,.14))}
-.ccard .ct{display:block;padding:12px 14px 14px}
-.ccard b{display:block;font-weight:700;font-size:.88rem;line-height:1.35}
-.ccard small{display:block;margin-top:4px;font-size:.76rem;color:var(--ink-3);font-weight:600}
-@media (max-width:480px){.cgrid{grid-template-columns:1fr 1fr;gap:10px}.ccard .ct{padding:10px}.ccard b{font-size:.8rem}}
+/* ===== Achievements ===== */
+.award{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:center;background:var(--g-900);color:#fff;border-radius:14px;padding:28px;position:relative;overflow:hidden}
+.award::after{content:"";position:absolute;right:0;top:0;bottom:0;width:10px;background:repeating-linear-gradient(-45deg,var(--g-600) 0 10px,var(--g-300) 10px 20px)}
+.badge{display:inline-flex;align-items:center;gap:6px;background:var(--g-200);color:var(--g-950);font-weight:800;font-size:.78rem;border-radius:999px;padding:5px 12px;margin-bottom:12px}
+.award h3{font-size:1.55rem;font-weight:800;line-height:1.2}
+.award p{color:var(--on-dark-2);margin-top:12px;font-size:.92rem}
+.award p b{color:#fff}
+.award button{padding:0;border:0;background:#fff;border-radius:8px;overflow:hidden;cursor:zoom-in}
+.award button img{width:100%}
+.training .log{grid-template-columns:180px minmax(0,1fr)}
+.training .log-body h3{font-size:1.15rem}
+.training .log-body p{color:var(--ink-2);font-size:.92rem;margin-top:4px}
+
+/* ===== Education & certificates ===== */
+.edu-row{display:flex;gap:18px;align-items:center}
+.edu-logo{flex:none;display:grid;place-items:center;width:84px;height:84px;border-radius:12px;background:#fff;border:1px solid var(--line);font-weight:900;color:var(--g-700);font-size:1.05rem}
+.edu-row h3{font-size:1.35rem;font-weight:800}
+.edu-row .role{margin:2px 0 0}
+.edu-more{margin-top:14px;color:var(--ink-2);font-size:.92rem}
+.edu-more li{padding:6px 0;border-top:1px solid var(--line)}
+.edu-more b{color:var(--ink)}
+.cg{margin-top:26px}
+.cg h4{font-size:1rem;font-weight:800;margin-bottom:12px}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px}
+.ccard{display:flex;flex-direction:column;padding:0;border:1px solid var(--line);background:#fff;border-radius:10px;overflow:hidden;cursor:zoom-in;text-align:left;font:inherit;color:inherit;transition:transform .2s,box-shadow .2s}
+.ccard:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.1)}
+.ccard .im{position:relative;display:block;aspect-ratio:4/3;background:var(--g-100)}
+.ccard img{position:absolute;inset:10px;width:calc(100% - 20px);height:calc(100% - 20px);object-fit:contain}
+.ccard .ct{display:block;padding:10px 12px 12px}
+.ccard b{display:block;font-size:.84rem;line-height:1.35}
+.ccard small{display:block;margin-top:3px;font-size:.74rem;color:var(--ink-3);font-weight:600}
 
 /* ===== Contact ===== */
-.contact{text-align:center}
-.contact .title{font-size:clamp(3.4rem,10vw,7rem)}
-.contact .lede{margin:14px auto 34px}
-.contact .touch{grid-template-columns:repeat(4,1fr);text-align:left}
-.dark .tcard{background:var(--panel-2)}
-.dark .tcard:hover{background:var(--panel-3)}
-@media (max-width:900px){.contact .touch{grid-template-columns:1fr 1fr}}
-@media (max-width:480px){.contact .touch{grid-template-columns:1fr}}
-footer{background:var(--panel-3);color:var(--on-dark-3);font-size:.82rem;padding:22px 0}
-footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.contact h2{font-size:clamp(2rem,4.6vw,3rem);font-weight:800;line-height:1.08;letter-spacing:-.02em;max-width:20ch}
+.contact .sub{color:var(--on-dark-2);margin:14px 0 26px;max-width:60ch}
+.mail{display:inline-block;font-size:clamp(1.05rem,2.6vw,1.6rem);font-weight:800;color:#fff;text-decoration:none;border-bottom:2px solid var(--g-300);word-break:break-all;margin-bottom:22px}
+.mail:hover{border-color:#fff}
+.contact-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.ccontact{display:block;background:var(--g-850);border:1px solid var(--line-dark);border-radius:10px;padding:14px 16px;text-decoration:none;transition:background .2s}
+.ccontact:hover{background:var(--g-800)}
+.ccontact small{display:block;color:var(--on-dark-3);font-size:.76rem}
+.ccontact b{font-size:.9rem;word-break:break-word}
+.loc{display:flex;align-items:center;gap:6px;color:var(--on-dark-3);font-size:.82rem;margin-top:18px}
+footer{background:var(--g-950);color:var(--on-dark-3);font-size:.8rem;padding:20px 0}
 
 /* ===== Lightbox ===== */
-.lb{position:fixed;inset:0;z-index:100;background:rgba(18,18,20,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 16px 24px}
-.lb img{max-width:min(1100px,100%);max-height:calc(100vh - 140px);object-fit:contain;border-radius:10px;background:#fff}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(18,18,20,.93);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 16px 24px}
+.lb img{max-width:min(1100px,100%);max-height:calc(100vh - 140px);object-fit:contain;border-radius:8px;background:#fff}
 .lb p{color:#fff;margin-top:12px;font-weight:600;text-align:center}
-.lb .x{position:absolute;top:14px;right:16px}
-.lb .nav-b{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;padding:0;justify-content:center;font-size:1.4rem}
+.lb .x{position:absolute;top:12px;right:14px;color:#fff}
+.lb .nb{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;padding:0;justify-content:center;font-size:1.4rem;color:#fff}
 .lb .prev{left:12px}.lb .next{right:12px}
 
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
+html:not(.js) .reveal{opacity:1;transform:none}
+
+/* ===== Responsive ===== */
+@media (max-width:980px){
+  .nav ul a{padding:6px 7px;font-size:.76rem}
+  .hero-top{grid-template-columns:minmax(0,1fr) 230px;gap:28px}
+  .about{grid-template-columns:1fr;gap:32px}
+  .skills{grid-template-columns:1fr 1fr}
+  .sk-wide{grid-template-columns:1fr}
+  .award{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:repeat(3,1fr)}
+  .life-axis,.lane{grid-template-columns:7.5rem minmax(0,1fr)}
+  .lanes-inner{left:7.5rem}
+  .track .lbl small{display:none}
+  .p-charts,.split{grid-template-columns:1fr}
+  .kpis,.lead-kpis{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .menu-btn{display:block}
+  .nav ul{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;gap:0;background:var(--g-950);border-bottom:1px solid var(--g-800);padding:4px var(--gutter) 12px}
+  .nav ul.open{display:flex}
+  .nav ul a{padding:12px 0;font-size:.95rem;border-bottom:1px solid var(--g-850);border-radius:0}
+  .nav ul a:hover,.nav ul a.on{background:none}
+  .nav-cv{margin-left:0}
+}
+@media (max-width:720px){
+  .hero{padding-top:28px}
+  .hero-top{grid-template-columns:1fr}
+  .hero-bg{width:100%;height:300px}
+  .deco{display:none}
+  .portrait{grid-row:1;justify-self:center;width:190px;margin:12px auto 22px}
+  /* Timeline becomes an ordered list with dates on phones */
+  .life-axis,.lanes-inner{display:none}
+  .lane,.lane.tall{display:block;border-top:0;padding:10px 0 4px;min-height:0}
+  .lane-name{display:block;margin-bottom:4px}
+  .track{background:none}
+  .track li{position:static;width:auto}
+  .track a{position:static;display:flex;gap:10px;align-items:baseline;padding:6px 0 6px 14px;border-left:3px solid var(--g-500)}
+  .lane-work .track a{border-left-color:#e9e9ec}
+  .track .bar{display:none}
+  .track .lbl{position:static;white-space:normal}
+  .track .lbl small{display:inline}
+  .track .date{position:static;width:auto;height:auto;overflow:visible;clip-path:none;white-space:nowrap;color:var(--on-dark-2);font-size:.74rem;order:-1;min-width:7.6rem}
+  section{padding:56px 0}
+  .log,.training .log{grid-template-columns:1fr;gap:12px;padding:28px 0}
+  .log-meta{flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 12px}
+  .facts{grid-template-columns:repeat(3,1fr)}
+  .more,.skills{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr 1fr}
+  .panel{padding:16px;border-width:4px}
+  .findings thead{display:none}
+  .findings,.findings tbody,.findings tr,.findings td{display:block;width:auto!important}
+  .findings tr{padding:10px 0;border-bottom:1px solid var(--line-dark)}
+  .findings td{border:0;padding:3px 0}
+  .findings td:not(:first-child)::before{content:attr(data-label) ": ";font-weight:700;color:#fff}
+  .thumb{width:calc(50% - 4px)}
+}
+@media (max-width:480px){.nav .wrap{gap:10px}.brand{font-size:.92rem}.cv-t{display:none}}
+@media (max-width:440px){
+  .hbar{grid-template-columns:100px 1fr;font-size:.76rem}
+  .vchart,.vlabels{gap:6px}
+  .kpis,.lead-kpis{grid-template-columns:1fr}
+  .cgrid{grid-template-columns:1fr 1fr;gap:10px}
+  .fact b{font-size:1.35rem}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+/* ===== Print (used to build the Download Portfolio PDF) ===== */
+@media print{
+  @page{size:A4;margin:12mm}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html{font-size:13px}
+  .nav,.lb,.menu-btn,.tabs,.btns .btn:not(.primary),.stripe{display:none!important}
+  .reveal{opacity:1!important;transform:none!important}
+  .js .track .bar,.js .track .ms .bar{animation:none}
+  .hero{padding-top:24px}
+  section{padding:26px 0}
+  #achievements{break-before:page}
+  footer{display:none}
+  h2,h3,h4,.sec-head,.log-meta{break-after:avoid}
+  .panel[hidden]{display:block!important;margin-top:14px}
+  .cap[hidden]{display:block!important}
+  .lead,.thumbs,.panel,.award,.ccard,.sk,.focus li,.mcard,.findings tr,.kpis,.p-charts>div,.split>div,.life{break-inside:avoid}
+  .is-out .hbar .f{width:var(--w)}.is-out .hbar .v{opacity:1}.is-out .vbar{height:var(--h)}.is-out .vbar i{opacity:1}
+  .hbar .f,.vbar{transition:none}
+}
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 7 5-3 5 3-1.5-7"/></symbol>
+  <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+</svg>
 
-<header class="nav">
+<nav class="nav" aria-label="Main">
   <div class="wrap">
-    <nav class="nav-in" aria-label="Main">
-      <a class="brand" href="#top">Rizka Ayu</a>
-      <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
-      <div class="menu" id="menu">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#work">Work Samples</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#contact">Contact</a>
-        <a class="cv" href="https://drive.google.com/file/d/1XIF4_O2ZOfrAq-InvuktB1GOjL13QoBQ/view?usp=drivesdk" target="_blank" rel="noopener">CV ↗</a>
-      </div>
-    </nav>
+    <a class="brand" href="#top">Rizka A. D. Sugiharto<i></i></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+    <ul id="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="nav-cv" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg><span class="cv-t">Download</span>CV</a>
   </div>
-</header>
+</nav>
 
-<main id="top">
-<!-- ============ HERO ============ -->
-<div class="hero">
-  <div class="wrap hero-in">
-    <div class="hero-title">
-      <p class="hero-eyebrow">Strategic Planning &amp; Finance</p>
-      <div class="hero-word" aria-hidden="true">PORTFOLIO</div>
-    </div>
-    <div class="hero-photo"><img src="assets/rizka-hero.webp" alt="Rizka Ayu Dwi Sugiharto" width="650" height="1277"></div>
-    <h1 class="hero-tag">Presented by <b>Rizka Ayu Dwi Sugiharto</b></h1>
-  </div>
-</div>
-
-<!-- ============ ABOUT ============ -->
-<section id="about">
+<main>
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <svg class="deco" viewBox="0 0 600 300" aria-hidden="true" fill="none">
+    <path d="M0 250 L120 215 L220 225 L330 150 L440 120 L600 70" stroke="#8a8a90" stroke-width="3"/>
+    <path d="M0 285 L150 270 L300 262 L450 238 L600 220" stroke="#5f5f64" stroke-width="2.5" stroke-dasharray="10 8"/>
+    <circle cx="330" cy="150" r="8" stroke="#b9b9bf" stroke-width="3" fill="#29292c"/>
+    <circle cx="540" cy="88" r="8" stroke="#b9b9bf" stroke-width="3" fill="#29292c"/>
+  </svg>
   <div class="wrap">
-    <div class="about-card reveal">
-      <div class="about-text">
-        <span class="hi">Hi,</span>
-        <p class="intro">I’m <b>Rizka Ayu Dwi Sugiharto</b> from <b>South Jakarta!</b></p>
-        <p class="bio">International Economics graduate (GPA 3.84/4.00) with three internships in strategic planning, finance, and supply chain across state-owned enterprises and government. Experienced in RJPP monitoring, annual budget planning (RKA), financial analysis, and industry outlook research. Proficient in Excel, Stata, and EViews for data processing and econometric analysis. Passionate about improving business efficiency through structured planning and data-driven insights.</p>
-        <div class="about-cta">
-          <a class="btn light" href="https://drive.google.com/file/d/1XIF4_O2ZOfrAq-InvuktB1GOjL13QoBQ/view?usp=drivesdk" target="_blank" rel="noopener">View my CV ↗</a>
-          <a class="btn ghost" href="#experience">See my experience ↓</a>
+    <div class="hero-top">
+      <div>
+        <p class="kicker">Strategic Planning &amp; Finance across state-owned enterprises and government</p>
+        <h1>Rizka Ayu<br>Dwi Sugiharto</h1>
+        <p class="tagline">Turning planning and financial data into clear, data-driven decisions.</p>
+        <div class="btns">
+          <a class="btn primary" href="#contact">Contact me</a>
+          <a class="btn" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download CV</a>
+          <a class="btn" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=1" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download Portfolio</a>
+          <a class="btn" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
-      <div class="about-photo"><img src="assets/rizka-about.webp" alt="" width="608" height="772" loading="lazy"></div>
+      <figure class="portrait">
+        <div class="pring"><img src="assets/rizka-about.webp" width="608" height="772" alt="Photo of Rizka Ayu Dwi Sugiharto" fetchpriority="high"></div>
+        <figcaption>Open to work</figcaption>
+      </figure>
     </div>
 
-    <div class="stats reveal">
-      <div class="stat"><b>3</b><span>Internships</span></div>
-      <div class="stat"><b>3.84</b><span>GPA (out of 4.00)</span></div>
-      <div class="stat"><b>18</b><span>Certificates</span></div>
-    </div>
-
-    <div class="touch reveal">
-      <h3>Get In<br>Touch</h3>
-      <a class="tcard" href="mailto:rizkaayudwisugiharto27@gmail.com">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg>
-        <span class="arrow">↗</span><small>rizkaayudwisugiharto27@gmail.com</small></a>
-      <a class="tcard" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.84-2.05 3.78-2.05 4.04 0 4.79 2.66 4.79 6.12V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg>
-        <span class="arrow">↗</span><small>linkedin.com/in/rizkaayudwi</small></a>
-      <a class="tcard" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-        <span class="arrow">↗</span><small>instagram.com/rizkaayudwi</small></a>
-      <a class="tcard" href="https://wa.me/6285257422314" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        <span class="arrow">↗</span><small>wa.me/6285257422314</small></a>
+    <!-- Career timeline. --s / --e = month index since Jan 2021 (72 months to Dec 2026) -->
+    <div class="life" aria-labelledby="life-title">
+      <div class="life-head">
+        <h2 id="life-title">Career timeline</h2>
+        <p>The dashed green line marks today (Oct 2026). Click a bar to jump to its details.</p>
+      </div>
+      <div class="life-axis" aria-hidden="true">
+        <span></span>
+        <div class="years"><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span></div>
+      </div>
+      <div class="lanes">
+        <div class="lane lane-work tall">
+          <span class="lane-name">Work experience</span>
+          <ol class="track">
+            <li style="--s:52;--e:53"><a href="#exp-pertamina"><span class="bar"></span><span class="lbl">Pertamina <small>Supply Chain</small></span><span class="date sr-only">May 2025</span></a></li>
+            <li class="row2" style="--s:58;--e:65"><a href="#exp-kemenimipas"><span class="bar"></span><span class="lbl">Kemenimipas <small>Finance</small></span><span class="date sr-only">Nov 2025 – May 2026</span></a></li>
+            <li style="--s:65;--e:70"><a href="#exp-pelindo"><span class="bar"></span><span class="lbl">Pelindo <small>Strategy</small></span><span class="date sr-only">Jun 2026 – now</span></a></li>
+          </ol>
+        </div>
+        <div class="lane lane-train tall">
+          <span class="lane-name">Training &amp; awards</span>
+          <ol class="track">
+            <li class="ms" style="--s:29.5;--e:29.5"><a href="#achievements"><span class="bar"></span><span class="lbl">2nd Runner-Up, HERO 11th</span><span class="date sr-only">Jun 2023</span></a></li>
+            <li class="ms" style="--s:44.9;--e:44.9"><a href="#training"><span class="bar"></span><span class="lbl">Stata workshop, UGM</span><span class="date sr-only">Sep 2024</span></a></li>
+            <li class="ms row2" style="--s:49.3;--e:49.3"><a href="#training"><span class="bar"></span><span class="lbl">BNSP competency</span><span class="date sr-only">Feb 2025</span></a></li>
+            <li class="end" style="--s:60;--e:69.5"><a href="#training"><span class="bar"></span><span class="lbl">Finance courses</span><span class="date sr-only">Jan – Oct 2026</span></a></li>
+          </ol>
+        </div>
+        <div class="lane lane-org">
+          <span class="lane-name">Organization</span>
+          <ol class="track">
+            <li style="--s:23;--e:32"><a href="#exp-himie"><span class="bar"></span><span class="lbl">Secretary, HIMIE</span><span class="date sr-only">Dec 2022 – Sep 2023</span></a></li>
+            <li style="--s:43;--e:44"><a href="#exp-icosi"><span class="bar"></span><span class="lbl">Liaison Officer, ICOSI</span><span class="date sr-only">Aug 2024</span></a></li>
+          </ol>
+        </div>
+        <div class="lane lane-edu">
+          <span class="lane-name">Education</span>
+          <ol class="track">
+            <li style="--s:8;--e:51"><a href="#education"><span class="bar"></span><span class="lbl">B.Econ International Economics, UMY <small>GPA 3.84</small></span><span class="date sr-only">Sep 2021 – Apr 2025</span></a></li>
+          </ol>
+        </div>
+        <div class="lanes-inner" aria-hidden="true"><div class="now"></div></div>
+      </div>
     </div>
   </div>
-</section>
+  <div class="stripe" aria-hidden="true"></div>
+</header>
 
-<!-- ============ EDUCATION ============ -->
-<section id="education" class="dark">
-  <div class="wrap edu">
-    <div class="reveal">
-      <h2 class="title" style="margin-bottom:28px">Education</h2>
-      <ul class="edu-list">
-        <li><div class="edu-dot">UMY</div><div><span class="yr">2021 – 2025</span><p>International Program for Islamic Economics and Finance, <b>at Universitas Muhammadiyah Yogyakarta</b></p></div></li>
-        <li><div class="edu-dot">SMA</div><div><span class="yr">2019 – 2021</span><p>Integrated Senior High School, <b>at SMAN 2 Kota Blitar</b></p></div></li>
-        <li><div class="edu-dot">SMP</div><div><span class="yr">2016 – 2018</span><p>Integrated Junior High School, <b>at SMP Laboratorium Kota Malang</b></p></div></li>
-      </ul>
-    </div>
-    <div class="edu-side reveal">
-      <div class="gpa"><b>3.84</b><span>GPA out of 4.00 — International Economics, UMY</span></div>
-      <div class="interest">
-        <h4>Interest &amp; Expertise</h4>
-        <ul>
-          <li>Strategic &amp; Corporate Planning</li>
-          <li>Financial &amp; Economic Analysis</li>
-          <li>Econometrics &amp; Data Analysis</li>
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="light">
+  <div class="wrap">
+    <div class="sec-head"><h2>About me</h2></div>
+    <div class="about">
+      <div class="prose reveal">
+        <p>I’m <b>Rizka Ayu Dwi Sugiharto</b> from South Jakarta — an International Economics graduate (GPA 3.84/4.00) with three internships in strategic planning, finance, and supply chain across state-owned enterprises and government.</p>
+        <p>Experienced in RJPP monitoring, annual budget planning (RKA), financial analysis, and industry outlook research. Proficient in Excel, Stata, and EViews for data processing and econometric analysis. Passionate about improving business efficiency through structured planning and data-driven insights.</p>
+        <div class="facts">
+          <div class="fact"><b>3</b><span>Internships</span></div>
+          <div class="fact"><b>3.84</b><span>GPA (out of 4.00)</span></div>
+          <div class="fact"><b>18</b><span>Certificates</span></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <h3 class="ready-title">What I can deliver right away</h3>
+        <ul class="focus">
+          <li><b>Strategic plan &amp; KPI monitoring</b><span>Quarterly RJPP progress reports on strategic initiatives, KPIs and RKM, plus long-term plan drafting and BOD materials.</span><span class="proof">Done at <a href="#exp-pelindo">Pelindo Sinergi Lokaseva</a></span></li>
+          <li><b>Budget planning &amp; financial administration</b><span>Annual budget plan (RKA), validation of SPM, grants and official-travel documents, monthly reconciliation and annual reports.</span><span class="proof">Done at <a href="#exp-kemenimipas">Ministry of Immigration and Corrections</a></span></li>
+          <li><b>Industry research, econometrics &amp; dashboards</b><span>Market and macro research, ARDL regression in Stata/EViews, and live Google Sheets + Apps Script dashboards.</span><span class="proof">See <a href="#case-outlook">Industry Outlook 2026</a> and <a href="#more-work">dashboards</a></span></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ EXPERIENCE ============ -->
-<section id="experience">
+<!-- ===================== EXPERIENCE ===================== -->
+<section id="experience" class="light" style="padding-top:24px">
   <div class="wrap">
-    <div class="xp">
-      <div class="xp-intro reveal">
-        <h2 class="title">Experiences</h2>
-        <p style="margin-top:14px">Hands-on experience in strategic planning, finance, and supply chain across state-owned enterprises and government, supported by organizational and volunteer leadership.</p>
-        <div class="stats">
-          <div class="stat"><b>3</b><span>Internships</span></div>
-          <div class="stat"><b>3.84</b><span>GPA</span></div>
-          <div class="stat"><b>1</b><span>Award</span></div>
-        </div>
-        <p class="tools">Tools: Excel • Stata • EViews • DELMIA Quintiq</p>
+    <div class="sec-head">
+      <h2>Work experience</h2>
+      <p>Strategic planning at a port-logistics SOE, finance &amp; budget administration at a ministry, and supply chain planning at Pertamina’s training &amp; consulting arm.</p>
+    </div>
+
+    <article class="log reveal" id="exp-pelindo">
+      <div class="log-meta">
+        <span class="when">Jun 2026 – Present</span>
+        <span class="where"><svg class="ico"><use href="#i-pin"/></svg>North Jakarta</span>
+        <span>Strategic Planning &amp; Transformation</span>
       </div>
-      <ul class="tl reveal">
-        <li><span class="when">Jun 2026 – Present</span><span class="rail"></span><a class="item" href="#pelindo"><b>Internship</b> – Strategic Planning &amp; Transformation<small>Pelindo Sinergi Lokaseva</small></a></li>
-        <li><span class="when">Nov 2025 – May 2026</span><span class="rail"></span><a class="item" href="#kemenimipas"><b>Internship</b> – Finance &amp; Budget Administration<small>Ministry of Immigration and Corrections</small></a></li>
-        <li><span class="when">May 2025</span><span class="rail"></span><a class="item" href="#pertamina"><b>Internship</b> – Supply Chain Planning<small>Pertamina Training &amp; Consulting</small></a></li>
-        <li><span class="when">Aug 2024</span><span class="rail"></span><a class="item" href="#volunteer"><b>Volunteer</b> – Liaison Officer (LO)<small>Int’l Conference on Sustainable Innovation</small></a></li>
-        <li><span class="when">Dec 2022 – Sep 2023</span><span class="rail"></span><a class="item" href="#organization"><b>Organization</b> – Secretary, Entrepreneurship Division<small>Economics Student Association</small></a></li>
-        <li><span class="when">2023</span><span class="rail"></span><a class="item" href="#certificates"><b>Achievement</b> – 2nd Runner-Up, Internal Academic Competition<small>Universitas Muhammadiyah Yogyakarta</small></a></li>
-      </ul>
-    </div>
+      <div class="log-body">
+        <h3>PT Pelindo Sinergi Lokaseva</h3>
+        <p class="role">Strategic Planning Intern</p>
+        <figure class="lead">
+          <div class="lead-head"><span>Work sample · Industry Outlook 2026 — Top-10 container ports benchmark</span><a href="#case-outlook">See the full analysis ↓</a></div>
+          <div class="lead-kpis">
+            <div><b>10 / 10</b><span>Top-10 WSC 2024 ports have a supporting ecosystem</span></div>
+            <div><b>57 km²</b><span>JAFZA free zone near Jebel Ali Port</span></div>
+            <div><b>8.30 m m²</b><span>Busan New Port Distripark — FTZ</span></div>
+            <div><b>1,000 acres</b><span>Port Klang Free Zone</span></div>
+          </div>
+        </figure>
+        <p class="lead-cap">Part of the Pelindo Group (Danantara Indonesia). Research I prepared for the company’s Industry Outlook 2026.</p>
+        <ul class="pts">
+          <li>Monitored quarterly <b>RJPP 2026</b> implementation, completing progress reports <b>50% faster</b>, and helped draft RJPP 2026–2030.</li>
+          <li>Conducted a comparative analysis of Terminal Kijing’s financial realization to support management performance evaluation.</li>
+          <li>Conducted market research and macroeconomic analysis for the Industry Outlook 2026, completing 90% independently.</li>
+          <li>Analyzed the impact of geopolitics, exchange rates and the BI Rate on export–import performance using <b>ARDL regression</b>.</li>
+          <li>Prepared data and presentation materials for the Board of Directors at ASEAN Port &amp; Logistics 2026 (8 July 2026).</li>
+        </ul>
+        <p class="result"><svg class="ico"><use href="#i-award"/></svg><span>Quarterly RJPP progress reports delivered 50% faster</span></p>
+      </div>
+    </article>
 
-    <div class="sec-head" style="margin-top:80px">
-      <div><span class="kicker">Strategic Planning • Finance • Supply Chain</span><h2 class="title">Internship Experience</h2></div>
-      <p class="lede">Pelindo • Kemenimipas • Pertamina</p>
-    </div>
+    <article class="log reveal" id="exp-kemenimipas">
+      <div class="log-meta">
+        <span class="when">Nov 2025 – May 2026</span>
+        <span class="where"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta</span>
+        <span>MagangHub program (Kemnaker RI)</span>
+      </div>
+      <div class="log-body">
+        <h3>Ministry of Immigration and Corrections</h3>
+        <p class="role">Finance &amp; Budget Administration Intern · Bureau of Planning and Finance</p>
+        <figure class="lead contain"><button class="lb-open" data-group="kem" data-src="assets/certs/maganghub-kemenimipas.webp" data-cap="MagangHub Certificate – Kemenimipas RI (Nov 2025 – May 2026)" style="all:unset;cursor:zoom-in;display:block"><img src="assets/certs/maganghub-kemenimipas.webp" alt="MagangHub internship certificate, Kemenimipas" loading="lazy"></button></figure>
+        <p class="lead-cap">Official MagangHub (Kemnaker RI) certificate for the internship at the Bureau of Planning and Finance.</p>
+        <ul class="pts">
+          <li>Organized <b>600+</b> financial and partnership records, improving data accessibility and reporting efficiency by <b>20%</b>.</li>
+          <li>Validated <b>200+</b> financial documents, including payment orders (SPM), grants, bank accounts and official travel documents.</li>
+          <li>Assisted in preparing the annual budget plan (<b>RKA</b>), contributing to a <b>15%</b> improvement in forecasting accuracy.</li>
+          <li>Supported monthly reconciliation and annual financial reporting with <b>100% on-time</b> submission.</li>
+          <li>Built the team innovation <a class="link" href="#more-work">SI-REKAP PERJADIN</a>, a travel-expense recap web app with real-time budget absorption dashboards.</li>
+        </ul>
+        <p class="result"><svg class="ico"><use href="#i-award"/></svg><span>Completed the internship with an “Excellent” (Sangat Baik) rating</span></p>
+      </div>
+    </article>
 
-    <div class="cards">
-      <!-- Pelindo -->
-      <article class="card reveal" id="pelindo">
-        <div class="card-head">
-          <div><h3>Pelindo Sinergi Lokaseva</h3><span class="pill role">Strategic Planning Intern</span></div>
-          <div class="meta"><span class="type">Internship</span><br>Jun 2026 – Present</div>
+    <article class="log reveal" id="exp-pertamina">
+      <div class="log-meta">
+        <span class="when">May 2025</span>
+        <span class="where"><svg class="ico"><use href="#i-pin"/></svg>Central Jakarta</span>
+        <span>1-month internship</span>
+      </div>
+      <div class="log-body">
+        <h3>PT Pertamina Training &amp; Consulting</h3>
+        <p class="role">Administrative Representative – Supply Chain Planning</p>
+        <figure class="lead"><button class="lb-open" data-group="ptc" data-src="assets/pertamina-distribution.webp" data-cap="Fuel distribution schedule monitoring in DELMIA Quintiq" style="all:unset;cursor:zoom-in;display:block"><img src="assets/pertamina-distribution.webp" alt="Fuel distribution schedule monitoring in DELMIA Quintiq" style="--ratio:2/1" loading="lazy"></button></figure>
+        <p class="lead-cap">Monitoring national fuel distribution schedules in DELMIA Quintiq.</p>
+        <ul class="pts">
+          <li>Monitored fuel distribution across <b>120+ locations in 8 regions</b> using DELMIA Quintiq to optimize delivery schedules.</li>
+          <li>Maintained daily distribution data with <b>95% accuracy</b>, improving planning reliability.</li>
+          <li>Classified and mapped <b>20+</b> industrial tankers for more efficient logistics allocation.</li>
+          <li>Developed automated Excel and Google Sheets reports, increasing reporting efficiency by <b>60%</b>.</li>
+        </ul>
+        <p class="result"><svg class="ico"><use href="#i-award"/></svg><span>Completed all assigned duties well — official completion letter from HC &amp; GA</span></p>
+        <div class="thumbs">
+          <button class="thumb" data-group="ptc" data-cap="Daily distribution and vessel data verification"><img src="assets/pertamina-data.webp" alt="Daily distribution data verification" loading="lazy"></button>
+          <button class="thumb contain" data-group="ptc" data-src="assets/certs/pertamina-completion-letter.webp" data-cap="Internship Completion Letter – PT Pertamina Training &amp; Consulting"><img src="assets/certs/pertamina-completion-letter-thumb.webp" alt="Internship completion letter" loading="lazy"></button>
         </div>
-        <div class="card-body">
-          <div>
-            <p class="sub">What I did</p>
-            <ul class="bul">
-              <li>Monitored RJPP 2026 quarterly, delivering progress reports 50% faster</li>
-              <li>Helped draft RJPP 2026–2030 and the Terminal Kijing review</li>
-              <li>Researched Industry Outlook 2026, including an ARDL export regression</li>
-              <li>Prepared BOD materials for the ASEAN Port &amp; Logistics agenda</li>
-            </ul>
-            <p class="sub" style="margin-top:20px">Deliverables</p>
-            <div class="tags">
-              <span class="tag">Quarterly RJPP 2026 Monitoring</span>
-              <span class="tag">Quarterly Finance &amp; Operations Recap 2026</span>
-              <span class="tag">RJPP Initiative Roadmap</span>
-              <span class="tag">Terminal Kijing Feasibility Study Comparison</span>
-              <span class="tag">Outlook 2026: Domestic Sea Cargo Volume</span>
-              <span class="tag">Outlook 2026: Domestic Sea Freight at Main Ports</span>
-              <span class="tag">PSL Innovation Program Plan 2026</span>
-            </div>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:14px">
-            <div class="proof">
-              <h4>ASEAN Port &amp; Logistics</h4>
-              <p class="em">BOD material • Pelindo (8 July 2026)</p>
-              <p>Built the Board of Directors deck on global container trends, ASEAN market share, the Kalibaru ecosystem, and geopolitical risks to shipping.</p>
-            </div>
-            <div class="proof">
-              <h4>Quarterly RJPP 2026 Monitoring</h4>
-              <p class="em">Management report</p>
-              <p>Quarterly progress report on strategic initiatives, KPIs and RKM for management.</p>
-            </div>
-            <a class="btn" href="#work">See work samples ↓</a>
-          </div>
-        </div>
-      </article>
+      </div>
+    </article>
 
-      <!-- Kemenimipas -->
-      <article class="card reveal" id="kemenimipas">
-        <div class="card-head">
-          <div><h3>Ministry of Immigration and Corrections</h3><span class="pill role">Finance &amp; Budget Administration Intern</span></div>
-          <div class="meta"><span class="type">Internship</span><br>Nov 2025 – May 2026</div>
-        </div>
-        <div class="card-body">
-          <div>
-            <p class="sub">What I did</p>
-            <ul class="bul">
-              <li>Organized 600+ records, improving reporting efficiency by 20%</li>
-              <li>Validated 200+ documents (SPM, grants, official travel)</li>
-              <li>Supported RKA preparation, raising forecasting accuracy by 15%</li>
-              <li>Completed reconciliation &amp; annual reports 100% on time</li>
-            </ul>
-            <div class="minis">
-              <div class="mini"><b>600+</b><span>records organized</span></div>
-              <div class="mini"><b>200+</b><span>documents validated</span></div>
-              <div class="mini"><b>100%</b><span>reports on time</span></div>
-            </div>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:14px">
-            <div class="proof">
-              <h4>MagangHub Certificate</h4>
-              <p class="em">Kemenimipas RI (Nov 2025 – May 2026)</p>
-              <p>Official MagangHub (Kemnaker RI) certificate confirming I completed the internship at the Bureau of Planning and Finance with an <b>“Excellent”</b> rating.</p>
-              <div class="shots">
-                <button class="shot doc" data-group="kemenimipas" data-src="assets/certs/maganghub-kemenimipas.webp" data-cap="MagangHub Certificate – Kemenimipas RI (Nov 2025 – May 2026)"><img src="assets/certs/maganghub-kemenimipas-thumb.webp" alt="MagangHub certificate" loading="lazy"></button>
-              </div>
-            </div>
-            <div class="proof">
-              <h4>Team innovation: SI-REKAP PERJADIN</h4>
-              <p class="em">Travel expense recap system</p>
-              <p>A web-based system replacing manual Excel recaps with real-time budget absorption dashboards.</p>
-            </div>
-            <a class="btn" href="#projects">See the project ↓</a>
-          </div>
-        </div>
-      </article>
+    <h3 class="sub-h" id="organization">Organization &amp; volunteering</h3>
 
-      <!-- Pertamina -->
-      <article class="card reveal" id="pertamina">
-        <div class="card-head">
-          <div><h3>Pertamina Training &amp; Consulting</h3><span class="pill role">Administrative Representative – Supply Chain Planning</span></div>
-          <div class="meta"><span class="type">Internship</span><br>1–31 May 2025</div>
-        </div>
-        <div class="card-body">
-          <div>
-            <p class="sub">What I did</p>
-            <ul class="bul">
-              <li>Monitored fuel distribution across 120+ locations in 8 regions using DELMIA Quintiq</li>
-              <li>Maintained daily distribution data with 95% accuracy</li>
-              <li>Classified and mapped 20+ industrial tankers for efficient logistics allocation</li>
-              <li>Built automated Excel &amp; Google Sheets reports, boosting efficiency by 60%</li>
-            </ul>
-            <div class="minis">
-              <div class="mini"><b>120+</b><span>locations, 8 regions</span></div>
-              <div class="mini"><b>95%</b><span>data accuracy</span></div>
-              <div class="mini"><b>+60%</b><span>reporting efficiency</span></div>
-            </div>
-          </div>
-          <div>
-            <div class="proof">
-              <h4>Internship Completion Letter</h4>
-              <p class="em">PT Pertamina Training &amp; Consulting (1–31 May 2025)</p>
-              <p>Official letter from HC &amp; GA confirming I completed the Supply Chain Planning internship and fulfilled all assigned duties and responsibilities well.</p>
-            </div>
-            <div class="shots">
-              <button class="shot doc" data-group="pertamina" data-src="assets/certs/pertamina-completion-letter.webp" data-cap="Internship Completion Letter – PT Pertamina Training &amp; Consulting"><img src="assets/certs/pertamina-completion-letter-thumb.webp" alt="Internship completion letter" loading="lazy"></button>
-              <button class="shot" data-group="pertamina" data-cap="Fuel distribution schedule monitoring in DELMIA Quintiq"><img src="assets/pertamina-distribution.webp" alt="Fuel distribution schedule monitoring in DELMIA Quintiq" loading="lazy"></button>
-              <button class="shot" data-group="pertamina" data-cap="Daily distribution and vessel data verification"><img src="assets/pertamina-data.webp" alt="Daily distribution and vessel data verification" loading="lazy"></button>
-            </div>
-          </div>
-        </div>
-      </article>
+    <article class="log reveal" id="exp-icosi">
+      <div class="log-meta">
+        <span class="when">Aug 2024</span>
+        <span class="where"><svg class="ico"><use href="#i-pin"/></svg>Yogyakarta</span>
+        <span>Volunteer</span>
+      </div>
+      <div class="log-body">
+        <h3>ICOSI &amp; ICIEFI 2024</h3>
+        <p class="role">Liaison Officer (LO) · International Conference on Sustainable Innovation</p>
+        <ul class="pts">
+          <li>Coordinated communication and schedules for <b>100+ participants</b> during a one-day academic conference.</li>
+          <li>Managed participant logistics and coordination throughout a <b>2-month</b> pre-event preparation period.</li>
+          <li>Supported participants promptly, contributing to <b>90% positive feedback</b> in the post-event survey.</li>
+        </ul>
+      </div>
+    </article>
 
-      <!-- Organization -->
-      <article class="card reveal" id="organization">
-        <div class="card-head">
-          <div><h3>Economics Student Association, UMY</h3><span class="pill role">Secretary, Entrepreneurship Division</span></div>
-          <div class="meta"><span class="type">Organization</span><br>Dec 2022 – Sep 2023 · 10-month term</div>
+    <article class="log reveal" id="exp-himie">
+      <div class="log-meta">
+        <span class="when">Dec 2022 – Sep 2023</span>
+        <span class="where"><svg class="ico"><use href="#i-pin"/></svg>Yogyakarta</span>
+        <span>10-month term</span>
+      </div>
+      <div class="log-body">
+        <h3>Economics Student Association (HIMIE), UMY</h3>
+        <p class="role">Secretary, Entrepreneurship Division</p>
+        <ul class="pts">
+          <li>Managed <b>50+</b> letters and administrative documents for a 30+ member division.</li>
+          <li>Developed <b>15 SOPs</b> to streamline division workflow and document approval.</li>
+          <li>Supported <b>10+</b> entrepreneurship events with 100+ total participants through documentation, administration and reporting.</li>
+        </ul>
+        <div class="thumbs">
+          <button class="thumb" data-group="himie" data-cap="Division structure"><img src="assets/himie-structure.webp" alt="Division structure" loading="lazy"></button>
+          <button class="thumb" data-group="himie" data-cap="Event budget plan"><img src="assets/himie-budget.webp" alt="Event budget plan" loading="lazy"></button>
+          <button class="thumb" data-group="himie" data-cap="Division accountability report"><img src="assets/himie-report.webp" alt="Division accountability report" loading="lazy"></button>
         </div>
-        <div class="card-body">
-          <div>
-            <p class="sub">What I did</p>
-            <ul class="bul">
-              <li>Managed 50+ letters &amp; admin docs</li>
-              <li>Developed 15 SOPs for workflow</li>
-              <li>Supported 10+ events, 100+ attendees</li>
-            </ul>
-            <div class="tags" style="margin-top:14px">
-              <span class="tag">30+ member division</span><span class="tag">Streamlined approvals</span><span class="tag">Event documentation</span>
-            </div>
-          </div>
-          <div>
-            <p class="sub">Documentation</p>
-            <div class="shots">
-              <button class="shot" data-group="himie" data-cap="Division structure"><img src="assets/himie-structure.webp" alt="Division structure" loading="lazy"></button>
-              <button class="shot" data-group="himie" data-cap="Event budget plan"><img src="assets/himie-budget.webp" alt="Event budget plan" loading="lazy"></button>
-              <button class="shot" data-group="himie" data-cap="Division accountability report"><img src="assets/himie-report.webp" alt="Division accountability report" loading="lazy"></button>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Volunteer -->
-      <article class="card reveal" id="volunteer">
-        <div class="card-head">
-          <div><h3>ICOSI &amp; ICIEFI 2024</h3><span class="pill role">Liaison Officer (LO)</span></div>
-          <div class="meta"><span class="type">Volunteer</span><br>August 2024 · Yogyakarta, Indonesia</div>
-        </div>
-        <div class="card-body one">
-          <div>
-            <p class="sub">What I did</p>
-            <div class="minis" style="margin-top:0">
-              <div class="mini"><b>100+</b><span>participants coordinated</span></div>
-              <div class="mini"><b>2 mo</b><span>of event logistics managed</span></div>
-              <div class="mini"><b>90%</b><span>positive participant feedback</span></div>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
+      </div>
+    </article>
   </div>
 </section>
 
-<!-- ============ WORK SAMPLES ============ -->
-<section id="work" class="dark">
+<!-- ===================== PROJECTS (dark) ===================== -->
+<section id="projects" class="dark">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div><span class="kicker">Industry Outlook 2026 • PT Pelindo Sinergi Lokaseva</span><h2 class="title">Work Samples</h2></div>
-      <p class="lede">Research and analysis I produced during my strategic planning internship, redrawn here from the original slides.</p>
+    <div class="sec-head">
+      <h2>Projects &amp; work samples</h2>
+      <p>Industry research from my Pelindo internship, an independent investment case study, and two dashboard web apps — redrawn here from the original slides.</p>
     </div>
 
-    <div class="ws-grid">
-      <!-- Top container ports -->
-      <article class="ws wide reveal">
-        <span class="label">Work sample · Benchmark</span>
-        <h3>Global trend: supporting zones at the top container ports</h3>
-        <p class="desc">Benchmark of the Top-10 global container ports (WSC 2024). Leading ports don’t stop at terminal handling — supporting zones create logistics, industrial, processing, warehousing and distribution activity.</p>
+    <article class="case" id="case-outlook">
+      <h3>Industry Outlook 2026 — PT Pelindo Sinergi Lokaseva</h3>
+      <p class="lede">Market and macroeconomic research for the company’s 2026 outlook: a global port benchmark, domestic container vessel trends, and an econometric model of Indonesia’s exports.</p>
+      <div class="chips"><span class="chip">Market research</span><span class="chip">Macroeconomic analysis</span><span class="chip">ARDL · EViews / Stata</span><span class="chip">Lloyd’s List · WSC data</span></div>
+      <div class="tabs" role="tablist" aria-label="Industry Outlook work samples">
+        <button class="tab" role="tab" aria-selected="true" aria-controls="t-ports" id="tb-ports">Port benchmark</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="t-vessel" id="tb-vessel" tabindex="-1">Vessel activity</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="t-ardl" id="tb-ardl" tabindex="-1">ARDL regression</button>
+      </div>
+
+      <div class="panel" role="tabpanel" id="t-ports" aria-labelledby="tb-ports">
+        <p class="desc"><b>Global trend: supporting zones at the top container ports.</b> Leading ports don’t stop at terminal handling — supporting zones create logistics, industrial, processing, warehousing and distribution activity.</p>
         <div class="kpis">
           <div class="kpi"><b>10 / 10</b><span>of the Top-10 WSC 2024 ports reviewed have an identified supporting ecosystem</span></div>
           <div class="kpi"><b>57 km²</b><span>JAFZA free zone near Jebel Ali Port; industrial + warehouse + offices</span></div>
           <div class="kpi"><b>8.30 m m²</b><span>Busan New Port Distripark — FTZ + value-added logistics</span></div>
           <div class="kpi"><b>1,000 acres</b><span>Port Klang Free Zone — free commercial + industrial zone</span></div>
         </div>
-        <div class="ws-split">
+        <div class="split">
           <div>
             <p class="chart-title">2025 container throughput<span>9 benchmark ports from the 2024 global Top 10 (million TEUs)</span></p>
             <div class="hbars" data-max="60">
@@ -683,277 +725,347 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
           </div>
         </div>
         <p class="src">Source: World Shipping Council — Top 50 Container Ports (statistics 2024). Review of the Top-10 WSC 2024; not an estimate for all ports worldwide.</p>
-      </article>
+      </div>
 
-      <!-- Container vessel activity -->
-      <article class="ws reveal">
-        <span class="label">Work sample · Market analysis</span>
-        <h3>Container vessel activity is shifting away from Java</h3>
-        <p class="desc">Analysis of container vessel port calls by island using Lloyd’s List Intelligence data, indexed to 2019 = 100, plus each island’s share of national port calls.</p>
+      <div class="panel" role="tabpanel" id="t-vessel" aria-labelledby="tb-vessel" hidden>
+        <p class="desc"><b>Container vessel activity is shifting away from Java.</b> Port calls by island from Lloyd’s List Intelligence, indexed to 2019 = 100, plus each island’s share of national container port calls.</p>
         <p class="chart-title">Java’s share of national container port calls</p>
-        <div class="shift">
-          <b>69%<small>2016</small></b><span class="arr">→</span><b>47%<small>6M 2026</small></b>
-        </div>
-        <div class="callout">Container ship activity is moving outside Java — Java’s share fell from 69% in 2016 to 47%, while Sumatra, Kalimantan, Sulawesi-Maluku, Balnusra and Papua gained.</div>
+        <div class="shift"><b>69%<small>2016</small></b><span class="arr">→</span><b>47%<small>6M 2026</small></b></div>
+        <div class="callout">Java’s share fell from 69% in 2016 to 47%, while Sumatra, Kalimantan, Sulawesi-Maluku, Balnusra and Papua gained.</div>
         <p class="src">Source: Lloyd’s List Intelligence.</p>
-      </article>
+      </div>
 
-      <!-- ARDL -->
-      <article class="ws reveal">
-        <span class="label">Work sample · Econometrics</span>
-        <h3>ARDL regression: exports vs exchange rate &amp; BI Rate</h3>
-        <p class="desc">Built an ARDL bounds-test model of Indonesia’s exports against the USD/IDR exchange rate and BI Rate to support the Industry Outlook 2026.</p>
-        <p class="chart-title">Bounds test<span>F-statistic vs I(1) upper bound at 5% (n = 15)</span></p>
-        <div class="hbars" data-max="8">
-          <div class="hbar"><span class="n">F-statistic</span><span class="t"><span class="f" data-v="6.783"></span><span class="v">6.783</span></span></div>
-          <div class="hbar"><span class="n">I(1) bound 5%</span><span class="t"><span class="f" data-v="4.428" style="background:var(--bar-2)"></span><span class="v">4.428</span></span></div>
-        </div>
-        <p style="margin:10px 0 16px"><span class="ok">✓ Cointegration — long-run relationship confirmed</span></p>
-        <div class="tbl-wrap">
-          <table class="tbl">
-            <thead><tr><th>Variable</th><th style="text-align:right">Coef.</th><th style="text-align:right">Prob.</th><th>Reading</th></tr></thead>
-            <tbody>
-              <tr><td>Exchange rate</td><td class="num">−2.6139</td><td class="num">0.0442</td><td>+1 IDR per USD → exports fall ≈ USD 2.61 m (5%)</td></tr>
-              <tr><td>BI Rate</td><td class="num">−2,210.57</td><td class="num">0.0097</td><td>+1 pp → exports fall ≈ USD 2.21 bn (1%)</td></tr>
-              <tr><td>Constant</td><td class="num">78,155.54</td><td class="num">0.0035</td><td>Significant</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="callout">Insight: a weaker rupiah does not automatically lift exports, as many exporters rely on imported inputs.</div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PROJECTS ============ -->
-<section id="projects">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div><span class="kicker">Innovation &amp; Dashboard Design</span><h2 class="title">The Projects</h2></div>
-      <p class="lede">Tools I helped build to replace manual work with live dashboards, plus an independent investment case study.</p>
-    </div>
-
-    <div class="proj">
-      <article class="pcard dark reveal">
-        <span class="num">Project 01 · 2026</span>
-        <div class="mock" aria-hidden="true">
-          <div class="side"></div>
-          <div class="main">
-            <div class="row"><div style="--c:#5b8def"></div><div style="--c:#3cb371"></div><div style="--c:#f2a33a"></div><div style="--c:#e05c5c"></div></div>
-            <div class="big"><div><span class="ring"></span></div><div><svg class="spark" viewBox="0 0 100 40" fill="none" stroke="#f2a33a" stroke-width="2.5"><path d="M2 34 L18 30 L30 8 L42 26 L56 28 L70 30 L84 32 L98 33"/></svg></div></div>
+      <div class="panel" role="tabpanel" id="t-ardl" aria-labelledby="tb-ardl" hidden>
+        <p class="desc"><b>ARDL bounds test: exports vs exchange rate &amp; BI Rate.</b> A model of Indonesia’s exports against the USD/IDR exchange rate and BI Rate to support the Industry Outlook 2026.</p>
+        <div class="split">
+          <div>
+            <p class="chart-title">Bounds test<span>F-statistic vs I(1) upper bound at 5% (n = 15)</span></p>
+            <div class="hbars" data-max="8">
+              <div class="hbar"><span class="n">F-statistic</span><span class="t"><span class="f" data-v="6.783"></span><span class="v">6.783</span></span></div>
+              <div class="hbar"><span class="n">I(1) bound 5%</span><span class="t"><span class="f alt" data-v="4.428"></span><span class="v">4.428</span></span></div>
+            </div>
+            <p style="margin-top:12px"><span class="ok">✓ Cointegration — long-run relationship confirmed</span></p>
           </div>
-        </div>
-        <h3>SI-REKAP PERJADIN – Travel Expense Recap System</h3>
-        <p>Team innovation at Kemenimipas: a web-based system replacing manual Excel recaps with real-time budget absorption dashboards.</p>
-        <div class="tags"><span class="tag">Google Apps Script</span><span class="tag">Dashboard</span><span class="tag">Budget monitoring</span></div>
-        <a class="btn light" href="https://script.google.com/macros/s/AKfycbwA5ElCYZvsyS7cHxXX55WejGfJZvDRKJGX6F4VXEF0bTF_f7Kyflm7ZPFSddqzRnp7Kw/exec" target="_blank" rel="noopener">View the project ↗</a>
-      </article>
-
-      <article class="pcard dark reveal">
-        <span class="num">Project 02 · 2026</span>
-        <div class="mock" aria-hidden="true">
-          <div class="side" style="background:#3b3b3d"></div>
-          <div class="main">
-            <div class="row"><div style="--c:#0d6efd"></div><div style="--c:#20c997"></div><div style="--c:#6f42c1"></div><div style="--c:#fd7e14"></div></div>
-            <div class="big"><div><svg class="spark" viewBox="0 0 100 40"><g fill="#545454"><rect x="8" y="18" width="12" height="20"/><rect x="28" y="10" width="12" height="28"/><rect x="48" y="22" width="12" height="16"/><rect x="68" y="4" width="12" height="34"/></g></svg></div><div><svg class="spark" viewBox="0 0 100 40" fill="none" stroke="#0d6efd" stroke-width="2.5"><path d="M2 32 L20 26 L36 28 L52 16 L68 18 L84 8 L98 6"/></svg></div></div>
+          <div class="tbl-wrap">
+            <table class="tbl">
+              <thead><tr><th>Variable</th><th style="text-align:right">Coef.</th><th style="text-align:right">Prob.</th></tr></thead>
+              <tbody>
+                <tr><td>Exchange rate (USD/IDR)</td><td class="num">−2.6139</td><td class="num">0.0442</td></tr>
+                <tr><td>BI Rate</td><td class="num">−2,210.57</td><td class="num">0.0097</td></tr>
+                <tr><td>Constant</td><td class="num">78,155.54</td><td class="num">0.0035</td></tr>
+              </tbody>
+            </table>
           </div>
-        </div>
-        <h3>Innovation Hub Dashboard – Pelindo Sinergi Lokaseva</h3>
-        <p>Google Sheets + Apps Script web app that turns the SPSL innovation data bank into a live monitoring dashboard.</p>
-        <div class="tags"><span class="tag">Google Sheets</span><span class="tag">Apps Script</span><span class="tag">Innovation monitoring</span></div>
-        <a class="btn light" href="https://script.google.com/macros/s/AKfycbwEEaQI-RCK1s31UnpRGKp6aLm6DQ1RZsMGfku10ogzkHh6GXuUIFlAGb1C1LMUXTYwJA/exec" target="_blank" rel="noopener">View the project ↗</a>
-      </article>
-    </div>
-
-    <article class="p3 reveal">
-      <div class="p3-head">
-        <div>
-          <span class="kicker">Project 03 · Oct 2026</span>
-          <h3>Investment Scheme Analysis – Profit Sharing vs Phantom Share</h3>
-          <p>Independent case study (skill test) for the Corporate Investment Staff selection • Financing scheme for PT Alpha Nusantara • Recommendation deck (PowerPoint) + Excel financial model.</p>
         </div>
       </div>
-      <div class="kpis">
-        <div class="kpi"><b>+41.7%</b><span>Projected revenue growth in 3 years (Rp12 bn → Rp17 bn)</span></div>
-        <div class="kpi"><b>72%</b><span>of net profit currently absorbed by bank installments</span></div>
-        <div class="kpi"><b>12.3% vs 12.7%</b><span>Investor IRR: Phantom Share vs Profit Sharing — nearly equal</span></div>
-        <div class="kpi"><b>Phantom Share</b><span>Recommended: cash Rp230–771 m higher, payout capped at 1.6x</span></div>
-      </div>
-      <div class="p3-charts">
-        <div>
-          <p class="chart-title">3-year projection<span>Revenue and EBITDA (Rp billion)</span></p>
-          <div class="legend"><span>Revenue</span><span class="alt">EBITDA</span></div>
-          <div class="vchart" style="--cols:4" data-max="19">
-            <div class="vgroup"><span class="vbar" data-v="12.0"><i>12.0</i></span><span class="vbar alt" data-v="1.8"><i>1.80</i></span></div>
-            <div class="vgroup"><span class="vbar" data-v="13.8"><i>13.8</i></span><span class="vbar alt" data-v="2.07"><i>2.07</i></span></div>
-            <div class="vgroup"><span class="vbar" data-v="15.456"><i>15.5</i></span><span class="vbar alt" data-v="2.3184"><i>2.32</i></span></div>
-            <div class="vgroup"><span class="vbar" data-v="17.0016"><i>17.0</i></span><span class="vbar alt" data-v="2.55024"><i>2.55</i></span></div>
-          </div>
-          <div class="vlabels" style="--cols:4"><span>Year 0<br>(actual)</span><span>Year 1</span><span>Year 2</span><span>Year 3</span></div>
-          <p class="note">Assumes revenue growth of 15%, 12%, 10% and a constant 15% EBITDA margin.</p>
-        </div>
-        <div>
-          <p class="chart-title">Payments to investor<span>Rp million</span></p>
-          <div class="legend"><span>Profit sharing</span><span class="alt">Phantom share</span></div>
-          <div class="vchart" style="--cols:3" data-max="3200">
-            <div class="vgroup"><span class="vbar" data-v="230"><i>230</i></span><span class="vbar alt" data-v="0"><i>0</i></span></div>
-            <div class="vgroup"><span class="vbar" data-v="257.6"><i>258</i></span><span class="vbar alt" data-v="0"><i>0</i></span></div>
-            <div class="vgroup"><span class="vbar" data-v="2283.4"><i>2,283</i></span><span class="vbar alt" data-v="2833.6"><i>2,834</i></span></div>
-          </div>
-          <div class="vlabels" style="--cols:3"><span>Year 1</span><span>Year 2</span><span>Year 3</span></div>
-          <p class="note">Profit sharing pays yearly and returns the Rp2 bn capital in Year 3; the phantom share is paid once at the end of Year 3.</p>
-        </div>
-        <div>
-          <p class="chart-title">Company cash balance<span>Year-end, Rp million</span></p>
-          <div class="legend"><span>Profit sharing</span><span class="alt">Phantom share</span></div>
-          <div class="vchart" style="--cols:3" data-max="2800">
-            <div class="vgroup"><span class="vbar" data-v="1000"><i>1,000</i></span><span class="vbar alt" data-v="1230"><i>1,230</i></span></div>
-            <div class="vgroup"><span class="vbar" data-v="1310.4"><i>1,310</i></span><span class="vbar alt" data-v="1798"><i>1,798</i></span></div>
-            <div class="vgroup"><span class="vbar" data-v="1723.8"><i>1,724</i></span><span class="vbar alt" data-v="2494.8"><i>2,495</i></span></div>
-          </div>
-          <div class="vlabels" style="--cols:3"><span>Year 1</span><span>Year 2</span><span>Year 3</span></div>
-          <p class="note">Before capital return (profit sharing) or the phantom share payout at the end of Year 3.</p>
-        </div>
-      </div>
-      <div class="callout">Investor returns are nearly equal (only 0.4% per year apart), but the phantom share keeps company cash Rp230–771 million higher with no routine payments for 3 years.</div>
+      <p class="cap" data-cap-for="t-ports"><b>Port benchmark:</b> all 10 of the top container ports reviewed have a logistics, industrial or free-trade zone linked to the port.</p>
+      <p class="cap" data-cap-for="t-vessel" hidden><b>Vessel activity:</b> Java’s share of national container port calls fell from 69% (2016) to 47% (6M 2026).</p>
+      <p class="cap" data-cap-for="t-ardl" hidden><b>Model result:</b> F-statistic 6.783 exceeds the 5% upper bound (4.428) — both rates have a significant long-run effect on exports.</p>
+
+      <h4 class="find-h">Key findings</h4>
+      <table class="findings">
+        <thead><tr><th>Area</th><th>Finding from the data</th><th>Implication</th></tr></thead>
+        <tbody>
+          <tr><td>Port ecosystem</td><td data-label="Finding">All <b>10 of 10</b> top container ports reviewed run logistics, industrial, bonded or free-trade zones linked to the port.</td><td data-label="Implication">Leading ports grow through supporting ecosystems, not terminal handling alone.</td></tr>
+          <tr><td>Vessel activity</td><td data-label="Finding">Java’s share of container port calls fell from <b>69%</b> (2016) to <b>47%</b> (6M 2026).</td><td data-label="Implication">Container growth is shifting to ports outside Java.</td></tr>
+          <tr><td>Exchange rate</td><td data-label="Finding">+1 IDR per USD → exports fall about <b>USD 2.61 million</b> (significant at 5%).</td><td data-label="Implication">A weaker rupiah does not automatically lift exports, as many exporters rely on imported inputs.</td></tr>
+          <tr><td>BI Rate</td><td data-label="Finding">+1 pp → exports fall about <b>USD 2.21 billion</b> (significant at 1%).</td><td data-label="Implication">Higher rates raise production and credit costs for exporters, reducing export capacity.</td></tr>
+        </tbody>
+      </table>
     </article>
+
+    <article class="case" id="case-invest">
+      <h3>Investment Scheme Analysis — Profit Sharing vs Phantom Share</h3>
+      <p class="lede">Independent case study (skill test) for a Corporate Investment Staff selection: choosing a financing scheme for PT Alpha Nusantara. Delivered as a recommendation deck (PowerPoint) plus an Excel financial model.</p>
+      <div class="chips"><span class="chip">Financial modelling · Excel</span><span class="chip">IRR</span><span class="chip">Cash-flow projection</span><span class="chip">Oct 2026</span></div>
+      <div class="panel">
+        <div class="kpis">
+          <div class="kpi"><b>+41.7%</b><span>Projected revenue growth in 3 years (Rp12 bn → Rp17 bn)</span></div>
+          <div class="kpi"><b>72%</b><span>of net profit currently absorbed by bank installments</span></div>
+          <div class="kpi"><b>12.3% vs 12.7%</b><span>Investor IRR: Phantom Share vs Profit Sharing — nearly equal</span></div>
+          <div class="kpi hl"><b>Phantom Share</b><span>Recommended: cash Rp230–771 m higher, payout capped at 1.6x</span></div>
+        </div>
+        <div class="p-charts">
+          <div>
+            <p class="chart-title">3-year projection<span>Revenue and EBITDA (Rp billion)</span></p>
+            <div class="legend"><span>Revenue</span><span class="alt">EBITDA</span></div>
+            <div class="vchart" style="--cols:4" data-max="19">
+              <div class="vgroup"><span class="vbar" data-v="12.0"><i>12.0</i></span><span class="vbar alt" data-v="1.8"><i>1.80</i></span></div>
+              <div class="vgroup"><span class="vbar" data-v="13.8"><i>13.8</i></span><span class="vbar alt" data-v="2.07"><i>2.07</i></span></div>
+              <div class="vgroup"><span class="vbar" data-v="15.456"><i>15.5</i></span><span class="vbar alt" data-v="2.3184"><i>2.32</i></span></div>
+              <div class="vgroup"><span class="vbar" data-v="17.0016"><i>17.0</i></span><span class="vbar alt" data-v="2.55024"><i>2.55</i></span></div>
+            </div>
+            <div class="vlabels" style="--cols:4"><span>Year 0<br>(actual)</span><span>Year 1</span><span>Year 2</span><span>Year 3</span></div>
+            <p class="nt">Revenue growth of 15%, 12%, 10% and a constant 15% EBITDA margin.</p>
+          </div>
+          <div>
+            <p class="chart-title">Payments to investor<span>Rp million</span></p>
+            <div class="legend"><span>Profit sharing</span><span class="alt">Phantom share</span></div>
+            <div class="vchart" style="--cols:3" data-max="3200">
+              <div class="vgroup"><span class="vbar" data-v="230"><i>230</i></span><span class="vbar alt" data-v="0"><i>0</i></span></div>
+              <div class="vgroup"><span class="vbar" data-v="257.6"><i>258</i></span><span class="vbar alt" data-v="0"><i>0</i></span></div>
+              <div class="vgroup"><span class="vbar" data-v="2283.4"><i>2,283</i></span><span class="vbar alt" data-v="2833.6"><i>2,834</i></span></div>
+            </div>
+            <div class="vlabels" style="--cols:3"><span>Year 1</span><span>Year 2</span><span>Year 3</span></div>
+            <p class="nt">Profit sharing pays yearly and returns the Rp2 bn capital in Year 3; the phantom share is paid once at the end of Year 3.</p>
+          </div>
+          <div>
+            <p class="chart-title">Company cash balance<span>Year-end, Rp million</span></p>
+            <div class="legend"><span>Profit sharing</span><span class="alt">Phantom share</span></div>
+            <div class="vchart" style="--cols:3" data-max="2800">
+              <div class="vgroup"><span class="vbar" data-v="1000"><i>1,000</i></span><span class="vbar alt" data-v="1230"><i>1,230</i></span></div>
+              <div class="vgroup"><span class="vbar" data-v="1310.4"><i>1,310</i></span><span class="vbar alt" data-v="1798"><i>1,798</i></span></div>
+              <div class="vgroup"><span class="vbar" data-v="1723.8"><i>1,724</i></span><span class="vbar alt" data-v="2494.8"><i>2,495</i></span></div>
+            </div>
+            <div class="vlabels" style="--cols:3"><span>Year 1</span><span>Year 2</span><span>Year 3</span></div>
+            <p class="nt">Before capital return (profit sharing) or the phantom share payout at the end of Year 3.</p>
+          </div>
+        </div>
+      </div>
+      <p class="cap"><b>Recommendation:</b> Phantom share — investor returns are almost the same, but the company keeps more cash during the 3 years.</p>
+
+      <h4 class="find-h">Findings &amp; recommendation</h4>
+      <table class="findings">
+        <thead><tr><th>Area</th><th>Finding from the model</th><th>Recommendation</th></tr></thead>
+        <tbody>
+          <tr><td>Investor return</td><td data-label="Finding">IRR <b>12.7%</b> (profit sharing) vs <b>12.3%</b> (phantom share) — only 0.4% per year apart.</td><td data-label="Recommendation">Return is not the deciding factor; compare the impact on company cash.</td></tr>
+          <tr><td>Cash flow</td><td data-label="Finding">Phantom share keeps year-end cash <b>Rp230–771 million</b> higher (Rp2.49 bn vs Rp1.72 bn in Year 3).</td><td data-label="Recommendation">Choose the phantom share to keep liquidity for operations and growth.</td></tr>
+          <tr><td>Debt burden</td><td data-label="Finding">Bank installments already absorb <b>72%</b> of net profit.</td><td data-label="Recommendation">Avoid adding routine yearly payouts; a single payout at the end of Year 3 fits better.</td></tr>
+          <tr><td>Payout risk</td><td data-label="Finding">Phantom share payout is capped at <b>1.6x</b> the investment.</td><td data-label="Recommendation">The cap limits the company’s maximum obligation if growth beats projections.</td></tr>
+        </tbody>
+      </table>
+    </article>
+
+    <div id="more-work">
+      <h3 class="sub-h" style="margin-top:8px">Dashboards &amp; web apps</h3>
+      <div class="more">
+        <article class="mcard reveal">
+          <span class="k">2026 · Kemenimipas</span>
+          <div class="mock" aria-hidden="true"><div class="side"></div><div class="main"><div class="row"><div style="--c:#5b8def"></div><div style="--c:#3cb371"></div><div style="--c:#f2a33a"></div><div style="--c:#e05c5c"></div></div><div class="big"><div><span class="ring"></span></div><div><svg class="spark" viewBox="0 0 100 40" fill="none" stroke="#f2a33a" stroke-width="2.5"><path d="M2 34 L18 30 L30 8 L42 26 L56 28 L70 30 L84 32 L98 33"/></svg></div></div></div></div>
+          <h4>SI-REKAP PERJADIN – Travel Expense Recap System</h4>
+          <p>Team innovation: a web-based system replacing manual Excel recaps with real-time budget absorption dashboards.</p>
+          <a class="btn" href="https://script.google.com/macros/s/AKfycbwA5ElCYZvsyS7cHxXX55WejGfJZvDRKJGX6F4VXEF0bTF_f7Kyflm7ZPFSddqzRnp7Kw/exec" target="_blank" rel="noopener">View the project <svg class="ico"><use href="#i-ext"/></svg></a>
+        </article>
+        <article class="mcard reveal">
+          <span class="k">2026 · Pelindo Sinergi Lokaseva</span>
+          <div class="mock" aria-hidden="true"><div class="side" style="background:#3b3b3d"></div><div class="main"><div class="row"><div style="--c:#0d6efd"></div><div style="--c:#20c997"></div><div style="--c:#6f42c1"></div><div style="--c:#fd7e14"></div></div><div class="big"><div><svg class="spark" viewBox="0 0 100 40"><g fill="#545454"><rect x="8" y="18" width="12" height="20"/><rect x="28" y="10" width="12" height="28"/><rect x="48" y="22" width="12" height="16"/><rect x="68" y="4" width="12" height="34"/></g></svg></div><div><svg class="spark" viewBox="0 0 100 40" fill="none" stroke="#0d6efd" stroke-width="2.5"><path d="M2 32 L20 26 L36 28 L52 16 L68 18 L84 8 L98 6"/></svg></div></div></div></div>
+          <h4>Innovation Hub Dashboard</h4>
+          <p>Google Sheets + Apps Script web app that turns the SPSL innovation data bank into a live monitoring dashboard.</p>
+          <a class="btn" href="https://script.google.com/macros/s/AKfycbwEEaQI-RCK1s31UnpRGKp6aLm6DQ1RZsMGfku10ogzkHh6GXuUIFlAGb1C1LMUXTYwJA/exec" target="_blank" rel="noopener">View the project <svg class="ico"><use href="#i-ext"/></svg></a>
+        </article>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ============ SKILLS ============ -->
-<section id="skills" class="dark" style="background:var(--panel-2)">
+<!-- ===================== SKILLS ===================== -->
+<section id="skills" class="light">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div><span class="kicker">What I bring</span><h2 class="title">Skills</h2></div>
-      <div class="cv-box"><p class="lede">Tools: Excel • Stata • EViews • DELMIA Quintiq • Google Sheets &amp; Apps Script</p><a class="btn light" href="https://drive.google.com/file/d/1XIF4_O2ZOfrAq-InvuktB1GOjL13QoBQ/view?usp=drivesdk" target="_blank" rel="noopener">Curriculum Vitae — view my CV ↗</a></div>
-    </div>
-    <div class="skills">
-      <div class="sk reveal">
-        <h3>Hardskill</h3>
-        <div class="chips">
-          <span class="chip">Strategic Planning</span><span class="chip o">Market Research</span><span class="chip o">Budget Planning</span>
-          <span class="chip">Macroeconomic Analysis</span><span class="chip o">Stata &amp; EViews</span><span class="chip">Supply Chain Planning</span>
-          <span class="chip o">Microsoft Office</span><span class="chip">Financial Reporting</span>
-        </div>
+    <div class="sec-head"><h2>Skills</h2><p>The tools and methods I use in planning, finance and analysis work.</p></div>
+    <div class="skills reveal">
+      <div class="sk">
+        <h3>Strategy &amp; finance</h3>
+        <div class="tags"><span>Strategic Planning</span><span class="o">Budget Planning (RKA)</span><span>Financial Reporting</span><span class="o">Supply Chain Planning</span></div>
+        <p class="used">Used at Pelindo, Kemenimipas and Pertamina</p>
       </div>
-      <div class="sk reveal">
-        <h3>Softskill</h3>
-        <div class="chips">
-          <span class="chip o">Analytical Thinking</span><span class="chip">Problem Solving</span><span class="chip o">Organizational Skills</span>
-          <span class="chip">Attention to Detail</span><span class="chip o">Communication</span><span class="chip">Public Speaking</span>
+      <div class="sk">
+        <h3>Research &amp; analysis</h3>
+        <div class="tags"><span>Market Research</span><span class="o">Macroeconomic Analysis</span><span>Econometrics (ARDL)</span><span class="o">Financial Modelling</span></div>
+        <p class="used">Used in the Industry Outlook 2026 and investment case study</p>
+      </div>
+      <div class="sk">
+        <h3>Tools</h3>
+        <div class="tags"><span>Microsoft Excel</span><span class="o">Stata &amp; EViews</span><span>Google Sheets &amp; Apps Script</span><span class="o">DELMIA Quintiq</span><span>PowerPoint</span></div>
+        <p class="used">Excel: Pivot Table, VLOOKUP, data cleaning, data visualization</p>
+      </div>
+      <div class="sk-wide">
+        <div class="sk">
+          <h3>Soft skills</h3>
+          <p>Analytical Thinking, Problem Solving, Organizational Skills, Attention to Detail, Communication, Public Speaking.</p>
+        </div>
+        <div class="sk">
+          <h3>Languages &amp; interests</h3>
+          <p><b>Indonesian</b> (native), <b>English</b> (intermediate). Interested in strategic &amp; corporate planning, financial &amp; economic analysis, and econometrics &amp; data analysis.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ CERTIFICATES ============ -->
-<section id="certificates">
+<!-- ===================== ACHIEVEMENTS & TRAINING ===================== -->
+<section id="achievements" class="light" style="padding-top:24px">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div><span class="kicker">Credentials &amp; Achievements</span><h2 class="title">Certificates</h2></div>
-      <p class="lede">Professional development, competency certification, awards and global exposure. Tap any certificate to view it full size.</p>
+    <div class="sec-head"><h2>Achievements &amp; training</h2></div>
+    <div class="award reveal">
+      <div>
+        <span class="badge"><svg class="ico"><use href="#i-award"/></svg>2nd Runner-Up</span>
+        <h3>HERO 11th International Call for Papers 2023</h3>
+        <p>Internal academic competition at the Faculty of Economics and Business, Universitas Muhammadiyah Yogyakarta, themed <b>“Increasing Economic Resilience in Era 4.0 to Realize Sustainable Development Goals 2030”</b>.</p>
+        <p>Yogyakarta, June 2023</p>
+      </div>
+      <button data-group="award" data-src="assets/certs/hero-2nd-runner-up.webp" data-cap="2nd Runner-Up – HERO 11th International Call for Papers 2023"><img src="assets/certs/hero-2nd-runner-up.webp" alt="HERO 11th 2nd Runner-Up certificate" loading="lazy"></button>
     </div>
-    <div class="cert-groups">
-      <div class="cg reveal">
-        <div class="cg-head"><h3>Professional Development</h3><span>4 certificates</span></div>
-        <div class="cgrid">
-          <button class="ccard" data-group="cert" data-src="assets/certs/cargo-logistics.webp" data-cap="Cargo Logistics Preparation Procedures – InJourney Aviation Services"><span class="im"><img src="assets/certs/cargo-logistics-thumb.webp" alt="Cargo Logistics Preparation Procedures certificate" loading="lazy"></span><span class="ct"><b>Cargo Logistics Preparation Procedures</b><small>InJourney Aviation Services</small></span></button>
-          <button class="ccard" data-group="cert" data-src="assets/certs/planning-organizing-controlling.webp" data-cap="Planning, Organizing &amp; Controlling – CAMY Collaboration Academy"><span class="im"><img src="assets/certs/planning-organizing-controlling-thumb.webp" alt="Planning, Organizing &amp; Controlling certificate" loading="lazy"></span><span class="ct"><b>Planning, Organizing &amp; Controlling</b><small>CAMY Collaboration Academy</small></span></button>
-          <button class="ccard" data-group="cert" data-src="assets/certs/financial-planning-asset.webp" data-cap="Financial Planning &amp; Asset Management – CAMY Collaboration Academy"><span class="im"><img src="assets/certs/financial-planning-asset-thumb.webp" alt="Financial Planning &amp; Asset Management certificate" loading="lazy"></span><span class="ct"><b>Financial Planning &amp; Asset Management</b><small>CAMY Collaboration Academy</small></span></button>
-          <button class="ccard" data-group="cert" data-src="assets/certs/corporate-finance-myskill.webp" data-cap="Corporate Finance – MySkill · Skill Specialization"><span class="im"><img src="assets/certs/corporate-finance-myskill-thumb.webp" alt="Corporate Finance certificate" loading="lazy"></span><span class="ct"><b>Corporate Finance</b><small>MySkill · Skill Specialization</small></span></button>
+
+    <h3 class="sub-h" id="training">Training</h3>
+    <div class="training">
+      <article class="log reveal">
+        <div class="log-meta"><span class="when">Oct 2026</span><span>InJourney Aviation Services</span></div>
+        <div class="log-body">
+          <h3>Cargo Logistics Preparation Procedures</h3>
+          <p>Training on cargo logistics preparation procedures, completed with a score of 80.</p>
+          <div class="thumbs"><button class="thumb contain" data-group="train" data-src="assets/certs/cargo-logistics.webp" data-cap="Cargo Logistics Preparation Procedures – InJourney Aviation Services"><img src="assets/certs/cargo-logistics-thumb.webp" alt="Cargo Logistics certificate" loading="lazy"></button></div>
         </div>
+      </article>
+      <article class="log reveal">
+        <div class="log-meta"><span class="when">Oct 2026</span><span>MySkill</span></div>
+        <div class="log-body">
+          <h3>Corporate Finance — Skill Specialization</h3>
+          <p>16-course learning path in accounting, finance and tax.</p>
+          <div class="thumbs"><button class="thumb contain" data-group="train" data-src="assets/certs/corporate-finance-myskill.webp" data-cap="Corporate Finance – MySkill"><img src="assets/certs/corporate-finance-myskill-thumb.webp" alt="Corporate Finance certificate" loading="lazy"></button></div>
+        </div>
+      </article>
+      <article class="log reveal">
+        <div class="log-meta"><span class="when">Jan – May 2026</span><span>CAMY Collaboration Academy</span></div>
+        <div class="log-body">
+          <h3>Financial Planning &amp; Asset Management · Planning, Organizing &amp; Controlling</h3>
+          <p>Two management trainings, scored 100 and 90.</p>
+          <div class="thumbs">
+            <button class="thumb contain" data-group="train" data-src="assets/certs/financial-planning-asset.webp" data-cap="Financial Planning &amp; Asset Management – CAMY"><img src="assets/certs/financial-planning-asset-thumb.webp" alt="Financial Planning certificate" loading="lazy"></button>
+            <button class="thumb contain" data-group="train" data-src="assets/certs/planning-organizing-controlling.webp" data-cap="Planning, Organizing &amp; Controlling – CAMY"><img src="assets/certs/planning-organizing-controlling-thumb.webp" alt="POC certificate" loading="lazy"></button>
+          </div>
+        </div>
+      </article>
+      <article class="log reveal">
+        <div class="log-meta"><span class="when">Feb 2025</span><span>BNSP · LSP UMY</span></div>
+        <div class="log-body">
+          <h3>BNSP Certificate of Competence</h3>
+          <p>National professional certification issued through the Professional Certification Institute of UMY.</p>
+          <div class="thumbs"><button class="thumb contain" data-group="train" data-src="assets/certs/bnsp-competency.webp" data-cap="BNSP Certificate of Competence – LSP UMY"><img src="assets/certs/bnsp-competency-thumb.webp" alt="BNSP certificate" loading="lazy"></button></div>
+        </div>
+      </article>
+      <article class="log reveal">
+        <div class="log-meta"><span class="when">Sep 2024</span><span>Universitas Gadjah Mada</span></div>
+        <div class="log-body">
+          <h3>Susenas Data Processing with STATA</h3>
+          <p>Workshop on processing National Socio-Economic Survey (Susenas) data in Stata.</p>
+          <div class="thumbs"><button class="thumb contain" data-group="train" data-src="assets/certs/susenas-stata-ugm.webp" data-cap="Susenas Data Processing with STATA – UGM"><img src="assets/certs/susenas-stata-ugm-thumb.webp" alt="Stata workshop certificate" loading="lazy"></button></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EDUCATION ===================== -->
+<section id="education" class="light" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head"><h2>Education</h2></div>
+    <article class="log reveal" style="border-top:0;padding-top:4px">
+      <div class="log-meta"><span class="when">2021 – 2025</span><span>Sep 2021 – Apr 2025</span></div>
+      <div class="log-body">
+        <div class="edu-row">
+          <span class="edu-logo">UMY</span>
+          <div>
+            <h3>Universitas Muhammadiyah Yogyakarta</h3>
+            <p class="role">Bachelor of International Economics · GPA 3.84 / 4.00</p>
+          </div>
+        </div>
+        <ul class="edu-more">
+          <li>International Program for Islamic Economics and Finance (IPIEF)</li>
+          <li><b>Thesis:</b> Analysis of Factors Affecting Agricultural Value Added (AVA) in Southeast Asia</li>
+          <li><b>Before UMY:</b> SMAN 2 Kota Blitar (2019 – 2021) · SMP Laboratorium Kota Malang (2016 – 2018)</li>
+        </ul>
       </div>
-      <div class="cg reveal">
-        <div class="cg-head"><h3>Essential Skills</h3><span>6 certificates</span></div>
-        <div class="cgrid">
-          <button class="ccard" data-group="cert" data-src="assets/certs/ms-office-myskill.webp" data-cap="MS Office Path (Excel, Word &amp; PowerPoint) – MySkill · Professional Skill"><span class="im"><img src="assets/certs/ms-office-myskill-thumb.webp" alt="MS Office Path (Excel, Word &amp; PowerPoint) certificate" loading="lazy"></span><span class="ct"><b>MS Office Path (Excel, Word &amp; PowerPoint)</b><small>MySkill · Professional Skill</small></span></button>
-          <button class="ccard" data-group="cert" data-src="assets/certs/supply-chain-alison.webp" data-cap="Mastering Supply Chain &amp; Logistics Management – Alison"><span class="im"><img src="assets/certs/supply-chain-alison-thumb.webp" alt="Mastering Supply Chain &amp; Logistics Management certificate" loading="lazy"></span><span class="ct"><b>Mastering Supply Chain &amp; Logistics Management</b><small>Alison</small></span></button>
-          <button class="ccard" data-group="cert" data-src="assets/certs/maganghub-kemenimipas.webp" data-cap="MagangHub Internship – Kemnaker RI · Kemenimipas"><span class="im"><img src="assets/certs/maganghub-kemenimipas-thumb.webp" alt="MagangHub Internship certificate" loading="lazy"></span><span class="ct"><b>MagangHub Internship</b><small>Kemnaker RI · Kemenimipas</small></span></button>
-          <button class="ccard" data-group="cert" data-src="assets/certs/design-thinking.webp" data-cap="Design Thinking – Kemnaker · Essential Skills"><span class="im"><img src="assets/certs/design-thinking-thumb.webp" alt="Design Thinking certificate" loading="lazy"></span><span class="ct"><b>Design Thinking</b><small>Kemnaker · Essential Skills</small></span></button>
-          <button class="ccard" data-group="cert" data-src="assets/certs/digital-disruption.webp" data-cap="Digital Disruption &amp; Transformation – Kemnaker · Essential Skills"><span class="im"><img src="assets/certs/digital-disruption-thumb.webp" alt="Digital Disruption &amp; Transformation certificate" loading="lazy"></span><span class="ct"><b>Digital Disruption &amp; Transformation</b><small>Kemnaker · Essential Skills</small></span></button>
-          <button class="ccard" data-group="cert" data-src="assets/certs/emotional-resilience.webp" data-cap="Emotional Resilience – Kemnaker · Essential Skills"><span class="im"><img src="assets/certs/emotional-resilience-thumb.webp" alt="Emotional Resilience certificate" loading="lazy"></span><span class="ct"><b>Emotional Resilience</b><small>Kemnaker · Essential Skills</small></span></button>
-        </div>
+    </article>
+
+    <h3 class="sub-h">Additional certificates</h3>
+    <p style="color:var(--ink-2);margin-top:-10px">Click a certificate to enlarge it.</p>
+    <div class="cg reveal">
+      <h4>Essential skills</h4>
+      <div class="cgrid">
+        <button class="ccard" data-group="cert" data-src="assets/certs/ms-office-myskill.webp" data-cap="MS Office Path (Excel, Word &amp; PowerPoint) – MySkill"><span class="im"><img src="assets/certs/ms-office-myskill-thumb.webp" alt="" loading="lazy"></span><span class="ct"><b>MS Office Path (Excel, Word &amp; PowerPoint)</b><small>MySkill · Oct 2026</small></span></button>
+        <button class="ccard" data-group="cert" data-src="assets/certs/supply-chain-alison.webp" data-cap="Mastering Supply Chain &amp; Logistics Management – Alison"><span class="im"><img src="assets/certs/supply-chain-alison-thumb.webp" alt="" loading="lazy"></span><span class="ct"><b>Mastering Supply Chain &amp; Logistics Management</b><small>Alison · Oct 2026</small></span></button>
+        <button class="ccard" data-group="cert" data-src="assets/certs/digital-disruption.webp" data-cap="Digital Disruption &amp; Transformation – Kemnaker"><span class="im"><img src="assets/certs/digital-disruption-thumb.webp" alt="" loading="lazy"></span><span class="ct"><b>Digital Disruption &amp; Transformation</b><small>Kemnaker · Mar 2026</small></span></button>
+        <button class="ccard" data-group="cert" data-src="assets/certs/emotional-resilience.webp" data-cap="Emotional Resilience – Kemnaker"><span class="im"><img src="assets/certs/emotional-resilience-thumb.webp" alt="" loading="lazy"></span><span class="ct"><b>Emotional Resilience</b><small>Kemnaker · Mar 2026</small></span></button>
+        <button class="ccard" data-group="cert" data-src="assets/certs/design-thinking.webp" data-cap="Design Thinking – Kemnaker"><span class="im"><img src="assets/certs/design-thinking-thumb.webp" alt="" loading="lazy"></span><span class="ct"><b>Design Thinking</b><small>Kemnaker · Jan 2026</small></span></button>
       </div>
-      <div class="cg reveal">
-        <div class="cg-head"><h3>Credentials &amp; Achievements</h3><span>5 certificates</span></div>
-        <div class="cgrid">
-          <button class="ccard" data-group="cert" data-src="assets/certs/hero-2nd-runner-up.webp" data-cap="2nd Runner Up – HERO 11th International Call for Papers – FEB UMY · 2023"><span class="im"><img src="assets/certs/hero-2nd-runner-up-thumb.webp" alt="2nd Runner Up – HERO 11th International Call for Papers certificate" loading="lazy"></span><span class="ct"><b>2nd Runner Up – HERO 11th International Call for Papers</b><small>FEB UMY · 2023</small></span></button>
-          <button class="ccard" data-group="cert" data-src="assets/certs/susenas-stata-ugm.webp" data-cap="Susenas Data Processing with STATA – Universitas Gadjah Mada"><span class="im"><img src="assets/certs/susenas-stata-ugm-thumb.webp" alt="Susenas Data Processing with STATA certificate" loading="lazy"></span><span class="ct"><b>Susenas Data Processing with STATA</b><small>Universitas Gadjah Mada</small></span></button>
-          <button class="ccard" data-group="cert" data-src="assets/certs/bnsp-competency.webp" data-cap="BNSP Certificate of Competence – LSP UMY"><span class="im"><img src="assets/certs/bnsp-competency-thumb.webp" alt="BNSP Certificate of Competence certificate" loading="lazy"></span><span class="ct"><b>BNSP Certificate of Competence</b><small>LSP UMY</small></span></button>
-          <button class="ccard" data-group="cert" data-src="assets/certs/excel-training-umy.webp" data-cap="Microsoft Excel Training – Pusat Pengembangan Ekonomi, FEB UMY"><span class="im"><img src="assets/certs/excel-training-umy-thumb.webp" alt="Microsoft Excel Training certificate" loading="lazy"></span><span class="ct"><b>Microsoft Excel Training</b><small>Pusat Pengembangan Ekonomi, FEB UMY</small></span></button>
-          <button class="ccard" data-group="cert" data-src="assets/certs/applied-ms-office.webp" data-cap="Applied Microsoft Office – Trust Training Partners · UMY"><span class="im"><img src="assets/certs/applied-ms-office-thumb.webp" alt="Applied Microsoft Office certificate" loading="lazy"></span><span class="ct"><b>Applied Microsoft Office</b><small>Trust Training Partners · UMY</small></span></button>
-        </div>
+    </div>
+    <div class="cg reveal">
+      <h4>Microsoft Office</h4>
+      <div class="cgrid">
+        <button class="ccard" data-group="cert" data-src="assets/certs/excel-training-umy.webp" data-cap="Microsoft Excel Training – FEB UMY"><span class="im"><img src="assets/certs/excel-training-umy-thumb.webp" alt="" loading="lazy"></span><span class="ct"><b>Microsoft Excel Training</b><small>FEB UMY · Sep 2024</small></span></button>
+        <button class="ccard" data-group="cert" data-src="assets/certs/applied-ms-office.webp" data-cap="Applied Microsoft Office – Trust Training Partners"><span class="im"><img src="assets/certs/applied-ms-office-thumb.webp" alt="" loading="lazy"></span><span class="ct"><b>Applied Microsoft Office</b><small>Trust Training Partners · May 2024</small></span></button>
       </div>
-      <div class="cg reveal">
-        <div class="cg-head"><h3>Global Exposure</h3><span>3 certificates</span></div>
-        <div class="cgrid">
-          <button class="ccard" data-group="cert" data-src="assets/certs/kkl-malaysia.webp" data-cap="Field Study (KKL) – Malaysia – IPIEF UMY · Jan 2023"><span class="im"><img src="assets/certs/kkl-malaysia-thumb.webp" alt="Field Study (KKL) – Malaysia certificate" loading="lazy"></span><span class="ct"><b>Field Study (KKL) – Malaysia</b><small>IPIEF UMY · Jan 2023</small></span></button>
-          <button class="ccard" data-group="cert" data-src="assets/certs/uitm-melaka.webp" data-cap="Academic Trip &amp; CSR – UiTM Melaka – Universiti Teknologi MARA"><span class="im"><img src="assets/certs/uitm-melaka-thumb.webp" alt="Academic Trip &amp; CSR – UiTM Melaka certificate" loading="lazy"></span><span class="ct"><b>Academic Trip &amp; CSR – UiTM Melaka</b><small>Universiti Teknologi MARA</small></span></button>
-          <button class="ccard" data-group="cert" data-src="assets/certs/kkn-umy.webp" data-cap="Community Service (KKN) – LPM UMY"><span class="im"><img src="assets/certs/kkn-umy-thumb.webp" alt="Community Service (KKN) certificate" loading="lazy"></span><span class="ct"><b>Community Service (KKN)</b><small>LPM UMY</small></span></button>
-        </div>
+    </div>
+    <div class="cg reveal">
+      <h4>Global exposure &amp; community</h4>
+      <div class="cgrid">
+        <button class="ccard" data-group="cert" data-src="assets/certs/kkl-malaysia.webp" data-cap="Field Study (KKL) – Malaysia, IPIEF UMY"><span class="im"><img src="assets/certs/kkl-malaysia-thumb.webp" alt="" loading="lazy"></span><span class="ct"><b>Field Study (KKL) – Malaysia</b><small>IPIEF UMY · Jan 2023</small></span></button>
+        <button class="ccard" data-group="cert" data-src="assets/certs/uitm-melaka.webp" data-cap="Academic Trip &amp; CSR – UiTM Melaka"><span class="im"><img src="assets/certs/uitm-melaka-thumb.webp" alt="" loading="lazy"></span><span class="ct"><b>Academic Trip &amp; CSR – UiTM Melaka</b><small>Universiti Teknologi MARA · Nov 2023</small></span></button>
+        <button class="ccard" data-group="cert" data-src="assets/certs/kkn-umy.webp" data-cap="Community Service (KKN) – LPM UMY"><span class="im"><img src="assets/certs/kkn-umy-thumb.webp" alt="" loading="lazy"></span><span class="ct"><b>Community Service (KKN)</b><small>LPM UMY · 2024</small></span></button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
+<!-- ===================== CONTACT ===================== -->
+<div class="stripe" aria-hidden="true"></div>
 <section id="contact" class="dark contact">
   <div class="wrap">
-    <h2 class="title reveal">Let’s Work Together</h2>
-    <p class="lede reveal">Open to opportunities in strategic planning, corporate finance and business analysis. Reach me through any of the channels below.</p>
-    <div class="touch reveal">
-      <a class="tcard" href="mailto:rizkaayudwisugiharto27@gmail.com">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg>
-        <span class="arrow">↗</span><small>rizkaayudwisugiharto27@gmail.com</small></a>
-      <a class="tcard" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.06c.53-1 1.840-2.05 3.78-2.05 4.04 0 4.79 2.66 4.79 6.12V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4z"/></svg>
-        <span class="arrow">↗</span><small>linkedin.com/in/rizkaayudwi</small></a>
-      <a class="tcard" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-        <span class="arrow">↗</span><small>instagram.com/rizkaayudwi</small></a>
-      <a class="tcard" href="https://wa.me/6285257422314" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-        <span class="arrow">↗</span><small>wa.me/6285257422314</small></a>
+    <h2>Looking for a role in strategic planning &amp; corporate finance</h2>
+    <p class="sub">Open to roles in corporate planning, budgeting, financial analysis and business research. The fastest way to reach me is email or WhatsApp.</p>
+    <a class="mail" href="mailto:rizkaayudwisugiharto27@gmail.com">rizkaayudwisugiharto27@gmail.com</a>
+    <div class="contact-grid">
+      <a class="ccontact" href="https://wa.me/6285257422314" target="_blank" rel="noopener"><small>WhatsApp</small><b>0852-5742-2314</b></a>
+      <a class="ccontact" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener"><small>LinkedIn</small><b>Rizka Ayu Dwi Sugiharto</b></a>
+      <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
+      <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=1" target="_blank" rel="noopener"><small>Portfolio</small><b>Download Portfolio (PDF)</b></a>
     </div>
-    <p class="reveal" style="margin-top:30px"><a class="btn light" href="https://drive.google.com/file/d/1XIF4_O2ZOfrAq-InvuktB1GOjL13QoBQ/view?usp=drivesdk" target="_blank" rel="noopener">Download / view my CV ↗</a></p>
+    <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>
 </section>
 </main>
 
-<footer>
-  <div class="wrap"><span>© 2026 Rizka Ayu Dwi Sugiharto</span><span>Strategic Planning &amp; Finance · South Jakarta</span></div>
-</footer>
+<footer><div class="wrap">© 2026 Rizka Ayu Dwi Sugiharto</div></footer>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
-  <button class="btn light x" id="lbClose">Close ✕</button>
-  <button class="btn light nav-b prev" id="lbPrev" aria-label="Previous">‹</button>
+  <button class="btn x" id="lbClose">Close ✕</button>
+  <button class="btn nb prev" id="lbPrev" aria-label="Previous">‹</button>
   <img id="lbImg" alt="">
   <p id="lbCap"></p>
-  <button class="btn light nav-b next" id="lbNext" aria-label="Next">›</button>
+  <button class="btn nb next" id="lbNext" aria-label="Next">›</button>
 </div>
 
 <script>
 (function(){
   // Mobile menu
-  var burger=document.getElementById('burger'),menu=document.getElementById('menu');
-  burger.addEventListener('click',function(){var o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o);});
-  menu.addEventListener('click',function(e){if(e.target.tagName==='A'){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');}});
+  var btn=document.getElementById('menuBtn'),menu=document.getElementById('menu');
+  btn.addEventListener('click',function(){var o=menu.classList.toggle('open');btn.setAttribute('aria-expanded',o);});
+  menu.addEventListener('click',function(e){if(e.target.tagName==='A'){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
 
   // Chart sizes from data-v / data-max
   document.querySelectorAll('.hbars').forEach(function(c){var m=+c.dataset.max;
-    c.querySelectorAll('.f').forEach(function(f){f.parentNode.style.setProperty('--w',(f.dataset.v/m*100)+'%');});
-    c.classList.add('is-out');});
+    c.querySelectorAll('.f').forEach(function(f){f.parentNode.style.setProperty('--w',(f.dataset.v/m*100)+'%');});c.classList.add('is-out');});
   document.querySelectorAll('.vchart').forEach(function(c){var m=+c.dataset.max;
-    c.querySelectorAll('.vbar').forEach(function(b){b.style.setProperty('--h',(b.dataset.v/m*100)+'%');});
-    c.classList.add('is-out');});
+    c.querySelectorAll('.vbar').forEach(function(b){b.style.setProperty('--h',(b.dataset.v/m*100)+'%');});c.classList.add('is-out');});
 
-  // Reveal on scroll + animate charts
+  // Reveal on scroll + grow charts
   var els=document.querySelectorAll('.reveal,.hbars,.vchart');
+  function show(el){el.classList.add('in');el.classList.remove('is-out');}
   if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');e.target.classList.remove('is-out');io.unobserve(e.target);}});},{threshold:.15});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target);}});},{threshold:.12});
     els.forEach(function(el){io.observe(el);});
-  } else els.forEach(function(el){el.classList.add('in');el.classList.remove('is-out');});
+  } else els.forEach(show);
+  window.addEventListener('beforeprint',function(){els.forEach(show);});
+
+  // Tabs
+  document.querySelectorAll('[role="tablist"]').forEach(function(list){
+    var tabs=[].slice.call(list.querySelectorAll('[role="tab"]'));
+    function select(t){tabs.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;
+      var id=x.getAttribute('aria-controls'),p=document.getElementById(id),c=document.querySelector('[data-cap-for="'+id+'"]');p.hidden=!on;if(c)c.hidden=!on;if(on)p.querySelectorAll('.hbars,.vchart').forEach(show);});}
+    tabs.forEach(function(t,i){t.addEventListener('click',function(){select(t);});
+      t.addEventListener('keydown',function(e){var d=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(d){var n=tabs[(i+d+tabs.length)%tabs.length];n.focus();select(n);}});});
+  });
 
   // Active nav link
   var links=[].slice.call(menu.querySelectorAll('a[href^="#"]'));
@@ -965,13 +1077,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   // Lightbox
   var lb=document.getElementById('lb'),img=document.getElementById('lbImg'),cap=document.getElementById('lbCap'),list=[],idx=0,last=null;
   function src(b){return b.dataset.src||b.querySelector('img').src;}
-  function show(){var b=list[idx];img.src=src(b);img.alt=b.dataset.cap||'';cap.textContent=b.dataset.cap||'';
+  function render(){var b=list[idx];img.src=src(b);img.alt=b.dataset.cap||'';cap.textContent=b.dataset.cap||'';
     var multi=list.length>1;document.getElementById('lbPrev').hidden=!multi;document.getElementById('lbNext').hidden=!multi;}
   document.querySelectorAll('[data-group]').forEach(function(b){b.addEventListener('click',function(){last=b;
-    list=[].slice.call(document.querySelectorAll('[data-group="'+b.dataset.group+'"]'));idx=list.indexOf(b);show();
+    list=[].slice.call(document.querySelectorAll('[data-group="'+b.dataset.group+'"]'));idx=list.indexOf(b);render();
     lb.hidden=false;document.body.style.overflow='hidden';document.getElementById('lbClose').focus();});});
   function close(){lb.hidden=true;document.body.style.overflow='';if(last)last.focus();}
-  function step(d){idx=(idx+d+list.length)%list.length;show();}
+  function step(d){idx=(idx+d+list.length)%list.length;render();}
   document.getElementById('lbClose').onclick=close;
   document.getElementById('lbPrev').onclick=function(){step(-1)};
   document.getElementById('lbNext').onclick=function(){step(1)};
