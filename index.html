@@ -7,7 +7,7 @@
 <meta name="description" content="Portfolio of Rizka Ayu Dwi Sugiharto — International Economics graduate (GPA 3.84) with internships in strategic planning, finance and supply chain at Pelindo, Kemenimipas and Pertamina.">
 <meta property="og:title" content="Rizka Ayu Dwi Sugiharto — Portfolio">
 <meta property="og:description" content="Strategic Planning & Finance. Internships at Pelindo Sinergi Lokaseva, Ministry of Immigration and Corrections, and Pertamina Training & Consulting.">
-<meta property="og:image" content="assets/rizka-hero.webp">
+<meta property="og:image" content="https://rizkaayudwisugiharto27-hue.github.io/assets/rizka-hero.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;800&display=swap">
@@ -41,6 +41,7 @@ ul{padding:0;list-style:none}
 .menu{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}
 .menu a{font-size:.82rem;font-weight:600;text-decoration:none;padding:7px 13px;border-radius:999px;color:var(--on-dark-2)}
 .menu a:hover,.menu a.on{background:#fff;color:var(--panel-2)}
+.menu a.cv{border:1.5px solid rgba(255,255,255,.55);color:#fff;margin-left:4px}
 .burger{display:none;margin-left:auto;background:none;border:0;color:#fff;font:inherit;font-weight:700;font-size:.85rem;padding:8px 14px;border-radius:999px;cursor:pointer;border:1.5px solid rgba(255,255,255,.5)}
 @media (max-width:880px){
   .burger{display:block}
@@ -57,16 +58,16 @@ ul{padding:0;list-style:none}
 .hero-title{position:absolute;top:44%;left:50%;transform:translate(-50%,-50%);text-align:left}
 .hero-word{font-family:var(--f-display);font-size:clamp(5.5rem,22vw,19rem);line-height:.8;letter-spacing:.01em;white-space:nowrap;color:#fff;text-shadow:0 6px 30px rgba(0,0,0,.18);user-select:none}
 .hero-eyebrow{margin:0 0 .2em .3em;font-weight:700;font-size:clamp(.85rem,1.6vw,1.15rem);letter-spacing:.02em}
-.hero-photo{position:relative;align-self:end;width:clamp(240px,34vw,420px);filter:drop-shadow(0 20px 40px rgba(0,0,0,.35))}
+.hero-photo{position:relative;align-self:end;width:clamp(210px,27vw,350px);filter:drop-shadow(0 20px 40px rgba(0,0,0,.35))}
 .hero-photo img{width:100%;height:auto}
 .hero-tag{position:absolute;bottom:clamp(28px,6vh,60px);left:50%;transform:translateX(-50%);background:rgba(255,255,255,.92);color:#3b3b3d;border-radius:999px;padding:9px 22px;font-size:clamp(.85rem,1.5vw,1.05rem);white-space:nowrap;box-shadow:0 10px 30px rgba(0,0,0,.2)}
 .hero-tag b{font-weight:800}
 @media (max-width:640px){
   .hero{min-height:auto}
-  .hero-in{min-height:600px}
-  .hero-title{top:36%;text-align:center}
+  .hero-in{min-height:620px}
+  .hero-title{top:22%;text-align:center}
   .hero-eyebrow{margin-left:0}
-  .hero-photo{width:min(78vw,330px)}
+  .hero-photo{width:min(58vw,235px)}
   .hero-tag{white-space:normal;text-align:center;width:max-content;max-width:calc(100% - 40px)}
 }
 
@@ -88,7 +89,7 @@ section{padding:88px 0}
 .btn.ghost{background:transparent;color:inherit;border:1.5px solid currentColor}
 
 /* ===== About ===== */
-.about-card{display:grid;grid-template-columns:1fr 300px;gap:32px;align-items:end;background:var(--panel);color:#fff;border-radius:34px;padding:44px 44px 0;overflow:hidden}
+.about-card{display:grid;grid-template-columns:1fr 280px;gap:32px;align-items:end;background:var(--panel);color:#fff;border-radius:34px;padding:44px 44px 0;overflow:hidden}
 .about-card .hi{font-weight:800;font-size:clamp(3rem,6vw,4.4rem);line-height:1;float:left;margin:4px 18px 0 0}
 .about-card .intro{font-size:1.05rem;margin-bottom:12px}
 .about-card .bio{font-weight:600;color:var(--on-dark-2);line-height:1.75}
@@ -187,6 +188,9 @@ section{padding:88px 0}
 .shot{padding:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;cursor:zoom-in;aspect-ratio:16/9}
 .shot img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .3s}
 .shot:hover img{transform:scale(1.04)}
+.shot.doc{background:#f1f1f3}
+.shot.doc img{object-fit:contain;padding:6px}
+.proof .shots{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
 .minis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
 .mini{background:var(--bg);border-radius:14px;padding:12px;text-align:center}
 .mini b{display:block;font-size:1.5rem;font-weight:800;color:var(--panel-2);line-height:1.1}
@@ -276,6 +280,7 @@ section{padding:88px 0}
 
 /* ===== Skills ===== */
 .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.cv-box{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
 .sk{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:30px}
 .sk h3{font-family:var(--f-display);font-weight:400;font-size:2.4rem;line-height:1;color:var(--panel);margin-bottom:16px}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
@@ -284,17 +289,19 @@ section{padding:88px 0}
 @media (max-width:760px){.skills{grid-template-columns:1fr}}
 
 /* ===== Certificates ===== */
-.certs{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-.cgroup{background:var(--panel-2);border-radius:28px;padding:28px}
-.cgroup h3{font-family:var(--f-display);font-weight:400;font-size:2.1rem;line-height:1;margin-bottom:16px}
-.clist li{display:flex;align-items:center;gap:14px;padding:11px 0;border-top:1px solid rgba(255,255,255,.16)}
-.clist li:first-child{border-top:0}
-.clist .ic{flex:none;width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,.12);display:grid;place-items:center;font-family:var(--f-display);font-size:1rem;color:#fff}
-.clist .txt{flex:1;font-weight:600;font-size:.94rem}
-.clist .txt span{display:block;font-weight:500;font-size:.8rem;color:var(--on-dark-3)}
-.clist button{flex:none;font:inherit;font-size:.78rem;font-weight:700;border-radius:999px;border:1.5px solid rgba(255,255,255,.6);background:transparent;color:#fff;padding:5px 12px;cursor:pointer}
-.clist button:hover{background:#fff;color:var(--panel-2)}
-@media (max-width:860px){.certs{grid-template-columns:1fr}}
+.cert-groups{display:flex;flex-direction:column;gap:44px}
+.cg-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:16px;border-bottom:2px solid var(--panel);padding-bottom:8px}
+.cg-head h3{font-family:var(--f-display);font-weight:400;font-size:2.2rem;line-height:1;color:var(--panel)}
+.cg-head span{color:var(--ink-3);font-weight:700;font-size:.8rem;white-space:nowrap}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.ccard{display:flex;flex-direction:column;padding:0;border:1px solid var(--line);background:var(--surface);border-radius:18px;overflow:hidden;cursor:zoom-in;text-align:left;font:inherit;color:inherit;transition:transform .2s ease,box-shadow .2s ease}
+.ccard:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.12)}
+.ccard .im{position:relative;display:block;aspect-ratio:4/3;background:#ececef}
+.ccard img{position:absolute;inset:12px;width:calc(100% - 24px);height:calc(100% - 24px);object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,.14))}
+.ccard .ct{display:block;padding:12px 14px 14px}
+.ccard b{display:block;font-weight:700;font-size:.88rem;line-height:1.35}
+.ccard small{display:block;margin-top:4px;font-size:.76rem;color:var(--ink-3);font-weight:600}
+@media (max-width:480px){.cgrid{grid-template-columns:1fr 1fr;gap:10px}.ccard .ct{padding:10px}.ccard b{font-size:.8rem}}
 
 /* ===== Contact ===== */
 .contact{text-align:center}
@@ -336,6 +343,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <a href="#skills">Skills</a>
         <a href="#certificates">Certificates</a>
         <a href="#contact">Contact</a>
+        <a class="cv" href="https://drive.google.com/file/d/1XIF4_O2ZOfrAq-InvuktB1GOjL13QoBQ/view?usp=drivesdk" target="_blank" rel="noopener">CV ↗</a>
       </div>
     </nav>
   </div>
@@ -349,7 +357,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       <p class="hero-eyebrow">Strategic Planning &amp; Finance</p>
       <div class="hero-word" aria-hidden="true">PORTFOLIO</div>
     </div>
-    <div class="hero-photo"><img src="assets/rizka-hero.webp" alt="Rizka Ayu Dwi Sugiharto" width="628" height="981"></div>
+    <div class="hero-photo"><img src="assets/rizka-hero.webp" alt="Rizka Ayu Dwi Sugiharto" width="650" height="1277"></div>
     <h1 class="hero-tag">Presented by <b>Rizka Ayu Dwi Sugiharto</b></h1>
   </div>
 </div>
@@ -363,17 +371,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <p class="intro">I’m <b>Rizka Ayu Dwi Sugiharto</b> from <b>South Jakarta!</b></p>
         <p class="bio">International Economics graduate (GPA 3.84/4.00) with three internships in strategic planning, finance, and supply chain across state-owned enterprises and government. Experienced in RJPP monitoring, annual budget planning (RKA), financial analysis, and industry outlook research. Proficient in Excel, Stata, and EViews for data processing and econometric analysis. Passionate about improving business efficiency through structured planning and data-driven insights.</p>
         <div class="about-cta">
-          <a class="btn light" href="#experience">See my experience ↓</a>
-          <a class="btn ghost" href="mailto:rizkaayudwisugiharto27@gmail.com">Email me</a>
+          <a class="btn light" href="https://drive.google.com/file/d/1XIF4_O2ZOfrAq-InvuktB1GOjL13QoBQ/view?usp=drivesdk" target="_blank" rel="noopener">View my CV ↗</a>
+          <a class="btn ghost" href="#experience">See my experience ↓</a>
         </div>
       </div>
-      <div class="about-photo"><img src="assets/rizka-about.webp" alt="" width="700" height="819" loading="lazy"></div>
+      <div class="about-photo"><img src="assets/rizka-about.webp" alt="" width="608" height="772" loading="lazy"></div>
     </div>
 
     <div class="stats reveal">
       <div class="stat"><b>3</b><span>Internships</span></div>
       <div class="stat"><b>3.84</b><span>GPA (out of 4.00)</span></div>
-      <div class="stat"><b>3</b><span>Featured projects</span></div>
+      <div class="stat"><b>18</b><span>Certificates</span></div>
     </div>
 
     <div class="touch reveal">
@@ -517,6 +525,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
               <h4>MagangHub Certificate</h4>
               <p class="em">Kemenimipas RI (Nov 2025 – May 2026)</p>
               <p>Official MagangHub (Kemnaker RI) certificate confirming I completed the internship at the Bureau of Planning and Finance with an <b>“Excellent”</b> rating.</p>
+              <div class="shots">
+                <button class="shot doc" data-group="kemenimipas" data-src="assets/certs/maganghub-kemenimipas.webp" data-cap="MagangHub Certificate – Kemenimipas RI (Nov 2025 – May 2026)"><img src="assets/certs/maganghub-kemenimipas-thumb.webp" alt="MagangHub certificate" loading="lazy"></button>
+              </div>
             </div>
             <div class="proof">
               <h4>Team innovation: SI-REKAP PERJADIN</h4>
@@ -556,6 +567,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
               <p>Official letter from HC &amp; GA confirming I completed the Supply Chain Planning internship and fulfilled all assigned duties and responsibilities well.</p>
             </div>
             <div class="shots">
+              <button class="shot doc" data-group="pertamina" data-src="assets/certs/pertamina-completion-letter.webp" data-cap="Internship Completion Letter – PT Pertamina Training &amp; Consulting"><img src="assets/certs/pertamina-completion-letter-thumb.webp" alt="Internship completion letter" loading="lazy"></button>
               <button class="shot" data-group="pertamina" data-cap="Fuel distribution schedule monitoring in DELMIA Quintiq"><img src="assets/pertamina-distribution.webp" alt="Fuel distribution schedule monitoring in DELMIA Quintiq" loading="lazy"></button>
               <button class="shot" data-group="pertamina" data-cap="Daily distribution and vessel data verification"><img src="assets/pertamina-data.webp" alt="Daily distribution and vessel data verification" loading="lazy"></button>
             </div>
@@ -749,6 +761,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <h3>Innovation Hub Dashboard – Pelindo Sinergi Lokaseva</h3>
         <p>Google Sheets + Apps Script web app that turns the SPSL innovation data bank into a live monitoring dashboard.</p>
         <div class="tags"><span class="tag">Google Sheets</span><span class="tag">Apps Script</span><span class="tag">Innovation monitoring</span></div>
+        <a class="btn light" href="https://script.google.com/macros/s/AKfycbwEEaQI-RCK1s31UnpRGKp6aLm6DQ1RZsMGfku10ogzkHh6GXuUIFlAGb1C1LMUXTYwJA/exec" target="_blank" rel="noopener">View the project ↗</a>
       </article>
     </div>
 
@@ -812,7 +825,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <div class="wrap">
     <div class="sec-head reveal">
       <div><span class="kicker">What I bring</span><h2 class="title">Skills</h2></div>
-      <p class="lede">Tools: Excel • Stata • EViews • DELMIA Quintiq • Google Sheets &amp; Apps Script</p>
+      <div class="cv-box"><p class="lede">Tools: Excel • Stata • EViews • DELMIA Quintiq • Google Sheets &amp; Apps Script</p><a class="btn light" href="https://drive.google.com/file/d/1XIF4_O2ZOfrAq-InvuktB1GOjL13QoBQ/view?usp=drivesdk" target="_blank" rel="noopener">Curriculum Vitae — view my CV ↗</a></div>
     </div>
     <div class="skills">
       <div class="sk reveal">
@@ -839,46 +852,46 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   <div class="wrap">
     <div class="sec-head reveal">
       <div><span class="kicker">Credentials &amp; Achievements</span><h2 class="title">Certificates</h2></div>
-      <p class="lede">Professional development, competency certification, awards and global exposure. Tap <b>View</b> to open a certificate.</p>
+      <p class="lede">Professional development, competency certification, awards and global exposure. Tap any certificate to view it full size.</p>
     </div>
-    <div class="certs">
-      <div class="cgroup dark reveal">
-        <h3>Professional Development</h3>
-        <ul class="clist">
-          <li><span class="ic">01</span><span class="txt">Cargo Logistics Preparation Procedures</span></li>
-          <li><span class="ic">02</span><span class="txt">Planning, Organizing &amp; Controlling</span></li>
-          <li><span class="ic">03</span><span class="txt">Financial Planning &amp; Asset Management</span></li>
-          <li><span class="ic">04</span><span class="txt">Corporate Finance<span>MySkill</span></span></li>
-        </ul>
+    <div class="cert-groups">
+      <div class="cg reveal">
+        <div class="cg-head"><h3>Professional Development</h3><span>4 certificates</span></div>
+        <div class="cgrid">
+          <button class="ccard" data-group="cert" data-src="assets/certs/cargo-logistics.webp" data-cap="Cargo Logistics Preparation Procedures – InJourney Aviation Services"><span class="im"><img src="assets/certs/cargo-logistics-thumb.webp" alt="Cargo Logistics Preparation Procedures certificate" loading="lazy"></span><span class="ct"><b>Cargo Logistics Preparation Procedures</b><small>InJourney Aviation Services</small></span></button>
+          <button class="ccard" data-group="cert" data-src="assets/certs/planning-organizing-controlling.webp" data-cap="Planning, Organizing &amp; Controlling – CAMY Collaboration Academy"><span class="im"><img src="assets/certs/planning-organizing-controlling-thumb.webp" alt="Planning, Organizing &amp; Controlling certificate" loading="lazy"></span><span class="ct"><b>Planning, Organizing &amp; Controlling</b><small>CAMY Collaboration Academy</small></span></button>
+          <button class="ccard" data-group="cert" data-src="assets/certs/financial-planning-asset.webp" data-cap="Financial Planning &amp; Asset Management – CAMY Collaboration Academy"><span class="im"><img src="assets/certs/financial-planning-asset-thumb.webp" alt="Financial Planning &amp; Asset Management certificate" loading="lazy"></span><span class="ct"><b>Financial Planning &amp; Asset Management</b><small>CAMY Collaboration Academy</small></span></button>
+          <button class="ccard" data-group="cert" data-src="assets/certs/corporate-finance-myskill.webp" data-cap="Corporate Finance – MySkill · Skill Specialization"><span class="im"><img src="assets/certs/corporate-finance-myskill-thumb.webp" alt="Corporate Finance certificate" loading="lazy"></span><span class="ct"><b>Corporate Finance</b><small>MySkill · Skill Specialization</small></span></button>
+        </div>
       </div>
-      <div class="cgroup dark reveal">
-        <h3>Essential Skills</h3>
-        <ul class="clist">
-          <li><span class="ic">01</span><span class="txt">MS Office Path<span>MySkill</span></span></li>
-          <li><span class="ic">02</span><span class="txt">Supply Chain Management<span>Alison</span></span></li>
-          <li><span class="ic">03</span><span class="txt">MagangHub<span>Kemnaker RI</span></span></li>
-          <li><span class="ic">04</span><span class="txt">Design Thinking<span>Kemnaker</span></span></li>
-          <li><span class="ic">05</span><span class="txt">Digital Disruption<span>Kemnaker</span></span></li>
-          <li><span class="ic">06</span><span class="txt">Emotional Resilience<span>Kemnaker</span></span></li>
-        </ul>
+      <div class="cg reveal">
+        <div class="cg-head"><h3>Essential Skills</h3><span>6 certificates</span></div>
+        <div class="cgrid">
+          <button class="ccard" data-group="cert" data-src="assets/certs/ms-office-myskill.webp" data-cap="MS Office Path (Excel, Word &amp; PowerPoint) – MySkill · Professional Skill"><span class="im"><img src="assets/certs/ms-office-myskill-thumb.webp" alt="MS Office Path (Excel, Word &amp; PowerPoint) certificate" loading="lazy"></span><span class="ct"><b>MS Office Path (Excel, Word &amp; PowerPoint)</b><small>MySkill · Professional Skill</small></span></button>
+          <button class="ccard" data-group="cert" data-src="assets/certs/supply-chain-alison.webp" data-cap="Mastering Supply Chain &amp; Logistics Management – Alison"><span class="im"><img src="assets/certs/supply-chain-alison-thumb.webp" alt="Mastering Supply Chain &amp; Logistics Management certificate" loading="lazy"></span><span class="ct"><b>Mastering Supply Chain &amp; Logistics Management</b><small>Alison</small></span></button>
+          <button class="ccard" data-group="cert" data-src="assets/certs/maganghub-kemenimipas.webp" data-cap="MagangHub Internship – Kemnaker RI · Kemenimipas"><span class="im"><img src="assets/certs/maganghub-kemenimipas-thumb.webp" alt="MagangHub Internship certificate" loading="lazy"></span><span class="ct"><b>MagangHub Internship</b><small>Kemnaker RI · Kemenimipas</small></span></button>
+          <button class="ccard" data-group="cert" data-src="assets/certs/design-thinking.webp" data-cap="Design Thinking – Kemnaker · Essential Skills"><span class="im"><img src="assets/certs/design-thinking-thumb.webp" alt="Design Thinking certificate" loading="lazy"></span><span class="ct"><b>Design Thinking</b><small>Kemnaker · Essential Skills</small></span></button>
+          <button class="ccard" data-group="cert" data-src="assets/certs/digital-disruption.webp" data-cap="Digital Disruption &amp; Transformation – Kemnaker · Essential Skills"><span class="im"><img src="assets/certs/digital-disruption-thumb.webp" alt="Digital Disruption &amp; Transformation certificate" loading="lazy"></span><span class="ct"><b>Digital Disruption &amp; Transformation</b><small>Kemnaker · Essential Skills</small></span></button>
+          <button class="ccard" data-group="cert" data-src="assets/certs/emotional-resilience.webp" data-cap="Emotional Resilience – Kemnaker · Essential Skills"><span class="im"><img src="assets/certs/emotional-resilience-thumb.webp" alt="Emotional Resilience certificate" loading="lazy"></span><span class="ct"><b>Emotional Resilience</b><small>Kemnaker · Essential Skills</small></span></button>
+        </div>
       </div>
-      <div class="cgroup dark reveal">
-        <h3>Credentials &amp; Achievements</h3>
-        <ul class="clist">
-          <li><span class="ic">01</span><span class="txt">2nd Runner Up – HERO 11th<span>UMY · International Call for Papers 2023</span></span><button data-group="cert" data-src="assets/cert-hero-2nd-runner-up.webp" data-cap="2nd Runner Up – HERO 11th UMY">View</button></li>
-          <li><span class="ic">02</span><span class="txt">BNSP Competency Certificate<span>LSP UMY</span></span><button data-group="cert" data-src="assets/cert-bnsp.webp" data-cap="BNSP Competency Certificate – LSP UMY">View</button></li>
-          <li><span class="ic">03</span><span class="txt">Susenas STATA Workshop<span>UGM</span></span></li>
-          <li><span class="ic">04</span><span class="txt">Microsoft Excel Training<span>UMY</span></span><button data-group="cert" data-src="assets/cert-excel-umy.webp" data-cap="Microsoft Excel Training – UMY">View</button></li>
-          <li><span class="ic">05</span><span class="txt">Applied Microsoft Office<span>Trust Training Partners · Microsoft Partner</span></span><button data-group="cert" data-src="assets/cert-applied-office.webp" data-cap="Applied Microsoft Office – Trust Training Partners">View</button></li>
-        </ul>
+      <div class="cg reveal">
+        <div class="cg-head"><h3>Credentials &amp; Achievements</h3><span>5 certificates</span></div>
+        <div class="cgrid">
+          <button class="ccard" data-group="cert" data-src="assets/certs/hero-2nd-runner-up.webp" data-cap="2nd Runner Up – HERO 11th International Call for Papers – FEB UMY · 2023"><span class="im"><img src="assets/certs/hero-2nd-runner-up-thumb.webp" alt="2nd Runner Up – HERO 11th International Call for Papers certificate" loading="lazy"></span><span class="ct"><b>2nd Runner Up – HERO 11th International Call for Papers</b><small>FEB UMY · 2023</small></span></button>
+          <button class="ccard" data-group="cert" data-src="assets/certs/susenas-stata-ugm.webp" data-cap="Susenas Data Processing with STATA – Universitas Gadjah Mada"><span class="im"><img src="assets/certs/susenas-stata-ugm-thumb.webp" alt="Susenas Data Processing with STATA certificate" loading="lazy"></span><span class="ct"><b>Susenas Data Processing with STATA</b><small>Universitas Gadjah Mada</small></span></button>
+          <button class="ccard" data-group="cert" data-src="assets/certs/bnsp-competency.webp" data-cap="BNSP Certificate of Competence – LSP UMY"><span class="im"><img src="assets/certs/bnsp-competency-thumb.webp" alt="BNSP Certificate of Competence certificate" loading="lazy"></span><span class="ct"><b>BNSP Certificate of Competence</b><small>LSP UMY</small></span></button>
+          <button class="ccard" data-group="cert" data-src="assets/certs/excel-training-umy.webp" data-cap="Microsoft Excel Training – Pusat Pengembangan Ekonomi, FEB UMY"><span class="im"><img src="assets/certs/excel-training-umy-thumb.webp" alt="Microsoft Excel Training certificate" loading="lazy"></span><span class="ct"><b>Microsoft Excel Training</b><small>Pusat Pengembangan Ekonomi, FEB UMY</small></span></button>
+          <button class="ccard" data-group="cert" data-src="assets/certs/applied-ms-office.webp" data-cap="Applied Microsoft Office – Trust Training Partners · UMY"><span class="im"><img src="assets/certs/applied-ms-office-thumb.webp" alt="Applied Microsoft Office certificate" loading="lazy"></span><span class="ct"><b>Applied Microsoft Office</b><small>Trust Training Partners · UMY</small></span></button>
+        </div>
       </div>
-      <div class="cgroup dark reveal">
-        <h3>Global Exposure</h3>
-        <ul class="clist">
-          <li><span class="ic">01</span><span class="txt">Field Study (KKL)<span>Malaysia</span></span></li>
-          <li><span class="ic">02</span><span class="txt">Academic Trip<span>UiTM Melaka</span></span></li>
-          <li><span class="ic">03</span><span class="txt">Community Service (KKN)<span>UMY</span></span></li>
-        </ul>
+      <div class="cg reveal">
+        <div class="cg-head"><h3>Global Exposure</h3><span>3 certificates</span></div>
+        <div class="cgrid">
+          <button class="ccard" data-group="cert" data-src="assets/certs/kkl-malaysia.webp" data-cap="Field Study (KKL) – Malaysia – IPIEF UMY · Jan 2023"><span class="im"><img src="assets/certs/kkl-malaysia-thumb.webp" alt="Field Study (KKL) – Malaysia certificate" loading="lazy"></span><span class="ct"><b>Field Study (KKL) – Malaysia</b><small>IPIEF UMY · Jan 2023</small></span></button>
+          <button class="ccard" data-group="cert" data-src="assets/certs/uitm-melaka.webp" data-cap="Academic Trip &amp; CSR – UiTM Melaka – Universiti Teknologi MARA"><span class="im"><img src="assets/certs/uitm-melaka-thumb.webp" alt="Academic Trip &amp; CSR – UiTM Melaka certificate" loading="lazy"></span><span class="ct"><b>Academic Trip &amp; CSR – UiTM Melaka</b><small>Universiti Teknologi MARA</small></span></button>
+          <button class="ccard" data-group="cert" data-src="assets/certs/kkn-umy.webp" data-cap="Community Service (KKN) – LPM UMY"><span class="im"><img src="assets/certs/kkn-umy-thumb.webp" alt="Community Service (KKN) certificate" loading="lazy"></span><span class="ct"><b>Community Service (KKN)</b><small>LPM UMY</small></span></button>
+        </div>
       </div>
     </div>
   </div>
@@ -903,6 +916,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
         <span class="arrow">↗</span><small>wa.me/6285257422314</small></a>
     </div>
+    <p class="reveal" style="margin-top:30px"><a class="btn light" href="https://drive.google.com/file/d/1XIF4_O2ZOfrAq-InvuktB1GOjL13QoBQ/view?usp=drivesdk" target="_blank" rel="noopener">Download / view my CV ↗</a></p>
   </div>
 </section>
 </main>
@@ -942,7 +956,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   } else els.forEach(function(el){el.classList.add('in');el.classList.remove('is-out');});
 
   // Active nav link
-  var links=[].slice.call(menu.querySelectorAll('a'));
+  var links=[].slice.call(menu.querySelectorAll('a[href^="#"]'));
   var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
   window.addEventListener('scroll',function(){var y=window.scrollY+120,cur=-1;
     secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i;});
