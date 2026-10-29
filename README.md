@@ -8,6 +8,7 @@ https://rizkaayudwisugiharto27-hue.github.io
 ## Isi repo
 - `index.html` — seluruh isi halaman (struktur mengikuti website kakak, warna abu-abu dari deck Canva)
 - `assets/` — foto profil dan dokumentasi kerja (format .webp)
+- `assets/exp/` — foto kegiatan magang (`nama.webp`) + versi kecilnya (`nama-thumb.webp`)
 - `assets/certs/` — gambar sertifikat (`nama.webp`) + versi kecilnya (`nama-thumb.webp`)
 - `assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf` — CV untuk tombol **Download CV**
 - `assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf` — versi PDF website untuk tombol **Download Portfolio**

@@ -160,12 +160,7 @@ section{padding:72px 0}
 .thumb.contain{background:var(--g-100)}
 .thumb.contain img{object-fit:contain;padding:4px}
 .thumb:hover img{transform:scale(1.05)}
-.lead-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
-.lead-kpis div{background:#fff;padding:18px 16px}
-.lead-kpis b{display:block;font-size:1.4rem;font-weight:800;color:var(--g-800);line-height:1.15}
-.lead-kpis span{font-size:.76rem;color:var(--ink-2);line-height:1.4;display:block;margin-top:4px}
-.lead-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;background:var(--g-900);color:#fff;padding:12px 16px;font-size:.82rem;font-weight:700}
-.lead-head a{color:#fff}
+.thumb[data-src*="/exp/"] img{object-position:50% 35%}
 .org-logo{display:flex;align-items:center;gap:14px;margin:6px 0 4px;color:var(--ink-2);font-size:.9rem}
 .org-logo span{display:grid;place-items:center;width:56px;height:56px;border-radius:10px;background:#fff;border:1px solid var(--line);font-weight:800;color:var(--g-700);font-size:.8rem}
 
@@ -332,7 +327,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
   .lanes-inner{left:7.5rem}
   .track .lbl small{display:none}
   .p-charts,.split{grid-template-columns:1fr}
-  .kpis,.lead-kpis{grid-template-columns:1fr 1fr}
+  .kpis{grid-template-columns:1fr 1fr}
 }
 @media (max-width:860px){
   .menu-btn{display:block}
@@ -378,7 +373,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
 @media (max-width:440px){
   .hbar{grid-template-columns:100px 1fr;font-size:.76rem}
   .vchart,.vlabels{gap:6px}
-  .kpis,.lead-kpis{grid-template-columns:1fr}
+  .kpis{grid-template-columns:1fr}
   .cgrid{grid-template-columns:1fr 1fr;gap:10px}
   .fact b{font-size:1.35rem}
   .contact-grid{grid-template-columns:1fr}
@@ -449,7 +444,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
         <div class="btns">
           <a class="btn primary" href="#contact">Contact me</a>
           <a class="btn" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download CV</a>
-          <a class="btn" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=1" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download Portfolio</a>
+          <a class="btn" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=2" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download Portfolio</a>
           <a class="btn" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
@@ -550,16 +545,8 @@ html:not(.js) .reveal{opacity:1;transform:none}
       <div class="log-body">
         <h3>PT Pelindo Sinergi Lokaseva</h3>
         <p class="role">Strategic Planning Intern</p>
-        <figure class="lead">
-          <div class="lead-head"><span>Work sample · Industry Outlook 2026 — Top-10 container ports benchmark</span><a href="#case-outlook">See the full analysis ↓</a></div>
-          <div class="lead-kpis">
-            <div><b>10 / 10</b><span>Top-10 WSC 2024 ports have a supporting ecosystem</span></div>
-            <div><b>57 km²</b><span>JAFZA free zone near Jebel Ali Port</span></div>
-            <div><b>8.30 m m²</b><span>Busan New Port Distripark — FTZ</span></div>
-            <div><b>1,000 acres</b><span>Port Klang Free Zone</span></div>
-          </div>
-        </figure>
-        <p class="lead-cap">Part of the Pelindo Group (Danantara Indonesia). Research I prepared for the company’s Industry Outlook 2026.</p>
+        <figure class="lead"><button class="lb-open" data-group="pel" data-src="assets/exp/pelindo-team-event.webp" data-cap="With the PT Pelindo Sinergi Lokaseva team at the Board of Directors farewell &amp; welcome event" style="all:unset;cursor:zoom-in;display:block"><img src="assets/exp/pelindo-team-event.webp" width="1600" height="883" alt="With the PT Pelindo Sinergi Lokaseva team at the Board of Directors farewell and welcome event" style="--ratio:16/9;--focus:50% 45%" loading="lazy"></button></figure>
+        <p class="lead-cap">With the team at the Board of Directors farewell &amp; welcome event (“Pisah Sambut Direksi”). Part of the Pelindo Group (Danantara Indonesia).</p>
         <ul class="pts">
           <li>Monitored quarterly <b>RJPP 2026</b> implementation, completing progress reports <b>50% faster</b>, and helped draft RJPP 2026–2030.</li>
           <li>Conducted a comparative analysis of Terminal Kijing’s financial realization to support management performance evaluation.</li>
@@ -568,6 +555,17 @@ html:not(.js) .reveal{opacity:1;transform:none}
           <li>Prepared data and presentation materials for the Board of Directors at ASEAN Port &amp; Logistics 2026 (8 July 2026).</li>
         </ul>
         <p class="result"><svg class="ico"><use href="#i-award"/></svg><span>Quarterly RJPP progress reports delivered 50% faster</span></p>
+        <p class="lead-cap" style="margin:10px 0 0">Work sample: <a class="link" href="#case-outlook">Industry Outlook 2026 — port benchmark, vessel trends &amp; ARDL regression ↓</a></p>
+        <div class="thumbs">
+          <button class="thumb" data-group="pel" data-src="assets/exp/pelindo-presenting.webp" data-cap="Presenting to the team"><img src="assets/exp/pelindo-presenting-thumb.webp" alt="Presenting to the team" loading="lazy"></button>
+          <button class="thumb" data-group="pel" data-src="assets/exp/pelindo-terminal.webp" data-cap="Site visit at a container terminal"><img src="assets/exp/pelindo-terminal-thumb.webp" alt="Site visit at a container terminal" loading="lazy"></button>
+          <button class="thumb" data-group="pel" data-src="assets/exp/pelindo-meeting.webp" data-cap="Planning meeting"><img src="assets/exp/pelindo-meeting-thumb.webp" alt="Planning meeting" loading="lazy"></button>
+          <button class="thumb" data-group="pel" data-src="assets/exp/pelindo-team.webp" data-cap="With colleagues at PT Pelindo Sinergi Lokaseva"><img src="assets/exp/pelindo-team-thumb.webp" alt="With colleagues at PT Pelindo Sinergi Lokaseva" loading="lazy"></button>
+          <button class="thumb" data-group="pel" data-src="assets/exp/pelindo-interns.webp" data-cap="With fellow interns"><img src="assets/exp/pelindo-interns-thumb.webp" alt="With fellow interns" loading="lazy"></button>
+          <button class="thumb" data-group="pel" data-src="assets/exp/pelindo-hq-group.webp" data-cap="At the Pelindo head office"><img src="assets/exp/pelindo-hq-group-thumb.webp" alt="At the Pelindo head office" loading="lazy"></button>
+          <button class="thumb" data-group="pel" data-src="assets/exp/pelindo-hq.webp" data-cap="At the Pelindo head office lobby"><img src="assets/exp/pelindo-hq-thumb.webp" alt="At the Pelindo head office lobby" loading="lazy"></button>
+          <button class="thumb" data-group="pel" data-src="assets/exp/pelindo-handover.webp" data-cap="At PT Pelindo Sinergi Lokaseva"><img src="assets/exp/pelindo-handover-thumb.webp" alt="At PT Pelindo Sinergi Lokaseva" loading="lazy"></button>
+        </div>
       </div>
     </article>
 
@@ -580,8 +578,8 @@ html:not(.js) .reveal{opacity:1;transform:none}
       <div class="log-body">
         <h3>Ministry of Immigration and Corrections</h3>
         <p class="role">Finance &amp; Budget Administration Intern · Bureau of Planning and Finance</p>
-        <figure class="lead contain"><button class="lb-open" data-group="kem" data-src="assets/certs/maganghub-kemenimipas.webp" data-cap="MagangHub Certificate – Kemenimipas RI (Nov 2025 – May 2026)" style="all:unset;cursor:zoom-in;display:block"><img src="assets/certs/maganghub-kemenimipas.webp" alt="MagangHub internship certificate, Kemenimipas" loading="lazy"></button></figure>
-        <p class="lead-cap">Official MagangHub (Kemnaker RI) certificate for the internship at the Bureau of Planning and Finance.</p>
+        <figure class="lead"><button class="lb-open" data-group="kem" data-src="assets/exp/kemenimipas-team.webp" data-cap="With fellow interns at the ministry’s Eid al-Fitr gathering" style="all:unset;cursor:zoom-in;display:block"><img src="assets/exp/kemenimipas-team.webp" width="1600" height="900" alt="With fellow interns at the Ministry of Immigration and Corrections" style="--ratio:16/9" loading="lazy"></button></figure>
+        <p class="lead-cap">With fellow interns at the ministry’s Eid al-Fitr gathering (“Silaturahmi Hari Raya Idul Fitri”).</p>
         <ul class="pts">
           <li>Organized <b>600+</b> financial and partnership records, improving data accessibility and reporting efficiency by <b>20%</b>.</li>
           <li>Validated <b>200+</b> financial documents, including payment orders (SPM), grants, bank accounts and official travel documents.</li>
@@ -590,6 +588,13 @@ html:not(.js) .reveal{opacity:1;transform:none}
           <li>Built the team innovation <a class="link" href="#more-work">SI-REKAP PERJADIN</a>, a travel-expense recap web app with real-time budget absorption dashboards.</li>
         </ul>
         <p class="result"><svg class="ico"><use href="#i-award"/></svg><span>Completed the internship with an “Excellent” (Sangat Baik) rating</span></p>
+        <div class="thumbs">
+          <button class="thumb" data-group="kem" data-src="assets/exp/kemenimipas-meeting.webp" data-cap="Meeting at the Bureau of Planning and Finance"><img src="assets/exp/kemenimipas-meeting-thumb.webp" alt="Meeting at the Bureau of Planning and Finance" loading="lazy"></button>
+          <button class="thumb" data-group="kem" data-src="assets/exp/kemenimipas-desk.webp" data-cap="Processing financial documents"><img src="assets/exp/kemenimipas-desk-thumb.webp" alt="Processing financial documents" loading="lazy"></button>
+          <button class="thumb" data-group="kem" data-src="assets/exp/kemenimipas-lobby.webp" data-cap="At the Secretariat General, Ministry of Immigration and Corrections"><img src="assets/exp/kemenimipas-lobby-thumb.webp" alt="At the Secretariat General, Ministry of Immigration and Corrections" loading="lazy"></button>
+          <button class="thumb" data-group="kem" data-src="assets/exp/kemenimipas-lobby-portrait.webp" data-cap="At the Secretariat General lobby"><img src="assets/exp/kemenimipas-lobby-portrait-thumb.webp" alt="At the Secretariat General lobby" loading="lazy"></button>
+          <button class="thumb contain" data-group="kem" data-src="assets/certs/maganghub-kemenimipas.webp" data-cap="MagangHub Certificate – Kemenimipas RI (Nov 2025 – May 2026)"><img src="assets/certs/maganghub-kemenimipas-thumb.webp" alt="MagangHub certificate" loading="lazy"></button>
+        </div>
       </div>
     </article>
 
@@ -1019,7 +1024,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
       <a class="ccontact" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener"><small>LinkedIn</small><b>Rizka Ayu Dwi Sugiharto</b></a>
       <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
       <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=1" target="_blank" rel="noopener"><small>Portfolio</small><b>Download Portfolio (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=2" target="_blank" rel="noopener"><small>Portfolio</small><b>Download Portfolio (PDF)</b></a>
     </div>
     <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>
