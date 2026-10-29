@@ -60,7 +60,8 @@ ul,ol{padding:0;list-style:none}
 .btn.solid:hover{background:var(--g-950)}
 
 /* ===== Hero ===== */
-.hero{position:relative;background:var(--g-900);color:var(--on-dark);padding:56px 0 0;overflow:hidden}
+.hero{position:relative;background:var(--g-900);color:var(--on-dark);padding:64px 0 0;overflow:hidden}
+.hero-top{padding-bottom:64px}
 .hero-bg{position:absolute;inset:0 0 auto auto;width:62%;height:420px;background-image:linear-gradient(var(--g-800) 1px,transparent 1px),linear-gradient(90deg,var(--g-800) 1px,transparent 1px);background-size:56px 56px;-webkit-mask:linear-gradient(90deg,transparent,#000 40%);mask:linear-gradient(90deg,transparent,#000 40%);opacity:.55}
 .hero-top{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:48px;align-items:center}
 .kicker{color:var(--on-dark-2);font-size:.98rem;font-weight:500;margin-bottom:10px}
@@ -75,36 +76,6 @@ ul,ol{padding:0;list-style:none}
 .portrait figcaption::before{content:"";width:9px;height:9px;border-radius:50%;background:#41b883;box-shadow:0 0 0 3px rgba(65,184,131,.25)}
 .deco{position:absolute;right:-40px;top:30px;width:58%;height:300px;pointer-events:none;opacity:.8}
 
-/* Career timeline (2021–2026, 72 months; --s/--e = month index from Jan 2021) */
-.life{margin-top:44px;padding:22px 0 30px;border-top:1px solid var(--line-dark)}
-.life-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px;align-items:baseline;margin-bottom:12px}
-.life-head h2{font-size:1.2rem;font-weight:800}
-.life-head p{color:var(--on-dark-2);font-size:.8rem}
-.life-axis,.lane{display:grid;grid-template-columns:10.5rem minmax(0,1fr)}
-.years{display:grid;grid-template-columns:repeat(6,1fr);color:var(--on-dark-3);font-size:.78rem;font-variant-numeric:tabular-nums}
-.years span{padding-left:6px;border-left:1px solid var(--line-dark)}
-.lane{min-height:50px;border-top:1px solid #38383c}
-.lane.tall{min-height:68px}
-.lane-name{align-self:center;color:var(--on-dark-2);font-size:.8rem;padding-right:12px}
-.track{position:relative;background-image:linear-gradient(to right,var(--line-dark) 1px,transparent 1px);background-size:calc(100% / 6) 100%}
-.track li{position:absolute;top:0;bottom:0;left:calc(var(--s) / 72 * 100%);width:calc((var(--e) - var(--s)) / 72 * 100%)}
-.track a{position:absolute;inset:0;text-decoration:none;color:var(--on-dark)}
-.track .bar{position:absolute;left:0;right:0;bottom:9px;height:12px;min-width:8px;border-radius:3px;background:var(--g-500);transform-origin:left center}
-.lane-work .bar{background:#e9e9ec;height:16px;bottom:7px}
-.lane-edu .bar{background:linear-gradient(90deg,transparent,var(--g-500) 4%,var(--g-500) 96%,transparent)}
-.track .lbl{position:absolute;left:0;top:4px;white-space:nowrap;font-size:.78rem;font-weight:700}
-.track .row2 .lbl{top:24px}
-.track .end .lbl{left:auto;right:0}
-.track .lbl small{font-weight:500;color:var(--on-dark-2)}
-.track a:hover .lbl,.track a:focus-visible .lbl{text-decoration:underline}
-.track .ms .bar{width:12px;min-width:0;height:12px;left:-6px;right:auto;border-radius:2px;background:#e9e9ec;transform:rotate(45deg)}
-.lanes{position:relative}
-.lanes-inner{position:absolute;top:0;bottom:0;left:10.5rem;right:0;pointer-events:none}
-.now{position:absolute;top:0;bottom:0;left:calc(69.9 / 72 * 100%);border-left:2px dashed #41b883}
-.js .track .bar{animation:grow .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--s) * 12ms + .2s)}
-.js .track .ms .bar{animation:fade .5s both;animation-delay:calc(var(--s) * 12ms + .2s)}
-@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-@keyframes fade{from{opacity:0}to{opacity:1}}
 .stripe{height:12px;background:repeating-linear-gradient(-45deg,var(--g-600) 0 14px,var(--g-300) 14px 28px)}
 
 /* ===== Sections ===== */
@@ -323,9 +294,6 @@ html:not(.js) .reveal{opacity:1;transform:none}
   .sk-wide{grid-template-columns:1fr}
   .award{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:repeat(3,1fr)}
-  .life-axis,.lane{grid-template-columns:7.5rem minmax(0,1fr)}
-  .lanes-inner{left:7.5rem}
-  .track .lbl small{display:none}
   .p-charts,.split{grid-template-columns:1fr}
   .kpis{grid-template-columns:1fr 1fr}
 }
@@ -343,18 +311,6 @@ html:not(.js) .reveal{opacity:1;transform:none}
   .hero-bg{width:100%;height:300px}
   .deco{display:none}
   .portrait{grid-row:1;justify-self:center;width:190px;margin:12px auto 22px}
-  /* Timeline becomes an ordered list with dates on phones */
-  .life-axis,.lanes-inner{display:none}
-  .lane,.lane.tall{display:block;border-top:0;padding:10px 0 4px;min-height:0}
-  .lane-name{display:block;margin-bottom:4px}
-  .track{background:none}
-  .track li{position:static;width:auto}
-  .track a{position:static;display:flex;gap:10px;align-items:baseline;padding:6px 0 6px 14px;border-left:3px solid var(--g-500)}
-  .lane-work .track a{border-left-color:#e9e9ec}
-  .track .bar{display:none}
-  .track .lbl{position:static;white-space:normal}
-  .track .lbl small{display:inline}
-  .track .date{position:static;width:auto;height:auto;overflow:visible;clip-path:none;white-space:nowrap;color:var(--on-dark-2);font-size:.74rem;order:-1;min-width:7.6rem}
   section{padding:56px 0}
   .log,.training .log{grid-template-columns:1fr;gap:12px;padding:28px 0}
   .log-meta{flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 12px}
@@ -386,7 +342,6 @@ html:not(.js) .reveal{opacity:1;transform:none}
   html{font-size:13px}
   .nav,.lb,.menu-btn,.tabs,.btns .btn:not(.primary),.stripe{display:none!important}
   .reveal{opacity:1!important;transform:none!important}
-  .js .track .bar,.js .track .ms .bar{animation:none}
   .hero{padding-top:24px}
   section{padding:26px 0}
   #achievements{break-before:page}
@@ -394,7 +349,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
   h2,h3,h4,.sec-head,.log-meta{break-after:avoid}
   .panel[hidden]{display:block!important;margin-top:14px}
   .cap[hidden]{display:block!important}
-  .lead,.thumbs,.panel,.award,.ccard,.sk,.focus li,.mcard,.findings tr,.kpis,.p-charts>div,.split>div,.life{break-inside:avoid}
+  .lead,.thumbs,.panel,.award,.ccard,.sk,.focus li,.mcard,.findings tr,.kpis,.p-charts>div,.split>div{break-inside:avoid}
   .is-out .hbar .f{width:var(--w)}.is-out .hbar .v{opacity:1}.is-out .vbar{height:var(--h)}.is-out .vbar i{opacity:1}
   .hbar .f,.vbar{transition:none}
 }
@@ -444,7 +399,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
         <div class="btns">
           <a class="btn primary" href="#contact">Contact me</a>
           <a class="btn" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download CV</a>
-          <a class="btn" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=2" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download Portfolio</a>
+          <a class="btn" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=3" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download Portfolio</a>
           <a class="btn" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
@@ -454,50 +409,6 @@ html:not(.js) .reveal{opacity:1;transform:none}
       </figure>
     </div>
 
-    <!-- Career timeline. --s / --e = month index since Jan 2021 (72 months to Dec 2026) -->
-    <div class="life" aria-labelledby="life-title">
-      <div class="life-head">
-        <h2 id="life-title">Career timeline</h2>
-        <p>The dashed green line marks today (Oct 2026). Click a bar to jump to its details.</p>
-      </div>
-      <div class="life-axis" aria-hidden="true">
-        <span></span>
-        <div class="years"><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span></div>
-      </div>
-      <div class="lanes">
-        <div class="lane lane-work tall">
-          <span class="lane-name">Work experience</span>
-          <ol class="track">
-            <li style="--s:52;--e:53"><a href="#exp-pertamina"><span class="bar"></span><span class="lbl">Pertamina <small>Supply Chain</small></span><span class="date sr-only">May 2025</span></a></li>
-            <li class="row2" style="--s:58;--e:65"><a href="#exp-kemenimipas"><span class="bar"></span><span class="lbl">Kemenimipas <small>Finance</small></span><span class="date sr-only">Nov 2025 – May 2026</span></a></li>
-            <li style="--s:65;--e:70"><a href="#exp-pelindo"><span class="bar"></span><span class="lbl">Pelindo <small>Strategy</small></span><span class="date sr-only">Jun 2026 – now</span></a></li>
-          </ol>
-        </div>
-        <div class="lane lane-train tall">
-          <span class="lane-name">Training &amp; awards</span>
-          <ol class="track">
-            <li class="ms" style="--s:29.5;--e:29.5"><a href="#achievements"><span class="bar"></span><span class="lbl">2nd Runner-Up, HERO 11th</span><span class="date sr-only">Jun 2023</span></a></li>
-            <li class="ms" style="--s:44.9;--e:44.9"><a href="#training"><span class="bar"></span><span class="lbl">Stata workshop, UGM</span><span class="date sr-only">Sep 2024</span></a></li>
-            <li class="ms row2" style="--s:49.3;--e:49.3"><a href="#training"><span class="bar"></span><span class="lbl">BNSP competency</span><span class="date sr-only">Feb 2025</span></a></li>
-            <li class="end" style="--s:60;--e:69.5"><a href="#training"><span class="bar"></span><span class="lbl">Finance courses</span><span class="date sr-only">Jan – Oct 2026</span></a></li>
-          </ol>
-        </div>
-        <div class="lane lane-org">
-          <span class="lane-name">Organization</span>
-          <ol class="track">
-            <li style="--s:23;--e:32"><a href="#exp-himie"><span class="bar"></span><span class="lbl">Secretary, HIMIE</span><span class="date sr-only">Dec 2022 – Sep 2023</span></a></li>
-            <li style="--s:43;--e:44"><a href="#exp-icosi"><span class="bar"></span><span class="lbl">Liaison Officer, ICOSI</span><span class="date sr-only">Aug 2024</span></a></li>
-          </ol>
-        </div>
-        <div class="lane lane-edu">
-          <span class="lane-name">Education</span>
-          <ol class="track">
-            <li style="--s:8;--e:51"><a href="#education"><span class="bar"></span><span class="lbl">B.Econ International Economics, UMY <small>GPA 3.84</small></span><span class="date sr-only">Sep 2021 – Apr 2025</span></a></li>
-          </ol>
-        </div>
-        <div class="lanes-inner" aria-hidden="true"><div class="now"></div></div>
-      </div>
-    </div>
   </div>
   <div class="stripe" aria-hidden="true"></div>
 </header>
@@ -1024,7 +935,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
       <a class="ccontact" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener"><small>LinkedIn</small><b>Rizka Ayu Dwi Sugiharto</b></a>
       <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
       <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=2" target="_blank" rel="noopener"><small>Portfolio</small><b>Download Portfolio (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=3" target="_blank" rel="noopener"><small>Portfolio</small><b>Download Portfolio (PDF)</b></a>
     </div>
     <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>

@@ -29,9 +29,6 @@ kartu sertifikat yang sudah ada, misalnya:
 <button class="ccard" data-group="cert" data-src="assets/certs/nama-file.webp" data-cap="Nama Sertifikat – Penerbit"><span class="im"><img src="assets/certs/nama-file.webp" alt="" loading="lazy"></span><span class="ct"><b>Nama Sertifikat</b><small>Penerbit · Tahun</small></span></button>
 ```
 
-**Timeline karier** (bagian atas): setiap batang punya `--s` (bulan mulai) dan `--e` (bulan selesai),
-dihitung dari Januari 2021 = 0. Contoh: Juni 2026 = 5×12 + 5 = 65.
-
 ## Memperbarui PDF portfolio
 Setiap kali isi `index.html` berubah (butuh Node.js + Playwright):
 
