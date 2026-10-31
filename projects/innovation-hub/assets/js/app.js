@@ -495,7 +495,7 @@
     renderLegend();
     renderAll();
     const m = DATA.meta || {};
-    $("#footNote").textContent = `Sumber: ${m.live ? "Google Sheet (live)" : (m.source || "bank data inovasi")} · ${fmt(INN.length)} inovasi${m.generated ? " · diperbarui " + fmtDate(m.generated) : ""}. Live demo — semua data fiktif.`;
+    $("#footNote").textContent = `Sumber: ${m.live ? "Google Sheet (live)" : (m.source || "bank data inovasi")} · ${fmt(INN.length)} inovasi${m.generated ? " · diperbarui " + fmtDate(m.generated) : ""}. Live demo — data disamarkan: tanpa nama pengusul, email, tim, dan deskripsi internal.`;
   }
   init();
 })();
