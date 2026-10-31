@@ -13,6 +13,7 @@
 .demo-bar a{color:#fff;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:3px 12px;white-space:nowrap}
 .demo-bar a:hover{background:#fff;color:#1d1d1f}
 .foot-right a{color:inherit}
+.embedded .demo-bar{display:none}
 </style>
 </head>
 <body>
@@ -220,5 +221,21 @@
 <script src="assets/js/config.js"></script>
 <script src="data/data.js"></script>
 <script src="assets/js/app.js"></script>
+<script>
+/* Embedded in the portfolio: filters and charts work in place; menu links open the full demo in a new tab */
+(function () {
+  if (window.self === window.top) return;
+  document.documentElement.classList.add("embedded");
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest("#navlinks a, .logo, .hero-cta a");
+    if (!a) return;
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    document.getElementById("navlinks").classList.remove("open");
+    var href = a.getAttribute("href") || "";
+    window.open(location.pathname + (href.charAt(0) === "#" && href.length > 1 ? href : "#beranda"), "_blank", "noopener");
+  }, true);
+})();
+</script>
 </body>
 </html>

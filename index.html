@@ -180,6 +180,7 @@ section{padding:72px 0}
 .browser-bar span{flex:1;min-width:0;background:#fff;border-radius:6px;padding:3px 10px;margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .browser iframe{display:block;width:100%;height:640px;border:0;background:#fff}
 .print-only{display:none}
+.live-tip{color:var(--on-dark-3);font-size:.82rem;margin-top:10px}
 .mock{background:#f4f4f6;border-radius:10px;padding:12px;display:grid;grid-template-columns:44px 1fr;gap:8px}
 .mock .side{background:#1f3550;border-radius:8px}
 .mock .main{display:flex;flex-direction:column;gap:6px}
@@ -360,7 +361,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
   @page{size:A4;margin:12mm}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   html{font-size:13px}
-  .nav,.lb,.menu-btn,.tabs,.btns .btn:not(.primary),.stripe,.browser{display:none!important}
+  .nav,.lb,.menu-btn,.tabs,.btns .btn:not(.primary),.stripe,.browser,.live-tip{display:none!important}
   .reveal{opacity:1!important;transform:none!important}
   .hero{padding-top:24px}
   section{padding:26px 0}
@@ -789,6 +790,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
           <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>rizkaayudwisugiharto27-hue.github.io/projects/innovation-hub/</span></div>
           <iframe src="projects/innovation-hub/index.html#dashboard" title="Innovation Hub Dashboard — live demo with fictional data" loading="lazy"></iframe>
         </div>
+        <p class="live-tip">Try the filters and click any bar right here. Menu items (Dashboard, Daftar Inovasi, Galeri, Alur &amp; Status) open the full demo in a new tab.</p>
         <a class="print-only" href="projects/innovation-hub/index.html"><img src="assets/exp/innovation-hub-demo.webp" width="1600" height="1000" alt="Innovation Hub Dashboard live demo" loading="lazy"></a>
         <div class="btns" style="margin-top:16px">
           <a class="btn primary" href="projects/innovation-hub/index.html" target="_blank" rel="noopener">Open full live demo <svg class="ico"><use href="#i-ext"/></svg></a>
