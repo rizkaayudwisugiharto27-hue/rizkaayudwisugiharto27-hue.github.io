@@ -13,6 +13,8 @@ https://rizkaayudwisugiharto27-hue.github.io
 - `assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf` — CV untuk tombol **Download CV**
 - `assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf` — versi PDF website untuk tombol **Download Portfolio**
 - `tools/build-portfolio-pdf.mjs` — membuat ulang PDF portfolio dari `index.html`
+- `projects/innovation-hub/` — **live demo** Innovation Hub Dashboard (kode asli dari repo `spsl-innovation-hub`) dengan **data fiktif**
+- `tools/make-demo-data.py` — membuat data fiktif untuk live demo (`python tools/make-demo-data.py`)
 - `portfolio-v1.html` — arsip desain sebelumnya (tidak diindeks mesin pencari)
 
 ## Cara update

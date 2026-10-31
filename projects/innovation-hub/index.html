@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Innovation Hub — Live Demo · Rizka Ayu Dwi Sugiharto</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Live demo of an innovation tracking dashboard built by Rizka Ayu Dwi Sugiharto. All data on this page is fictional.">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+.demo-bar{background:#1d1d1f;color:#e9e9ec;font-size:13px;position:relative;z-index:60}
+.demo-in{display:flex;gap:10px 18px;align-items:center;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.demo-bar a{color:#fff;font-weight:700;text-decoration:none;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:3px 12px;white-space:nowrap}
+.demo-bar a:hover{background:#fff;color:#1d1d1f}
+.foot-right a{color:inherit}
+</style>
+</head>
+<body>
+
+
+<!-- DEMO BAR -->
+<div class="demo-bar"><div class="wrap demo-in"><a href="../../index.html#more-work">← Back to portfolio</a><span><b>Live demo</b> · semua data di halaman ini <b>fiktif</b> — dibuat untuk portofolio, bukan data perusahaan.</span></div></div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#beranda" class="logo">
+      <span class="logo-mark">◆</span>
+      <span>Innovation Hub<small>Innovation Tracking Dashboard · Demo</small></span>
+    </a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#beranda">Beranda</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#daftar">Daftar Inovasi</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#alur">Alur &amp; Status</a>
+      <a href="#" class="btn btn-primary nav-cta js-form-link" target="_blank" rel="noopener">+ Ajukan Ide</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" aria-label="Ganti tema terang/gelap" title="Ganti tema"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="beranda">
+  <div class="wrap hero-in">
+    <span class="badge"><span class="dot"></span>Live demo · data fiktif</span>
+    <!-- >> BOLEH DIEDIT: judul besar & kalimat pembuka << -->
+    <h1>Satu tempat untuk mengumpulkan, memantau &amp; mengukur seluruh inovasi perusahaan</h1>
+    <p class="sub">Ajukan ide kapan saja, pantau statusnya dari awal sampai diterapkan, dan lihat manfaat nyatanya — semuanya dalam satu portal yang terhubung dengan bank data inovasi.</p>
+    <div class="hero-cta">
+      <a href="#" class="btn btn-primary btn-light js-form-link" target="_blank" rel="noopener">+ Ajukan Ide Inovasi</a>
+      <a href="#dashboard" class="btn btn-ghost">Lihat Dashboard</a>
+    </div>
+    <div class="hero-stats" id="heroStats"></div>
+    <div class="data-stamp" id="dataStamp"></div>
+  </div>
+</section>
+
+<!-- FUNGSI -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <!-- >> BOLEH DIEDIT << -->
+      <div class="eyebrow">Kenapa portal ini ada</div>
+      <h2>Dari sekadar mengumpulkan ide, menjadi mengawal ide sampai bermanfaat</h2>
+      <p>Perusahaan tidak kekurangan ide — sudah ada ratusan dari kompetisi sebelumnya. Yang dibutuhkan adalah sistem yang memastikan ide ditindaklanjuti, diterapkan, dipantau, dan diukur manfaatnya.</p>
+    </div>
+    <div class="fgrid">
+      <div class="fcard"><div class="ic">✎</div><h3>Menampung ide kapan saja</h3><p>Pegawai bisa mengajukan ide inovasi sepanjang tahun lewat satu formulir, tanpa menunggu kompetisi dibuka.</p></div>
+      <div class="fcard"><div class="ic">▤</div><h3>Satu database terpusat</h3><p>Seluruh data inovasi dari 2022 sampai sekarang disatukan dengan format seragam, bukan lagi tersebar di banyak file.</p></div>
+      <div class="fcard"><div class="ic">◉</div><h3>Pantau setiap status</h3><p>Tahu persis mana ide yang baru masuk, sedang dikembangkan, sudah diterapkan, atau belum diprioritaskan.</p></div>
+      <div class="fcard"><div class="ic">◈</div><h3>Galeri &amp; riwayat inovasi</h3><p>Inovasi unggulan dan riwayat perubahan status tetap terlihat sebagai bank data perusahaan.</p></div>
+      <div class="fcard"><div class="ic">▦</div><h3>Dashboard interaktif</h3><p>Saring per tahun, unit, kategori, area bisnis &amp; horizon — semua angka dan grafik ikut menyesuaikan.</p></div>
+      <div class="fcard"><div class="ic">◎</div><h3>Ukur manfaat nyata</h3><p>Dengan kolom baseline, target, realisasi &amp; evidence, manfaat inovasi bisa benar-benar diukur setelah diterapkan.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard">
+  <div class="wrap">
+    <div class="sec-head">
+      <!-- >> BOLEH DIEDIT << -->
+      <div class="eyebrow">Monitoring</div>
+      <h2>Dashboard inovasi</h2>
+      <p>Gunakan filter di bawah — semua angka, grafik, dan daftar inovasi ikut menyesuaikan. Klik batang grafik untuk menyaring cepat.</p>
+    </div>
+
+    <div class="filterbar" id="filterbar">
+      <select data-f="tahun" aria-label="Filter tahun"><option value="">Semua tahun</option></select>
+      <select data-f="unit" aria-label="Filter unit"><option value="">Semua unit</option></select>
+      <select data-f="kategori" aria-label="Filter kategori"><option value="">Semua kategori</option></select>
+      <select data-f="status" aria-label="Filter status"><option value="">Semua status</option></select>
+      <select data-f="area" aria-label="Filter area bisnis"><option value="">Semua area bisnis</option></select>
+      <select data-f="horizon" aria-label="Filter horizon"><option value="">Semua horizon</option></select>
+      <button class="btn btn-outline btn-sm" id="resetBtn" type="button">Reset filter</button>
+    </div>
+    <div class="active-filters" id="activeFilters"></div>
+
+    <div class="kpis" id="kpis"></div>
+
+    <div class="dash-grid">
+      <div class="panel"><h3>Jumlah ide per tahun</h3><div class="psub">Total ide yang terkumpul tiap tahun</div><div class="vbars" id="chartYear"></div></div>
+      <div class="panel"><h3>Posisi ide di alur inovasi</h3><div class="psub">Jumlah ide per status, berurutan sesuai alur</div><div id="chartStatus"></div></div>
+      <div class="panel"><h3>Ide per kategori</h3><div class="psub">Pengelompokan ide berdasarkan jenis inovasi</div><div id="chartKat"></div></div>
+      <div class="panel"><h3>Ide per unit / anak perusahaan</h3><div class="psub">Kontribusi ide dari tiap entitas</div><div id="chartUnit"></div></div>
+      <div class="panel"><h3>Horizon inovasi</h3><div class="psub">Seberapa jauh ide dari bisnis inti</div><div id="chartHorizon"></div></div>
+      <div class="panel"><h3>Area bisnis</h3><div class="psub">Sebaran ide per area bisnis</div><div id="chartArea"></div></div>
+      <div class="panel span2">
+        <div class="panel-h">
+          <div><h3>Matriks unit × kategori</h3><div class="psub">Makin gelap = makin banyak ide. Klik sel untuk menyaring.</div></div>
+        </div>
+        <div class="heat-wrap" id="chartHeat"></div>
+      </div>
+      <div class="panel span2">
+        <h3>Riwayat perubahan status terbaru</h3><div class="psub">Diambil dari sheet Riwayat_Status</div>
+        <div id="history"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAFTAR -->
+<section id="daftar" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <!-- >> BOLEH DIEDIT << -->
+      <div class="eyebrow">Bank data inovasi</div>
+      <h2>Daftar seluruh inovasi</h2>
+      <p>Cari berdasarkan judul, tim, pengusul, atau kata kunci. Filter dari dashboard di atas juga berlaku di sini.</p>
+    </div>
+    <div class="toolbar">
+      <div class="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="q" type="search" placeholder="Cari judul, tim, pengusul, atau kata kunci…">
+      </div>
+      <select id="sortBy" aria-label="Urutkan">
+        <option value="id">Urut: ID</option>
+        <option value="tahun-desc">Urut: Tahun terbaru</option>
+        <option value="status">Urut: Status (alur)</option>
+        <option value="rank">Urut: Peringkat</option>
+        <option value="judul">Urut: Judul A–Z</option>
+      </select>
+      <div class="seg" role="group" aria-label="Tampilan">
+        <button type="button" data-view="cards" class="on">Kartu</button>
+        <button type="button" data-view="table">Tabel</button>
+      </div>
+      <button class="btn btn-outline btn-sm" id="csvBtn" type="button">⬇ Unduh CSV</button>
+    </div>
+    <div class="count-line" id="countLine"></div>
+    <div class="cards" id="cards"></div>
+    <div class="table-wrap" id="tableWrap" hidden></div>
+    <div class="more-wrap"><button class="btn btn-outline" id="moreBtn" type="button">Tampilkan lebih banyak</button></div>
+  </div>
+</section>
+
+<!-- GALERI -->
+<section id="galeri">
+  <div class="wrap">
+    <div class="sec-head">
+      <!-- >> BOLEH DIEDIT << -->
+      <div class="eyebrow">Inovasi unggulan</div>
+      <h2>Galeri inovasi unggulan</h2>
+      <p>Inovasi yang ditandai <i>Featured</i> di bank data — sebagian besar sudah diterapkan dan menghasilkan manfaat nyata.</p>
+    </div>
+    <div class="cards" id="galeriCards"></div>
+  </div>
+</section>
+
+<!-- ALUR + STATUS -->
+<section id="alur" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <!-- >> BOLEH DIEDIT << -->
+      <div class="eyebrow">Cara kerja sistem</div>
+      <h2>Alur sistem inovasi</h2>
+      <p>Setiap ide bergerak melalui alur yang jelas, dari pengajuan sampai manfaatnya benar-benar terukur.</p>
+    </div>
+    <div class="flow">
+      <div class="fstep"><div class="fic">✎</div><b>Pengajuan</b><span>Pegawai mengajukan ide lewat formulir kapan saja</span></div>
+      <div class="farrow">→</div>
+      <div class="fstep"><div class="fic">⚖</div><b>Seleksi</b><span>Ide dinilai &amp; diprioritaskan oleh tim inovasi</span></div>
+      <div class="farrow">→</div>
+      <div class="fstep"><div class="fic">⚗</div><b>Inkubasi</b><span>Ide dikembangkan bersama BPO &amp; unit terkait</span></div>
+      <div class="farrow">→</div>
+      <div class="fstep"><div class="fic">▶</div><b>Implementasi</b><span>Inovasi diterapkan di lapangan</span></div>
+      <div class="farrow">→</div>
+      <div class="fstep"><div class="fic">✓</div><b>Validasi Manfaat</b><span>Dampak diukur: baseline, target, realisasi</span></div>
+    </div>
+
+    <div class="sec-head" style="margin-top:56px">
+      <div class="eyebrow">Tentang status</div>
+      <h2>Arti setiap status inovasi</h2>
+    </div>
+    <div class="legend-grid" id="legend"></div>
+    <div class="note"><b>Catatan:</b> Sebagian besar ide lama berstatus <i>Backlog</i> sebagai titik awal netral, karena data asal kompetisi belum mencatat kelanjutan tiap ide. Status ini perlu ditinjau bertahap oleh PIC/BPO tiap unit.</div>
+  </div>
+</section>
+
+<!-- >> BOLEH DIEDIT: teks footer << -->
+<footer>
+  <div class="wrap">
+    <div class="foot-in">
+      <div>
+        <div class="foot-title">Innovation Hub — Live Demo</div>
+        <div class="foot-sub">Digital Innovation Box &amp; Tracking Dashboard</div>
+      </div>
+      <div class="foot-right">Dibuat oleh <a href="../../index.html">Rizka Ayu Dwi Sugiharto</a><br>Semua data di halaman ini fiktif</div>
+    </div>
+    <div class="foot-note" id="footNote"></div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modalBg"><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
+<!-- TOOLTIP -->
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script src="assets/js/config.js"></script>
+<script src="data/data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

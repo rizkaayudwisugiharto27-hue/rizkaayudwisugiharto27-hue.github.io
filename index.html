@@ -157,12 +157,28 @@ section{padding:72px 0}
 .findings td:first-child{color:#fff;font-weight:700;width:16%}
 .findings td:nth-child(2){width:42%}
 .findings b{color:#fff}
-.more{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.more{display:grid;grid-template-columns:1fr;gap:18px}
 .mcard{background:var(--g-850);border:1px solid var(--line-dark);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px}
 .mcard .k{font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-3)}
 .mcard h4{font-size:1.15rem;font-weight:800;line-height:1.3}
 .mcard p{color:var(--on-dark-2);font-size:.92rem}
 .mcard .btn{align-self:flex-start;margin-top:auto}
+.mcard.wide{display:grid;grid-template-columns:300px 1fr;gap:24px;align-items:center}
+.mtext{display:flex;flex-direction:column;gap:10px}
+.live{background:var(--g-850);border:1px solid var(--line-dark);border-radius:12px;padding:24px;margin-bottom:18px}
+.live-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start;margin-bottom:8px}
+.live .k{font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-3)}
+.live h4{font-size:1.3rem;font-weight:800;line-height:1.3;margin-top:4px}
+.live>p{color:var(--on-dark-2);font-size:.94rem;max-width:80ch}
+.live>p b{color:#fff}
+.badge-live{display:inline-flex;align-items:center;gap:8px;background:#e9f7ef;color:#1f6b45;font-weight:800;font-size:.74rem;letter-spacing:.08em;border-radius:999px;padding:5px 12px}
+.badge-live::before{content:"";width:8px;height:8px;border-radius:50%;background:#2fbf71;animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(47,191,113,.6)}70%{box-shadow:0 0 0 8px rgba(47,191,113,0)}100%{box-shadow:0 0 0 0 rgba(47,191,113,0)}}
+.browser{margin-top:6px;border-radius:10px;overflow:hidden;background:#fff;border:1px solid var(--line-dark)}
+.browser-bar{display:flex;align-items:center;gap:6px;background:#e4e4e8;padding:8px 12px;color:#55555b;font-size:.75rem}
+.browser-bar i{width:10px;height:10px;border-radius:50%;background:#c4c4ca}
+.browser-bar span{flex:1;min-width:0;background:#fff;border-radius:6px;padding:3px 10px;margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.browser iframe{display:block;width:100%;height:640px;border:0;background:#fff}
 .mock{background:#f4f4f6;border-radius:10px;padding:12px;display:grid;grid-template-columns:44px 1fr;gap:8px}
 .mock .side{background:#1f3550;border-radius:8px}
 .mock .main{display:flex;flex-direction:column;gap:6px}
@@ -316,6 +332,9 @@ html:not(.js) .reveal{opacity:1;transform:none}
   .log-meta{flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 12px}
   .facts{grid-template-columns:repeat(3,1fr)}
   .more,.skills{grid-template-columns:1fr}
+  .mcard.wide{grid-template-columns:1fr}
+  .browser iframe{height:540px}
+  .live{padding:16px}
   .contact-grid{grid-template-columns:1fr 1fr}
   .panel{padding:16px;border-width:4px}
   .findings thead{display:none}
@@ -340,7 +359,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
   @page{size:A4;margin:12mm}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   html{font-size:13px}
-  .nav,.lb,.menu-btn,.tabs,.btns .btn:not(.primary),.stripe{display:none!important}
+  .nav,.lb,.menu-btn,.tabs,.btns .btn:not(.primary),.stripe,.browser{display:none!important}
   .reveal{opacity:1!important;transform:none!important}
   .hero{padding-top:24px}
   section{padding:26px 0}
@@ -399,7 +418,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
         <div class="btns">
           <a class="btn primary" href="#contact">Contact me</a>
           <a class="btn" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download CV</a>
-          <a class="btn" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=3" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download Portfolio</a>
+          <a class="btn" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=4" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download Portfolio</a>
           <a class="btn" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
@@ -754,20 +773,33 @@ html:not(.js) .reveal{opacity:1;transform:none}
 
     <div id="more-work">
       <h3 class="sub-h" style="margin-top:8px">Dashboards &amp; web apps</h3>
+      <article class="live reveal" id="case-innovation">
+        <div class="live-head">
+          <div>
+            <span class="k">2026 · Pelindo Sinergi Lokaseva</span>
+            <h4>Innovation Hub Dashboard</h4>
+          </div>
+          <span class="badge-live">LIVE DEMO</span>
+        </div>
+        <p>Google Sheets + Apps Script web app that turns the company’s innovation data bank into a live monitoring dashboard: filters, KPIs, charts, a unit × category matrix, a searchable list with CSV export, a gallery and status history. The original reads the Sheet in real time and is internal; the demo below runs the same code on <b>fictional data</b>. Try the filters or click a bar.</p>
+        <div class="chips"><span class="chip">Google Sheets</span><span class="chip">Apps Script</span><span class="chip">HTML · CSS · JavaScript</span><span class="chip">Data visualization</span></div>
+        <div class="browser">
+          <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>rizkaayudwisugiharto27-hue.github.io/projects/innovation-hub/</span></div>
+          <iframe src="projects/innovation-hub/index.html#dashboard" title="Innovation Hub Dashboard — live demo with fictional data" loading="lazy"></iframe>
+        </div>
+        <div class="btns" style="margin-top:16px">
+          <a class="btn primary" href="projects/innovation-hub/index.html" target="_blank" rel="noopener">Open full live demo <svg class="ico"><use href="#i-ext"/></svg></a>
+        </div>
+      </article>
       <div class="more">
-        <article class="mcard reveal">
-          <span class="k">2026 · Kemenimipas</span>
+        <article class="mcard wide reveal">
           <div class="mock" aria-hidden="true"><div class="side"></div><div class="main"><div class="row"><div style="--c:#5b8def"></div><div style="--c:#3cb371"></div><div style="--c:#f2a33a"></div><div style="--c:#e05c5c"></div></div><div class="big"><div><span class="ring"></span></div><div><svg class="spark" viewBox="0 0 100 40" fill="none" stroke="#f2a33a" stroke-width="2.5"><path d="M2 34 L18 30 L30 8 L42 26 L56 28 L70 30 L84 32 L98 33"/></svg></div></div></div></div>
-          <h4>SI-REKAP PERJADIN – Travel Expense Recap System</h4>
-          <p>Team innovation: a web-based system replacing manual Excel recaps with real-time budget absorption dashboards.</p>
-          <a class="btn" href="https://script.google.com/macros/s/AKfycbwA5ElCYZvsyS7cHxXX55WejGfJZvDRKJGX6F4VXEF0bTF_f7Kyflm7ZPFSddqzRnp7Kw/exec" target="_blank" rel="noopener">View the project <svg class="ico"><use href="#i-ext"/></svg></a>
-        </article>
-        <article class="mcard reveal">
-          <span class="k">2026 · Pelindo Sinergi Lokaseva</span>
-          <div class="mock" aria-hidden="true"><div class="side" style="background:#3b3b3d"></div><div class="main"><div class="row"><div style="--c:#0d6efd"></div><div style="--c:#20c997"></div><div style="--c:#6f42c1"></div><div style="--c:#fd7e14"></div></div><div class="big"><div><svg class="spark" viewBox="0 0 100 40"><g fill="#545454"><rect x="8" y="18" width="12" height="20"/><rect x="28" y="10" width="12" height="28"/><rect x="48" y="22" width="12" height="16"/><rect x="68" y="4" width="12" height="34"/></g></svg></div><div><svg class="spark" viewBox="0 0 100 40" fill="none" stroke="#0d6efd" stroke-width="2.5"><path d="M2 32 L20 26 L36 28 L52 16 L68 18 L84 8 L98 6"/></svg></div></div></div></div>
-          <h4>Innovation Hub Dashboard</h4>
-          <p>Google Sheets + Apps Script web app that turns the SPSL innovation data bank into a live monitoring dashboard.</p>
-          <a class="btn" href="https://script.google.com/macros/s/AKfycbwEEaQI-RCK1s31UnpRGKp6aLm6DQ1RZsMGfku10ogzkHh6GXuUIFlAGb1C1LMUXTYwJA/exec" target="_blank" rel="noopener">View the project <svg class="ico"><use href="#i-ext"/></svg></a>
+          <div class="mtext">
+            <span class="k">2026 · Kemenimipas</span>
+            <h4>SI-REKAP PERJADIN – Travel Expense Recap System</h4>
+            <p>Team innovation: a web-based system replacing manual Excel recaps with real-time budget absorption dashboards.</p>
+            <a class="btn" href="https://script.google.com/macros/s/AKfycbwA5ElCYZvsyS7cHxXX55WejGfJZvDRKJGX6F4VXEF0bTF_f7Kyflm7ZPFSddqzRnp7Kw/exec" target="_blank" rel="noopener">View the project <svg class="ico"><use href="#i-ext"/></svg></a>
+          </div>
         </article>
       </div>
     </div>
@@ -935,7 +967,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
       <a class="ccontact" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener"><small>LinkedIn</small><b>Rizka Ayu Dwi Sugiharto</b></a>
       <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
       <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=3" target="_blank" rel="noopener"><small>Portfolio</small><b>Download Portfolio (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=4" target="_blank" rel="noopener"><small>Portfolio</small><b>Download Portfolio (PDF)</b></a>
     </div>
     <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>
