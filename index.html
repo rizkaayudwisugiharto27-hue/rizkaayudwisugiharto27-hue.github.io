@@ -179,6 +179,7 @@ section{padding:72px 0}
 .browser-bar i{width:10px;height:10px;border-radius:50%;background:#c4c4ca}
 .browser-bar span{flex:1;min-width:0;background:#fff;border-radius:6px;padding:3px 10px;margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .browser iframe{display:block;width:100%;height:640px;border:0;background:#fff}
+.browser.tall iframe{height:820px}
 .print-only{display:none}
 .live-tip{color:var(--on-dark-3);font-size:.82rem;margin-top:10px}
 .mock{background:#f4f4f6;border-radius:10px;padding:12px;display:grid;grid-template-columns:44px 1fr;gap:8px}
@@ -336,6 +337,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
   .more,.skills{grid-template-columns:1fr}
   .mcard.wide{grid-template-columns:1fr}
   .browser iframe{height:540px}
+  .browser.tall iframe{height:620px}
   .live{padding:16px}
   .contact-grid{grid-template-columns:1fr 1fr}
   .panel{padding:16px;border-width:4px}
@@ -421,7 +423,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
         <div class="btns">
           <a class="btn primary" href="#contact">Contact me</a>
           <a class="btn" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download CV</a>
-          <a class="btn" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download Portfolio</a>
+          <a class="btn" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=7" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download Portfolio</a>
           <a class="btn" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
@@ -518,7 +520,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
           <li>Validated <b>200+</b> financial documents, including payment orders (SPM), grants, bank accounts and official travel documents.</li>
           <li>Assisted in preparing the annual budget plan (<b>RKA</b>), contributing to a <b>15%</b> improvement in forecasting accuracy.</li>
           <li>Supported monthly reconciliation and annual financial reporting with <b>100% on-time</b> submission.</li>
-          <li>Built the team innovation <a class="link" href="#more-work">SI-REKAP PERJADIN</a>, a travel-expense recap web app with real-time budget absorption dashboards.</li>
+          <li>Built the team innovation <a class="link" href="#case-sirekap">SI-REKAP PERJADIN</a>, a travel-expense recap web app with real-time budget absorption dashboards.</li>
         </ul>
         <p class="result"><svg class="ico"><use href="#i-award"/></svg><span>Completed the internship with an “Excellent” (Sangat Baik) rating</span></p>
         <div class="thumbs">
@@ -796,17 +798,26 @@ html:not(.js) .reveal{opacity:1;transform:none}
           <a class="btn primary" href="projects/innovation-hub/index.html" target="_blank" rel="noopener">Open full live demo <svg class="ico"><use href="#i-ext"/></svg></a>
         </div>
       </article>
-      <div class="more">
-        <article class="mcard wide reveal">
-          <div class="mock" aria-hidden="true"><div class="side"></div><div class="main"><div class="row"><div style="--c:#5b8def"></div><div style="--c:#3cb371"></div><div style="--c:#f2a33a"></div><div style="--c:#e05c5c"></div></div><div class="big"><div><span class="ring"></span></div><div><svg class="spark" viewBox="0 0 100 40" fill="none" stroke="#f2a33a" stroke-width="2.5"><path d="M2 34 L18 30 L30 8 L42 26 L56 28 L70 30 L84 32 L98 33"/></svg></div></div></div></div>
-          <div class="mtext">
+      <article class="live reveal" id="case-sirekap">
+        <div class="live-head">
+          <div>
             <span class="k">2026 · Kemenimipas</span>
             <h4>SI-REKAP PERJADIN – Travel Expense Recap System</h4>
-            <p>Team innovation: a web-based system replacing manual Excel recaps with real-time budget absorption dashboards.</p>
-            <a class="btn" href="https://script.google.com/macros/s/AKfycbwA5ElCYZvsyS7cHxXX55WejGfJZvDRKJGX6F4VXEF0bTF_f7Kyflm7ZPFSddqzRnp7Kw/exec" target="_blank" rel="noopener">View the project <svg class="ico"><use href="#i-ext"/></svg></a>
           </div>
-        </article>
-      </div>
+          <span class="badge-live">LIVE DEMO</span>
+        </div>
+        <p>Team innovation at the Bureau of Planning and Finance: a Google Sheets + Apps Script web app that replaces manual Excel recaps of official travel (perjadin) with a reconciliation dashboard — document status per bureau, monthly trend, input/edit forms, master data and a printable report. The demo below runs the original code on <b>simulated data</b> (no ministry data); what you add or edit is saved only in your browser.</p>
+        <div class="chips"><span class="chip">Google Sheets</span><span class="chip">Apps Script</span><span class="chip">HTML · CSS · JavaScript</span><span class="chip">Budget reconciliation</span></div>
+        <div class="browser tall">
+          <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>rizkaayudwisugiharto27-hue.github.io/projects/si-rekap-perjadin/</span></div>
+          <iframe src="projects/si-rekap-perjadin/index.html" title="SI-REKAP PERJADIN — live demo with simulated data" loading="lazy"></iframe>
+        </div>
+        <p class="live-tip">Use the sidebar inside the frame: Beranda, Input Perjadin, Data Perjadin (edit &amp; delete), Data Master and Laporan all work here.</p>
+        <a class="print-only" href="projects/si-rekap-perjadin/index.html"><img src="assets/exp/si-rekap-perjadin-demo.webp" width="1600" height="1001" alt="SI-REKAP PERJADIN live demo" loading="lazy"></a>
+        <div class="btns" style="margin-top:16px">
+          <a class="btn primary" href="projects/si-rekap-perjadin/index.html" target="_blank" rel="noopener">Open full live demo <svg class="ico"><use href="#i-ext"/></svg></a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -972,7 +983,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
       <a class="ccontact" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener"><small>LinkedIn</small><b>Rizka Ayu Dwi Sugiharto</b></a>
       <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
       <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><small>Portfolio</small><b>Download Portfolio (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=7" target="_blank" rel="noopener"><small>Portfolio</small><b>Download Portfolio (PDF)</b></a>
     </div>
     <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>

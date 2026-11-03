@@ -14,6 +14,8 @@ https://rizkaayudwisugiharto27-hue.github.io
 - `assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf` — versi PDF website untuk tombol **Download Portfolio**
 - `tools/build-portfolio-pdf.mjs` — membuat ulang PDF portfolio dari `index.html`
 - `projects/innovation-hub/` — **live demo** Innovation Hub Dashboard (kode asli dari repo `spsl-innovation-hub`) dengan **data asli yang disamarkan**
+- `projects/si-rekap-perjadin/` — **live demo** SI-REKAP PERJADIN: kode Apps Script asli (`server.js`) dijalankan di browser lewat `gas-shim.js`, dengan **data simulasi** (`seed-data.js`)
+- `tools/build-perjadin-demo.py` — membangun ulang demo PERJADIN dari `Code.gs` + `Index.html` asli (`python tools/build-perjadin-demo.py <folder>`)
 - `tools/anonymize-innovation-data.py` — menyamarkan data bank inovasi untuk live demo (nama, email, tim, dan deskripsi internal dihapus)
 - `portfolio-v1.html` — arsip desain sebelumnya (tidak diindeks mesin pencari)
 
