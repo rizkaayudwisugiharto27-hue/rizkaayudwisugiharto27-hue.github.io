@@ -25,8 +25,8 @@ https://rizkaayudwisugiharto27-hue.github.io
 **Mengubah teks**: buka `index.html` di GitHub, klik ikon pensil (Edit), cari teks yang mau
 diubah (Ctrl+F), ubah, lalu klik **Commit changes**. Perubahan tampil dalam 1–2 menit.
 
-**Mengganti CV**: ubah teks di `tools/cv.html` lalu jalankan `node tools/build-portfolio-pdf.mjs`,
-atau upload PDF baru ke folder `assets` dengan nama file yang sama (`CV-Rizka-Ayu-Dwi-Sugiharto.pdf`).
+**Mengganti CV**: upload PDF baru ke folder `assets` dengan nama file yang sama
+(`CV-Rizka-Ayu-Dwi-Sugiharto.pdf`), lalu commit.
 
 **Menambah sertifikat**: upload gambar ke `assets/certs`, lalu di `index.html` salin salah satu
 kartu sertifikat yang sudah ada, misalnya:

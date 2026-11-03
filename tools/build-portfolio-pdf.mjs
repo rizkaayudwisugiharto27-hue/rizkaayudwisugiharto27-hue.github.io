@@ -35,12 +35,6 @@ const outSummary = path.join(root, 'assets', 'Portfolio-Summary-Rizka-Ayu-Dwi-Su
 const sp = await browser.newPage();
 await sp.goto(pathToFileURL(path.join(root, 'tools', 'portfolio-summary.html')).href, { waitUntil: 'networkidle' });
 await sp.pdf({ path: outSummary, format: 'A4', printBackground: true, preferCSSPageSize: true });
-// 1-page CV from tools/cv.html
-const outCv = path.join(root, 'assets', 'CV-Rizka-Ayu-Dwi-Sugiharto.pdf');
-const cp = await browser.newPage();
-await cp.goto(pathToFileURL(path.join(root, 'tools', 'cv.html')).href, { waitUntil: 'networkidle' });
-await cp.pdf({ path: outCv, format: 'A4', printBackground: true, preferCSSPageSize: true });
 await browser.close();
 console.log('Saved', out);
-console.log('Saved', outCv);
 console.log('Saved', outSummary);
