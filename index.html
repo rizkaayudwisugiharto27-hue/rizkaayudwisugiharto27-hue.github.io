@@ -106,6 +106,9 @@ section{padding:72px 0}
 .sec-head h2::before{content:"";display:block;width:44px;height:6px;background:var(--gold);margin-bottom:14px}
 .dark .sec-head h2::before{background:var(--g-300)}
 .sec-head p{margin-top:10px;color:var(--ink-2);max-width:64ch}
+/* Long text is justified; on narrow screens hyphenation keeps the word gaps even */
+.prose p,.sec-head p,.log-body ul.pts li,.lead-cap,.lede,.live>p,.ba p,.cap,.award p,.focus li span,.sk-wide p,.desc,.live-tip,.panel>p,#contact .sub{text-align:justify}
+@media (max-width:640px){.prose p,.sec-head p,.log-body ul.pts li,.lead-cap,.lede,.live>p,.ba p,.cap,.award p,.focus li span,.sk-wide p,.desc,.live-tip,.panel>p,#contact .sub{-webkit-hyphens:auto;hyphens:auto}}
 .dark .sec-head p{color:var(--on-dark-2)}
 .sub-h{font-size:1.35rem;font-weight:800;margin:48px 0 18px;letter-spacing:-.01em}
 .link{font-weight:700;text-underline-offset:3px;text-decoration-thickness:2px}
@@ -476,7 +479,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
         <div class="btns">
           <a class="btn primary" href="#contact">Contact me</a>
           <a class="btn" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download CV</a>
-          <a class="btn" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=10" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Portfolio Summary (PDF)</a>
+          <a class="btn" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=11" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Portfolio Summary (PDF)</a>
           <a class="btn" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
@@ -496,8 +499,8 @@ html:not(.js) .reveal{opacity:1;transform:none}
     <div class="sec-head"><h2>About me</h2></div>
     <div class="about">
       <div class="prose reveal">
-        <p>I work where the analysis meets the tools. I can build the economic case — an industry outlook, an ARDL model, a financing comparison — <b>and</b> the spreadsheet or dashboard that keeps those numbers up to date for the people who decide.</p>
-        <p>I like turning scattered data into one clear picture: plan-versus-realization reports, budget reconciliation, KPI monitoring. I’m careful with official documents and deadlines — at the ministry, reconciliation and annual reports went in <b>100% on time</b> — and I learn new systems quickly, from DELMIA Quintiq to Apps Script.</p>
+        <p>I work where the analysis meets the tools. I can build the economic case, such as an industry outlook, an ARDL model or a financing comparison, <b>and</b> the spreadsheet or dashboard that keeps those numbers up to date for the people who decide.</p>
+        <p>I like turning scattered data into one clear picture: plan-versus-realization reports, budget reconciliation, KPI monitoring. I’m careful with official documents and deadlines: at the ministry, reconciliation and annual reports went in <b>100% on time</b>. I also learn new systems quickly, from DELMIA Quintiq to Apps Script.</p>
         <div class="facts">
           <div class="fact"><b>3</b><span>Internships</span></div>
           <div class="fact"><b>3.84</b><span>GPA (out of 4.00)</span></div>
@@ -1079,8 +1082,8 @@ html:not(.js) .reveal{opacity:1;transform:none}
       <a class="ccontact" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener"><small>LinkedIn</small><b>Rizka Ayu Dwi Sugiharto</b></a>
       <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
       <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=10" target="_blank" rel="noopener"><small>Portfolio · 3 pages</small><b>Summary (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=32" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=11" target="_blank" rel="noopener"><small>Portfolio · 3 pages</small><b>Summary (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=33" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
     </div>
     <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>
