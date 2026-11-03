@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Portfolio Summary — Rizka Ayu Dwi Sugiharto</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
+<!-- Source for assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf (3 A4 pages). Rebuild: node tools/build-portfolio-pdf.mjs -->
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;font-family:Montserrat,Arial,sans-serif;color:#1c1c1e;font-size:10.5pt;line-height:1.5}
+.page{width:210mm;height:297mm;padding:14mm 15mm;position:relative;overflow:hidden;break-after:page}
+.page:last-child{break-after:auto}
+h1,h2,h3,p,ul{margin:0}
+a{color:inherit}
+.top{background:#29292c;color:#fff;margin:-14mm -15mm 8mm;padding:12mm 15mm 9mm;display:grid;grid-template-columns:1fr 34mm;gap:8mm;align-items:center}
+.top .k{color:#c2c2c8;font-size:9.5pt;font-weight:600}
+.top h1{font-size:26pt;font-weight:900;line-height:1.05;letter-spacing:-.5pt;margin:2mm 0}
+.top .c{font-size:8.6pt;color:#d9d9de}
+.top .c a{color:#fff;font-weight:700;text-decoration:none}
+.photo{width:34mm;height:34mm;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 50% 35%,#a3a3a9,#5d5d62 70%);border:2mm solid #3a3a3e;position:relative}
+.photo img{position:absolute;left:50%;top:8%;width:72%;transform:translateX(-50%)}
+.stripe{height:3mm;background:repeating-linear-gradient(-45deg,#545454 0 4mm,#b9b9bf 4mm 8mm);margin:-8mm -15mm 7mm}
+h2{font-size:12.5pt;font-weight:800;margin:0 0 3mm;display:flex;align-items:center;gap:3mm}
+h2::before{content:"";width:8mm;height:1.6mm;background:#545454}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin-bottom:6mm}
+.fact{border:.3mm solid #dcdce1;border-radius:2mm;padding:3mm}
+.fact b{display:block;font-size:15pt;font-weight:800;color:#3a3a3e;line-height:1.1}
+.fact span{font-size:7.8pt;color:#55555b}
+.lead{color:#3a3a3e;margin-bottom:6mm}
+.exp{display:grid;grid-template-columns:30mm 1fr;gap:4mm;padding:3mm 0;border-top:.3mm solid #dcdce1}
+.exp:first-of-type{border-top:0}
+.when{font-size:8pt;font-weight:700;color:#55555b}
+.exp h3{font-size:10.5pt;font-weight:800}
+.role{font-size:8.8pt;font-weight:700;color:#4a4a4f;margin-bottom:1mm}
+.exp ul{padding-left:4mm;font-size:9pt}
+.exp li{margin-bottom:.6mm}
+.case{border:.3mm solid #dcdce1;border-radius:2.5mm;padding:4mm;margin-bottom:4mm;break-inside:avoid}
+.case .tag{font-size:7.5pt;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#86868c}
+.case h3{font-size:11pt;font-weight:800;margin:.5mm 0 1.5mm}
+.case p{font-size:9pt;color:#3a3a3e}
+.case .row{display:grid;grid-template-columns:62mm 1fr;gap:4mm;align-items:center}
+.case img{width:100%;border-radius:1.5mm;border:.3mm solid #dcdce1}
+.case .link{display:inline-block;margin-top:2mm;font-size:8.6pt;font-weight:700}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:2mm;margin-top:2mm}
+.kpi{background:#ececef;border-radius:1.5mm;padding:2mm}
+.kpi b{display:block;font-size:10.5pt;font-weight:800}
+.kpi span{font-size:7.2pt;color:#55555b;line-height:1.3;display:block}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:6mm}
+.box{border:.3mm solid #dcdce1;border-radius:2.5mm;padding:4mm;margin-bottom:4mm}
+.box h3{font-size:10pt;font-weight:800;margin-bottom:2mm}
+.box ul{padding-left:4mm;font-size:9pt}
+.box li{margin-bottom:.8mm}
+.chips{display:flex;flex-wrap:wrap;gap:1.5mm}
+.chips span{background:#3a3a3e;color:#fff;border-radius:5mm;padding:.8mm 2.6mm;font-size:8pt;font-weight:700}
+.chips span.o{background:none;color:#3a3a3e;box-shadow:inset 0 0 0 .3mm #3a3a3e}
+.foot{position:absolute;left:15mm;right:15mm;bottom:9mm;display:flex;justify-content:space-between;font-size:7.8pt;color:#86868c;border-top:.3mm solid #dcdce1;padding-top:2mm}
+.foot a{color:#3a3a3e;font-weight:700;text-decoration:none}
+.cta{background:#29292c;color:#fff;border-radius:2.5mm;padding:5mm;margin-top:4mm}
+.cta h3{font-size:12pt;font-weight:800;margin-bottom:1.5mm}
+.cta p{font-size:9pt;color:#d9d9de}
+.cta a{color:#fff;font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: profile + experience -->
+<section class="page">
+  <div class="top">
+    <div>
+      <p class="k">Corporate Planning &amp; Financial Analyst · Fresh graduate</p>
+      <h1>Rizka Ayu Dwi Sugiharto</h1>
+      <p class="c"><a href="mailto:rizkaayudwisugiharto27@gmail.com">rizkaayudwisugiharto27@gmail.com</a> · +62 852-5742-2314 · <a href="https://www.linkedin.com/in/rizkaayudwi/">linkedin.com/in/rizkaayudwi</a> · South Jakarta<br>
+      Full portfolio &amp; live demos: <a href="https://rizkaayudwisugiharto27-hue.github.io/">rizkaayudwisugiharto27-hue.github.io</a></p>
+    </div>
+    <div class="photo"><img src="../assets/rizka-about.webp" alt=""></div>
+  </div>
+  <div class="stripe"></div>
+
+  <div class="facts">
+    <div class="fact"><b>3</b><span>Internships (SOE, ministry, Pertamina)</span></div>
+    <div class="fact"><b>3.84</b><span>GPA out of 4.00, UMY</span></div>
+    <div class="fact"><b>583</b><span>English Proficiency Test (EPT)</span></div>
+    <div class="fact"><b>2</b><span>Dashboard web apps built</span></div>
+  </div>
+
+  <p class="lead">International Economics graduate with hands-on experience in RJPP monitoring, annual budget planning (RKA), financial analysis and industry outlook research. Proficient in Excel, Stata and EViews; builds Google Sheets + Apps Script dashboards.</p>
+
+  <h2>Experience</h2>
+  <div class="exp">
+    <div class="when">Jun 2026 – Present</div>
+    <div><h3>PT Pelindo Sinergi Lokaseva</h3><p class="role">Strategic Planning Intern · North Jakarta</p>
+      <ul>
+        <li>Monitored quarterly RJPP 2026 implementation, completing progress reports <b>50% faster</b>; helped draft RJPP 2026–2030.</li>
+        <li>Market and macroeconomic research for the Industry Outlook 2026, including an <b>ARDL regression</b> of exports.</li>
+        <li>Comparative analysis of Terminal Kijing’s financial realization; BOD materials for ASEAN Port &amp; Logistics 2026.</li>
+      </ul></div>
+  </div>
+  <div class="exp">
+    <div class="when">Nov 2025 – May 2026</div>
+    <div><h3>Ministry of Immigration and Corrections</h3><p class="role">Finance &amp; Budget Administration Intern · Bureau of Planning and Finance</p>
+      <ul>
+        <li>Organized <b>600+</b> financial records (+20% reporting efficiency); validated <b>200+</b> SPM, grant and travel documents.</li>
+        <li>Supported the annual budget plan (RKA), <b>+15%</b> forecasting accuracy; reconciliation and annual reports <b>100% on time</b>.</li>
+        <li>Built the team innovation SI-REKAP PERJADIN. Completed with an <b>“Excellent”</b> rating.</li>
+      </ul></div>
+  </div>
+  <div class="exp">
+    <div class="when">May 2025</div>
+    <div><h3>PT Pertamina Training &amp; Consulting</h3><p class="role">Administrative Representative – Supply Chain Planning</p>
+      <ul>
+        <li>Monitored fuel distribution across <b>120+ locations in 8 regions</b> in DELMIA Quintiq, with <b>95%</b> data accuracy.</li>
+        <li>Automated Excel &amp; Google Sheets reports, increasing reporting efficiency by <b>60%</b>.</li>
+      </ul></div>
+  </div>
+  <div class="exp">
+    <div class="when">2022 – 2024</div>
+    <div><h3>Organization &amp; volunteering</h3>
+      <ul>
+        <li><b>Liaison Officer</b>, ICOSI &amp; ICIEFI 2024: coordinated 100+ participants, 90% positive feedback.</li>
+        <li><b>Secretary</b>, Entrepreneurship Division, HIMIE UMY: 50+ documents, 15 SOPs, 10+ events.</li>
+      </ul></div>
+  </div>
+  <div class="foot"><span>Rizka Ayu Dwi Sugiharto · Portfolio Summary</span><span>1 / 3</span></div>
+</section>
+
+<!-- PAGE 2: projects -->
+<section class="page">
+  <h2>Projects &amp; work samples</h2>
+
+  <div class="case">
+    <span class="tag">Live demo · Pelindo Sinergi Lokaseva · 2026</span>
+    <h3>Innovation Hub Dashboard</h3>
+    <div class="row">
+      <img src="../assets/exp/innovation-hub-demo.webp" alt="">
+      <div><p>Google Sheets + Apps Script web app that turns the company’s innovation data bank (453 ideas) into a live monitoring dashboard: filters, KPIs, charts, unit × category matrix, searchable list with CSV export.</p>
+      <a class="link" href="https://rizkaayudwisugiharto27-hue.github.io/projects/innovation-hub/">Open the live demo ↗</a></div>
+    </div>
+  </div>
+
+  <div class="case">
+    <span class="tag">Live demo · Kemenimipas · 2026</span>
+    <h3>SI-REKAP PERJADIN – Travel Expense Recap System</h3>
+    <div class="row">
+      <img src="../assets/exp/si-rekap-perjadin-demo.webp" alt="">
+      <div><p>Replaces manual Excel recaps of official travel with a reconciliation dashboard: document status per bureau, monthly trend, input/edit forms, master data and a printable report.</p>
+      <a class="link" href="https://rizkaayudwisugiharto27-hue.github.io/projects/si-rekap-perjadin/">Open the live demo ↗</a></div>
+    </div>
+  </div>
+
+  <div class="case">
+    <span class="tag">Work sample · Industry Outlook 2026</span>
+    <h3>Port benchmark, vessel trends &amp; ARDL regression</h3>
+    <p>Top-10 global container port benchmark (all 10 run supporting logistics/FTZ zones); Java’s share of container port calls fell from 69% to 47%; ARDL bounds test (F = 6.783 &gt; 4.428) shows the exchange rate and BI Rate both reduce exports in the long run.</p>
+  </div>
+
+  <div class="case">
+    <span class="tag">Case study · Oct 2026</span>
+    <h3>Investment Scheme Analysis — Profit Sharing vs Phantom Share</h3>
+    <p>Excel financial model and recommendation deck for a Corporate Investment Staff skill test.</p>
+    <div class="kpis">
+      <div class="kpi"><b>+41.7%</b><span>Revenue growth in 3 years</span></div>
+      <div class="kpi"><b>72%</b><span>Net profit absorbed by bank installments</span></div>
+      <div class="kpi"><b>12.3% vs 12.7%</b><span>Investor IRR, nearly equal</span></div>
+      <div class="kpi"><b>Phantom share</b><span>Cash Rp230–771 m higher</span></div>
+    </div>
+  </div>
+  <div class="foot"><span>Rizka Ayu Dwi Sugiharto · Portfolio Summary</span><span>2 / 3</span></div>
+</section>
+
+<!-- PAGE 3: skills, education, certificates -->
+<section class="page">
+  <h2>Skills</h2>
+  <div class="cols">
+    <div class="box"><h3>Strategy, finance &amp; research</h3>
+      <div class="chips"><span>Strategic Planning (RJPP)</span><span class="o">Budget Planning (RKA)</span><span>Financial Reporting</span><span class="o">Financial Modelling</span><span>Market Research</span><span class="o">Macroeconomic Analysis</span><span>Econometrics (ARDL)</span><span class="o">Supply Chain Planning</span></div></div>
+    <div class="box"><h3>Tools &amp; languages</h3>
+      <div class="chips"><span>Microsoft Excel</span><span class="o">Stata &amp; EViews</span><span>Google Sheets &amp; Apps Script</span><span class="o">DELMIA Quintiq</span><span>PowerPoint</span></div>
+      <p style="font-size:9pt;margin-top:3mm"><b>Indonesian</b> (native) · <b>English</b> — EPT 583</p></div>
+  </div>
+
+  <h2 style="margin-top:3mm">Education</h2>
+  <div class="box">
+    <h3>Universitas Muhammadiyah Yogyakarta — Bachelor of International Economics (2021 – 2025)</h3>
+    <ul>
+      <li>GPA <b>3.84 / 4.00</b> · International Program for Islamic Economics and Finance (IPIEF)</li>
+      <li>Thesis: <a href="https://etd.umy.ac.id/id/eprint/50806/">Analysis of Factors Affecting Agricultural Value Added (AVA) in Southeast Asia</a></li>
+      <li><b>2nd Runner-Up</b>, HERO 11th International Call for Papers 2023 (FEB UMY)</li>
+    </ul>
+  </div>
+
+  <h2 style="margin-top:3mm">Selected certificates</h2>
+  <div class="cols">
+    <div class="box"><ul>
+      <li>Corporate Finance — MySkill (2026)</li>
+      <li>Financial Planning &amp; Asset Management — CAMY (2026)</li>
+      <li>Planning, Organizing &amp; Controlling — CAMY (2026)</li>
+      <li>Cargo Logistics Preparation Procedures — InJourney (2026)</li>
+      <li>Mastering Supply Chain &amp; Logistics — Alison (2026)</li>
+    </ul></div>
+    <div class="box"><ul>
+      <li>BNSP Certificate of Competence — LSP UMY (2025)</li>
+      <li>English Proficiency Test 583 — UMY (2025)</li>
+      <li>Susenas Data Processing with STATA — UGM (2024)</li>
+      <li>Microsoft Excel Training — FEB UMY (2024)</li>
+      <li>MagangHub Internship — Kemnaker RI (2026)</li>
+    </ul></div>
+  </div>
+
+  <div class="cta">
+    <h3>See the full portfolio and try the live dashboards</h3>
+    <p><a href="https://rizkaayudwisugiharto27-hue.github.io/">rizkaayudwisugiharto27-hue.github.io</a> — work samples, photos, all 19 certificates and two interactive demos.<br>
+    Contact: <a href="mailto:rizkaayudwisugiharto27@gmail.com">rizkaayudwisugiharto27@gmail.com</a> · WhatsApp +62 852-5742-2314</p>
+  </div>
+  <div class="foot"><span>Rizka Ayu Dwi Sugiharto · Portfolio Summary</span><span>3 / 3</span></div>
+</section>
+</body>
+</html>

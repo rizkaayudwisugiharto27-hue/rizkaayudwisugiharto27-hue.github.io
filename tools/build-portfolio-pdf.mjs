@@ -1,4 +1,5 @@
-// Builds assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf from index.html using its @media print styles.
+// Builds assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf (full, from index.html @media print)
+// and assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf (3 pages, from tools/portfolio-summary.html).
 // Usage (needs Node.js + Playwright):  node tools/build-portfolio-pdf.mjs
 // Afterwards bump the ?v= number on the Portfolio PDF links in index.html.
 import { createRequire } from 'node:module';
@@ -29,5 +30,11 @@ await page.evaluate(live => {
 await page.emulateMedia({ media: 'print' });
 await page.waitForTimeout(500);
 await page.pdf({ path: out, format: 'A4', printBackground: true, preferCSSPageSize: true, scale: 0.8 });
+// Short 3-page summary from tools/portfolio-summary.html
+const outSummary = path.join(root, 'assets', 'Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf');
+const sp = await browser.newPage();
+await sp.goto(pathToFileURL(path.join(root, 'tools', 'portfolio-summary.html')).href, { waitUntil: 'networkidle' });
+await sp.pdf({ path: outSummary, format: 'A4', printBackground: true, preferCSSPageSize: true });
 await browser.close();
 console.log('Saved', out);
+console.log('Saved', outSummary);

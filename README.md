@@ -11,8 +11,10 @@ https://rizkaayudwisugiharto27-hue.github.io
 - `assets/exp/` — foto kegiatan magang (`nama.webp`) + versi kecilnya (`nama-thumb.webp`)
 - `assets/certs/` — gambar sertifikat (`nama.webp`) + versi kecilnya (`nama-thumb.webp`)
 - `assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf` — CV untuk tombol **Download CV**
-- `assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf` — versi PDF website untuk tombol **Download Portfolio**
-- `tools/build-portfolio-pdf.mjs` — membuat ulang PDF portfolio dari `index.html`
+- `assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf` — versi PDF lengkap website (Full portfolio)
+- `assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf` — ringkasan 3 halaman, dibuat dari `tools/portfolio-summary.html`
+- `assets/og-cover.jpg`, `assets/favicon.svg`, `assets/apple-touch-icon.png` — gambar preview link & ikon tab
+- `tools/build-portfolio-pdf.mjs` — membuat ulang kedua PDF portfolio (lengkap & ringkasan)
 - `projects/innovation-hub/` — **live demo** Innovation Hub Dashboard (kode asli dari repo `spsl-innovation-hub`) dengan **data asli yang disamarkan**
 - `projects/si-rekap-perjadin/` — **live demo** SI-REKAP PERJADIN: kode Apps Script asli (`server.js`) dijalankan di browser lewat `gas-shim.js`, dengan **data simulasi** (`seed-data.js`)
 - `tools/build-perjadin-demo.py` — membangun ulang demo PERJADIN dari `Code.gs` + `Index.html` asli (`python tools/build-perjadin-demo.py <folder>`)
