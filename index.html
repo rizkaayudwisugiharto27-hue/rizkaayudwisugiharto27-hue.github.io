@@ -79,7 +79,7 @@ ul,ol{padding:0;list-style:none}
 .kicker b{color:#fff}
 .avail{display:flex;align-items:flex-start;gap:8px;color:var(--on-dark-2);font-size:.88rem;font-weight:600;margin:18px 0 26px;max-width:52ch}
 .avail .ico{flex:none;margin-top:3px}
-.ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 4px;max-width:880px}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 4px}
 .ba>div{border:1px solid var(--line-dark);border-radius:10px;padding:12px 14px;background:var(--g-900)}
 .ba>div:last-child{border-color:#41b883;background:rgba(65,184,131,.08)}
 .ba span{display:block;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-3);margin-bottom:4px}
@@ -104,8 +104,8 @@ section{padding:72px 0}
 .sec-head{margin-bottom:32px;max-width:760px}
 .sec-head h2{font-size:clamp(1.9rem,4vw,2.5rem);font-weight:800;letter-spacing:-.02em;line-height:1.15}
 .sec-head h2::before{content:"";display:block;width:44px;height:6px;background:var(--gold);margin-bottom:14px}
-.dark .sec-head h2::before{background:var(--g-300)}
 .sec-head p{margin-top:10px;color:var(--ink-2);max-width:64ch}
+#projects .sec-head,#projects .sec-head p{max-width:none}
 /* Long text is justified; on narrow screens hyphenation keeps the word gaps even */
 .prose p,.sec-head p,.log-body ul.pts li,.lead-cap,.lede,.live>p,.ba p,.cap,.award p,.focus li span,.sk-wide p,.desc,.live-tip,.panel>p,#contact .sub{text-align:justify}
 @media (max-width:640px){.prose p,.sec-head p,.log-body ul.pts li,.lead-cap,.lede,.live>p,.ba p,.cap,.award p,.focus li span,.sk-wide p,.desc,.live-tip,.panel>p,#contact .sub{-webkit-hyphens:auto;hyphens:auto}}
@@ -160,16 +160,16 @@ section{padding:72px 0}
 /* ===== Cases (dark) ===== */
 .case{padding:8px 0 40px;margin-bottom:40px;border-bottom:1px solid var(--line-dark)}
 .case:last-of-type{border-bottom:0;margin-bottom:0}
-.case h3{font-size:clamp(1.4rem,2.6vw,1.75rem);font-weight:800;letter-spacing:-.01em;line-height:1.2;max-width:24ch}
-.case .lede{color:var(--on-dark);max-width:68ch;margin:12px 0}
-.case .note{border-left:3px solid var(--g-500);padding:4px 0 4px 14px;color:var(--on-dark-2);font-style:italic;font-size:.92rem;max-width:68ch;margin:14px 0}
+.case h3{font-size:clamp(1.4rem,2.6vw,1.75rem);font-weight:800;letter-spacing:-.01em;line-height:1.2}
+.case .lede{color:var(--on-dark);margin:12px 0}
+.case .note{border-left:3px solid var(--g-500);padding:4px 0 4px 14px;color:var(--on-dark-2);font-style:italic;font-size:.92rem;margin:14px 0}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}
 .chip{border:1px solid var(--line-dark);color:var(--on-dark-2);border-radius:999px;padding:4px 12px;font-size:.78rem;font-weight:600}
 .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
 .tab{font:inherit;font-weight:700;font-size:.84rem;padding:9px 16px;border-radius:6px;border:1px solid var(--line-dark);background:transparent;color:#fff;cursor:pointer}
 .tab[aria-selected="true"]{background:#fff;color:var(--g-950);border-color:#fff}
 .panel{background:#fff;color:var(--ink);border-radius:10px;padding:26px;border:8px solid #fff;box-shadow:0 0 0 1px var(--line-dark)}
-.panel .desc{color:var(--ink-2);font-size:.92rem;margin-bottom:18px;max-width:72ch}
+.panel .desc{color:var(--ink-2);font-size:.92rem;margin-bottom:18px}
 .cap{margin-top:12px;color:var(--on-dark);font-size:.9rem}
 .cap b{color:#fff}
 .find-h{font-size:1.15rem;font-weight:800;margin:30px 0 10px}
@@ -191,7 +191,7 @@ section{padding:72px 0}
 .live-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start;margin-bottom:8px}
 .live .k{font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-3)}
 .live h4{font-size:1.3rem;font-weight:800;line-height:1.3;margin-top:4px}
-.live>p{color:var(--on-dark-2);font-size:.94rem;max-width:80ch}
+.live>p{color:var(--on-dark-2);font-size:.94rem}
 .live>p b{color:#fff}
 .badge-live{display:inline-flex;align-items:center;gap:8px;background:#e9f7ef;color:#1f6b45;font-weight:800;font-size:.74rem;letter-spacing:.08em;border-radius:999px;padding:5px 12px}
 .badge-live::before{content:"";width:8px;height:8px;border-radius:50%;background:#2fbf71;animation:pulse 1.6s infinite}
@@ -1083,7 +1083,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
       <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
       <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
       <a class="ccontact" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=11" target="_blank" rel="noopener"><small>Portfolio · 3 pages</small><b>Summary (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=33" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=34" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
     </div>
     <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>
