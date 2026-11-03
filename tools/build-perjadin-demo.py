@@ -13,10 +13,28 @@ from pathlib import Path
 OUT = Path(__file__).resolve().parent.parent / "projects" / "si-rekap-perjadin"
 
 # ---------------------------------------------------------------- server.js
+# Demo additions to Code.gs: the original leaves every "Total Biaya" column at Rp 0 (it never sums the costs).
+SERVER_FIX = [
+    ("function toNumber_(value) {",
+     "function biaya_(rows) {\n  return sum_(rows.map(function(r) { return toNumber_(r.TOTAL_BIAYA); }));\n}\n\nfunction toNumber_(value) {"),
+    ("      totalBiaya: 0,", "      totalBiaya: biaya_(rows),"),
+    ("      persen: pct_(lengkap, data.length)\n    };", "      persen: pct_(lengkap, data.length),\n      totalBiaya: biaya_(data)\n    };"),
+    ("      lengkap: byBulan[k].filter(function(r) { return isStatus_(r, 'Lengkap'); }).length\n    };",
+     "      lengkap: byBulan[k].filter(function(r) { return isStatus_(r, 'Lengkap'); }).length,\n      totalBiaya: biaya_(byBulan[k])\n    };"),
+    ("    return { jenis: k || '-', register: byJenis[k].length };",
+     "    return { jenis: k || '-', register: byJenis[k].length, totalBiaya: biaya_(byJenis[k]) };"),
+]
+
+
 def build_server(code_gs: str) -> str:
+    for a, b in SERVER_FIX:
+        if code_gs.count(a) != 1:
+            raise SystemExit(f"Expected exactly one match for: {a[:60]!r}")
+        code_gs = code_gs.replace(a, b)
     names = re.findall(r"^function\s+([A-Za-z_$][\w$]*)\s*\(", code_gs, flags=re.M)
     exports = ", ".join(f"{n}: {n}" for n in names)
-    return ("/* Original Code.gs (Apps Script), wrapped so it runs in the browser on gas-shim.js. */\n"
+    return ("/* Original Code.gs (Apps Script), wrapped so it runs in the browser on gas-shim.js"
+            " (plus the cost totals added in tools/build-perjadin-demo.py). */\n"
             "(function () {\n" + code_gs + "\n;window.__GAS_SERVER__ = {" + exports + "};\n})();\n")
 
 

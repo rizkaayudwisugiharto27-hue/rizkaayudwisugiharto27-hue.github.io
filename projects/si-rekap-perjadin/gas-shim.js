@@ -8,7 +8,7 @@
    ================================================================ */
 (function () {
   "use strict";
-  var STORE_KEY = "sirekap-demo-v2";
+  var STORE_KEY = "sirekap-demo-v3";
   var BOOK_NAME = "Demo - Rekap Perjadin 2026 (data asli, disamarkan)";
 
   function load() {

@@ -1,4 +1,4 @@
-/* Original Code.gs (Apps Script), wrapped so it runs in the browser on gas-shim.js. */
+/* Original Code.gs (Apps Script), wrapped so it runs in the browser on gas-shim.js (plus the cost totals added in tools/build-perjadin-demo.py). */
 (function () {
 const CONFIG = {
   APP_TITLE: 'Dashboard Monitoring Perjadin & Rekonsiliasi Biro',
@@ -406,7 +406,7 @@ function getDashboardData(filters) {
 
   const byJenis = groupRows_(rows, 'JENIS_PERJADIN');
   const jenisSummary = Object.keys(byJenis).map(function(k) {
-    return { jenis: k || '-', register: byJenis[k].length };
+    return { jenis: k || '-', register: byJenis[k].length, totalBiaya: biaya_(byJenis[k]) };
   }).sort(function(a, b) { return b.register - a.register; });
 
   const recent = rows.slice().sort(function(a, b) {
@@ -427,7 +427,8 @@ function getDashboardData(filters) {
       lengkap: lengkap,
       proses: proses,
       belum: belum,
-      persen: pct_(lengkap, data.length)
+      persen: pct_(lengkap, data.length),
+      totalBiaya: biaya_(data)
     };
   }).sort(function(a, b) { return b.register - a.register; });
 
@@ -437,7 +438,8 @@ function getDashboardData(filters) {
       bulan: k || '-',
       label: formatBulanLabel_(k),
       register: byBulan[k].length,
-      lengkap: byBulan[k].filter(function(r) { return isStatus_(r, 'Lengkap'); }).length
+      lengkap: byBulan[k].filter(function(r) { return isStatus_(r, 'Lengkap'); }).length,
+      totalBiaya: biaya_(byBulan[k])
     };
   }).sort(function(a, b) { return String(a.bulan).localeCompare(String(b.bulan)); });
 
@@ -450,7 +452,7 @@ function getDashboardData(filters) {
       totalRegister: totalRegister,
       totalPeserta: totalRegister,
       biroAktif: biroAktif,
-      totalBiaya: 0,
+      totalBiaya: biaya_(rows),
       lengkap: statusCounts.lengkap,
       proses: statusCounts.proses,
       belum: statusCounts.belum,
@@ -948,6 +950,10 @@ function sum_(arr) {
   return arr.reduce(function(a, b) { return a + b; }, 0);
 }
 
+function biaya_(rows) {
+  return sum_(rows.map(function(r) { return toNumber_(r.TOTAL_BIAYA); }));
+}
+
 function toNumber_(value) {
   if (value === null || value === undefined || value === '') return 0;
   if (typeof value === 'number') return value;
@@ -955,5 +961,5 @@ function toNumber_(value) {
   return isNaN(n) ? 0 : n;
 }
 
-;window.__GAS_SERVER__ = {onOpen: onOpen, doGet: doGet, include: include, initWebApp: initWebApp, setupDatabase: setupDatabase, ensureDbHeaders_: ensureDbHeaders_, normalizeDbHeader: normalizeDbHeader, getHeaderMap: getHeaderMap, getHeaderMap_: getHeaderMap_, getBiro_: getBiro_, parseBiroLabel_: parseBiroLabel_, mapSatkerCode_: mapSatkerCode_, formatBiroLabel_: formatBiroLabel_, groupRowsByBiro_: groupRowsByBiro_, ensureMasterHeaders_: ensureMasterHeaders_, seedIfEmpty_: seedIfEmpty_, findHeaderCol_: findHeaderCol_, getMasterData: getMasterData, readMasterList_: readMasterList_, readMasterPegawai_: readMasterPegawai_, getFilterOptions: getFilterOptions, getDashboardData: getDashboardData, getPerjadinTable: getPerjadinTable, savePerjadin: savePerjadin, updatePerjadin: updatePerjadin, deletePerjadin: deletePerjadin, addMasterEntry: addMasterEntry, validatePerjadin_: validatePerjadin_, buildDbRow_: buildDbRow_, calcDurasiHari_: calcDurasiHari_, nextDbNo_: nextDbNo_, appendDbRow_: appendDbRow_, writeDbRow_: writeDbRow_, writeDbCell_: writeDbCell_, generatePerjadinId_: generatePerjadinId_, maybeAddTujuanKota_: maybeAddTujuanKota_, readDbRows_: readDbRows_, normalizeDbRow_: normalizeDbRow_, mapTableRow_: mapTableRow_, mapRecent_: mapRecent_, findRowById_: findRowById_, applyFilters_: applyFilters_, readObjects_: readObjects_, buildTrend_: buildTrend_, groupRows_: groupRows_, isStatus_: isStatus_, parseDateInput_: parseDateInput_, formatDateStore_: formatDateStore_, formatBulanLabel_: formatBulanLabel_, formatDate_: formatDate_, pct_: pct_, unique_: unique_, sum_: sum_, toNumber_: toNumber_};
+;window.__GAS_SERVER__ = {onOpen: onOpen, doGet: doGet, include: include, initWebApp: initWebApp, setupDatabase: setupDatabase, ensureDbHeaders_: ensureDbHeaders_, normalizeDbHeader: normalizeDbHeader, getHeaderMap: getHeaderMap, getHeaderMap_: getHeaderMap_, getBiro_: getBiro_, parseBiroLabel_: parseBiroLabel_, mapSatkerCode_: mapSatkerCode_, formatBiroLabel_: formatBiroLabel_, groupRowsByBiro_: groupRowsByBiro_, ensureMasterHeaders_: ensureMasterHeaders_, seedIfEmpty_: seedIfEmpty_, findHeaderCol_: findHeaderCol_, getMasterData: getMasterData, readMasterList_: readMasterList_, readMasterPegawai_: readMasterPegawai_, getFilterOptions: getFilterOptions, getDashboardData: getDashboardData, getPerjadinTable: getPerjadinTable, savePerjadin: savePerjadin, updatePerjadin: updatePerjadin, deletePerjadin: deletePerjadin, addMasterEntry: addMasterEntry, validatePerjadin_: validatePerjadin_, buildDbRow_: buildDbRow_, calcDurasiHari_: calcDurasiHari_, nextDbNo_: nextDbNo_, appendDbRow_: appendDbRow_, writeDbRow_: writeDbRow_, writeDbCell_: writeDbCell_, generatePerjadinId_: generatePerjadinId_, maybeAddTujuanKota_: maybeAddTujuanKota_, readDbRows_: readDbRows_, normalizeDbRow_: normalizeDbRow_, mapTableRow_: mapTableRow_, mapRecent_: mapRecent_, findRowById_: findRowById_, applyFilters_: applyFilters_, readObjects_: readObjects_, buildTrend_: buildTrend_, groupRows_: groupRows_, isStatus_: isStatus_, parseDateInput_: parseDateInput_, formatDateStore_: formatDateStore_, formatBulanLabel_: formatBulanLabel_, formatDate_: formatDate_, pct_: pct_, unique_: unique_, sum_: sum_, biaya_: biaya_, toNumber_: toNumber_};
 })();

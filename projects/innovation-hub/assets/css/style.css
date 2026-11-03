@@ -94,7 +94,7 @@ header.nav{position:sticky;top:0;z-index:100;background:rgba(10,36,80,.94);backd
 /* HERO */
 .hero{position:relative;background:linear-gradient(135deg,#0a2450 0%,#0a1c40 55%,#071531 100%);color:#fff;overflow:hidden}
 .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 20%,rgba(64,124,224,.48),transparent 42%),radial-gradient(circle at 12% 88%,rgba(64,124,224,.30),transparent 40%);pointer-events:none}
-.hero-in{position:relative;z-index:1;padding:64px 0 72px}
+.hero-in{position:relative;z-index:1;padding-top:64px;padding-bottom:72px}
 .cobrand{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:28px}
 .cobrand img{height:38px;width:auto;display:block;filter:drop-shadow(0 1px 3px rgba(0,0,0,.28))}
 .cb-div{width:1px;height:32px;background:rgba(255,255,255,.30)}

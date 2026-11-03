@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
 <title>Rizka Ayu Dwi Sugiharto — Corporate Planning &amp; Financial Analyst</title>
-<meta name="description" content="Rizka Ayu Dwi Sugiharto — fresh graduate in International Economics (GPA 3.84) open to Corporate Planning and Financial Analyst roles. 3 internships at Pelindo Sinergi Lokaseva, Kementerian Imigrasi dan Pemasyarakatan and Pertamina Training &amp; Consulting.">
+<meta name="description" content="Rizka Ayu Dwi Sugiharto — 2025 Economics graduate (GPA 3.84) open to Corporate Planning and Financial Analyst roles. 3 internships at Pelindo Sinergi Lokaseva, Kementerian Imigrasi dan Pemasyarakatan and Pertamina Training &amp; Consulting.">
 <link rel="canonical" href="https://rizkaayudwisugiharto27-hue.github.io/">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta name="theme-color" content="#29292c">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Rizka Ayu Dwi Sugiharto", "url": "https://rizkaayudwisugiharto27-hue.github.io/", "image": "https://rizkaayudwisugiharto27-hue.github.io/assets/og-cover.jpg", "jobTitle": "Corporate Planning & Financial Analyst (fresh graduate)", "email": "mailto:rizkaayudwisugiharto27@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "South Jakarta", "addressCountry": "ID"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "Universitas Muhammadiyah Yogyakarta"}, "knowsAbout": ["Strategic planning", "Corporate planning", "Budget planning", "Financial analysis", "Econometrics", "Google Apps Script dashboards"], "knowsLanguage": ["id", "en"], "sameAs": ["https://www.linkedin.com/in/rizkaayudwi/", "https://www.instagram.com/rizkaayudwi"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Rizka Ayu Dwi Sugiharto", "url": "https://rizkaayudwisugiharto27-hue.github.io/", "image": "https://rizkaayudwisugiharto27-hue.github.io/assets/og-cover.jpg", "jobTitle": "Corporate Planning & Financial Analyst", "email": "mailto:rizkaayudwisugiharto27@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "South Jakarta", "addressCountry": "ID"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "Universitas Muhammadiyah Yogyakarta"}, "knowsAbout": ["Strategic planning", "Corporate planning", "Budget planning", "Financial analysis", "Econometrics", "Google Apps Script dashboards"], "knowsLanguage": ["id", "en"], "sameAs": ["https://www.linkedin.com/in/rizkaayudwi/", "https://www.instagram.com/rizkaayudwi"]}</script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Rizka Ayu Dwi Sugiharto — Corporate Planning & Financial Analyst">
-<meta property="og:description" content="Fresh graduate (GPA 3.84) with 3 internships in strategic planning, finance and supply chain at Pelindo, Kemenimipas and Pertamina. Live dashboard demos inside.">
+<meta property="og:description" content="2025 Economics graduate (GPA 3.84) with 3 internships in strategic planning, finance and supply chain at Pelindo, Kemenimipas and Pertamina. Live dashboard demos inside.">
 <meta property="og:image" content="https://rizkaayudwisugiharto27-hue.github.io/assets/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -77,7 +77,8 @@ ul,ol{padding:0;list-style:none}
 .hero h1{font-size:clamp(2.4rem,5.6vw,4rem);font-weight:900;line-height:1.02;letter-spacing:-.03em}
 .tagline{font-size:1.05rem;color:var(--on-dark);margin:16px 0 26px;max-width:46ch}
 .kicker b{color:#fff}
-.avail{display:flex;align-items:center;gap:8px;color:var(--on-dark-2);font-size:.88rem;font-weight:600;margin:-12px 0 24px}
+.avail{display:flex;align-items:flex-start;gap:8px;color:var(--on-dark-2);font-size:.88rem;font-weight:600;margin:-12px 0 24px}
+.avail .ico{flex:none;margin-top:3px}
 .ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 4px;max-width:880px}
 .ba>div{border:1px solid var(--line-dark);border-radius:10px;padding:12px 14px;background:var(--g-900)}
 .ba>div:last-child{border-color:#41b883;background:rgba(65,184,131,.08)}
@@ -198,6 +199,11 @@ section{padding:72px 0}
 .browser-bar span{flex:1;min-width:0;background:#fff;border-radius:6px;padding:3px 10px;margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .browser iframe{display:block;width:100%;height:640px;border:0;background:#fff}
 .browser.tall iframe{height:820px}
+.demo-load{all:unset;box-sizing:border-box;position:relative;display:block;width:100%;cursor:pointer}
+.demo-load img{display:block;width:100%;height:340px;object-fit:cover;object-position:top left;filter:saturate(.9) brightness(.82);transition:filter .2s}
+.demo-load .btn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);box-shadow:0 8px 24px rgba(0,0,0,.35);white-space:nowrap}
+.demo-load:hover img,.demo-load:focus-visible img{filter:none}
+.demo-load:focus-visible{outline:3px solid #fff;outline-offset:-3px}
 .print-only{display:none}
 .live-tip{color:var(--on-dark-3);font-size:.82rem;margin-top:10px}
 .mock{background:#f4f4f6;border-radius:10px;padding:12px;display:grid;grid-template-columns:44px 1fr;gap:8px}
@@ -308,6 +314,9 @@ section{padding:72px 0}
 .fold>summary:hover{background:var(--g-800);color:#fff}
 .dark .fold>summary{border-color:var(--g-300);color:#fff}
 .dark .fold>summary:hover{background:#fff;color:var(--g-950)}
+.dark .fold.in-panel{margin-top:4px}
+.dark .fold.in-panel>summary{color:#29292c;border-color:#8a8a90;background:#fff}
+.dark .fold.in-panel>summary:hover{background:#29292c;color:#fff}
 .cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px}
 .ccard{display:flex;flex-direction:column;padding:0;border:1px solid var(--line);background:#fff;border-radius:10px;overflow:hidden;cursor:zoom-in;text-align:left;font:inherit;color:inherit;transition:transform .2s,box-shadow .2s}
 .ccard:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.1)}
@@ -388,6 +397,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
   .findings td{border:0;padding:3px 0}
   .findings td:not(:first-child)::before{content:attr(data-label) ": ";font-weight:700;color:#fff}
   .thumb{width:calc(50% - 4px)}
+  .demo-load img{height:220px}
 }
 @media (max-width:720px){.thesis-btn{min-height:40px;padding:8px 14px;margin:6px 0 0}.brand{padding:10px 0}.mail{padding:6px 0}}
 @media (max-width:480px){.nav .wrap{gap:10px}.brand{font-size:.92rem}.cv-t{display:none}}
@@ -460,14 +470,14 @@ html:not(.js) .reveal{opacity:1;transform:none}
   <div class="wrap">
     <div class="hero-top">
       <div>
-        <p class="kicker">Open to <b>Corporate Planning</b> &amp; <b>Financial Analyst</b> roles · fresh graduate, GPA 3.84</p>
+        <p class="kicker">Open to <b>Corporate Planning</b> &amp; <b>Financial Analyst</b> roles · 2025 Economics graduate, GPA 3.84</p>
         <h1>Rizka Ayu<br>Dwi Sugiharto</h1>
         <p class="tagline">3 internships in strategic planning, finance and supply chain at Pelindo, Kemenimipas and Pertamina, turning planning and financial data into clear decisions.</p>
-        <p class="avail"><svg class="ico"><use href="#i-pin"/></svg>Available to start immediately · open to placement anywhere in Indonesia</p>
+        <p class="avail"><svg class="ico"><use href="#i-pin"/></svg>Currently interning at Pelindo · ready to start a full-time role immediately · open to placement anywhere in Indonesia</p>
         <div class="btns">
           <a class="btn primary" href="#contact">Contact me</a>
           <a class="btn" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download CV</a>
-          <a class="btn" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Portfolio Summary (PDF)</a>
+          <a class="btn" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=7" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Portfolio Summary (PDF)</a>
           <a class="btn" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
@@ -530,7 +540,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
         <ul class="pts">
           <li>Monitored quarterly <b>RJPP 2026</b> implementation, completing progress reports <b>50% faster</b>, and helped draft RJPP 2026–2030.</li>
           <li>Conducted a comparative analysis of Terminal Kijing’s financial realization to support management performance evaluation.</li>
-          <li>Conducted market research and macroeconomic analysis for the Industry Outlook 2026, completing 90% independently.</li>
+          <li>Conducted market research and macroeconomic analysis for the Industry Outlook 2026, handling about 90% of the research and analysis independently.</li>
           <li>Analyzed the impact of geopolitics, exchange rates and the BI Rate on export–import performance using <b>ARDL regression</b>.</li>
           <li>Prepared data and presentation materials for the Board of Directors at ASEAN Port &amp; Logistics 2026 (8 July 2026).</li>
         </ul>
@@ -613,14 +623,13 @@ html:not(.js) .reveal{opacity:1;transform:none}
       <div class="log-body">
         <h3>ICOSI &amp; ICIEFI 2024</h3>
         <p class="role">Liaison Officer (LO) · International Conference on Sustainable Innovation</p>
-        <figure class="lead"><button class="lb-open" data-group="icosi" data-src="assets/exp/icosi-delegates.webp" data-cap="With conference delegates at ICOSI &amp; ICIEFI 2024" style="all:unset;cursor:zoom-in;display:block"><img src="assets/exp/icosi-delegates.webp" width="1179" height="893" alt="With conference delegates at ICOSI &amp; ICIEFI 2024" style="--ratio:4/3;--focus:50% 40%" loading="lazy"></button></figure>
-        <p class="lead-cap">With conference delegates at the ICOSI &amp; ICIEFI 2024 venue, Yogyakarta.</p>
         <ul class="pts">
           <li>Coordinated communication and schedules for <b>100+ participants</b> during a one-day academic conference.</li>
           <li>Managed participant logistics and coordination throughout a <b>2-month</b> pre-event preparation period.</li>
           <li>Supported participants promptly, contributing to <b>90% positive feedback</b> in the post-event survey.</li>
         </ul>
         <div class="thumbs">
+          <button class="thumb" data-group="icosi" data-src="assets/exp/icosi-delegates.webp" data-cap="With conference delegates at ICOSI &amp; ICIEFI 2024"><img src="assets/exp/icosi-delegates-thumb.webp" alt="With conference delegates at ICOSI &amp; ICIEFI 2024" loading="lazy"></button>
           <button class="thumb" data-group="icosi" data-src="assets/exp/icosi-committee.webp" data-cap="With the ICOSI &amp; ICIEFI 2024 committee and liaison officers"><img src="assets/exp/icosi-committee-thumb.webp" alt="With the ICOSI &amp; ICIEFI 2024 committee and liaison officers" loading="lazy"></button>
           <button class="thumb" data-group="icosi" data-src="assets/exp/icosi-auditorium.webp" data-cap="Conference participants and committee in the auditorium"><img src="assets/exp/icosi-auditorium-thumb.webp" alt="Conference participants and committee in the auditorium" loading="lazy"></button>
         </div>
@@ -636,14 +645,13 @@ html:not(.js) .reveal{opacity:1;transform:none}
       <div class="log-body">
         <h3>Economics Student Association (HIMIE), UMY</h3>
         <p class="role">Secretary, Entrepreneurship Division</p>
-        <figure class="lead"><button class="lb-open" data-group="himie" data-src="assets/exp/himie-event.webp" data-cap="With members of the Economics Student Association (HIMIE), UMY" style="all:unset;cursor:zoom-in;display:block"><img src="assets/exp/himie-event.webp" width="1600" height="1200" alt="With members of the Economics Student Association (HIMIE), UMY" style="--ratio:16/9;--focus:50% 40%" loading="lazy"></button></figure>
-        <p class="lead-cap">With members of the Economics Student Association (HIMIE), Universitas Muhammadiyah Yogyakarta.</p>
         <ul class="pts">
           <li>Managed <b>50+</b> letters and administrative documents for a 30+ member division.</li>
           <li>Developed <b>15 SOPs</b> to streamline division workflow and document approval.</li>
           <li>Supported <b>10+</b> entrepreneurship events with 100+ total participants through documentation, administration and reporting.</li>
         </ul>
         <div class="thumbs">
+          <button class="thumb" data-group="himie" data-src="assets/exp/himie-event.webp" data-cap="With members of the Economics Student Association (HIMIE), UMY"><img src="assets/exp/himie-event-thumb.webp" alt="With members of the Economics Student Association (HIMIE), UMY" loading="lazy"></button>
           <button class="thumb" data-group="himie" data-cap="Division structure"><img src="assets/himie-structure.webp" alt="Division structure" loading="lazy"></button>
           <button class="thumb" data-group="himie" data-cap="Event budget plan"><img src="assets/himie-budget.webp" alt="Event budget plan" loading="lazy"></button>
           <button class="thumb" data-group="himie" data-cap="Division accountability report"><img src="assets/himie-report.webp" alt="Division accountability report" loading="lazy"></button>
@@ -778,6 +786,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
           <div class="kpi"><b>12.3% vs 12.7%</b><span>Investor IRR: Phantom Share vs Profit Sharing — nearly equal</span></div>
           <div class="kpi hl"><b>Phantom Share</b><span>Recommended: cash Rp230–771 m higher, payout capped at 1.6x</span></div>
         </div>
+        <details class="fold in-panel"><summary>Show the model charts (3)</summary>
         <div class="p-charts">
           <div>
             <p class="chart-title">3-year projection<span>Revenue and EBITDA (Rp billion)</span></p>
@@ -814,6 +823,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
             <p class="nt">Before capital return (profit sharing) or the phantom share payout at the end of Year 3.</p>
           </div>
         </div>
+        </details>
       </div>
       <p class="cap"><b>Recommendation:</b> Phantom share — investor returns are almost the same, but the company keeps more cash during the 3 years.</p>
 
@@ -848,9 +858,9 @@ html:not(.js) .reveal{opacity:1;transform:none}
         <div class="chips"><span class="chip">Google Sheets</span><span class="chip">Apps Script</span><span class="chip">HTML · CSS · JavaScript</span><span class="chip">Data visualization</span></div>
         <div class="browser">
           <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>rizkaayudwisugiharto27-hue.github.io/projects/innovation-hub/</span></div>
-          <iframe src="projects/innovation-hub/index.html#dashboard" title="Innovation Hub Dashboard — live demo with anonymized data" loading="lazy"></iframe>
+          <button class="demo-load" type="button" data-src="projects/innovation-hub/index.html#dashboard" data-title="Innovation Hub Dashboard — live demo with anonymized data"><img src="assets/exp/innovation-hub-demo.webp" alt="" loading="lazy"><span class="btn primary">▶ Try the live demo here</span></button>
         </div>
-        <p class="live-tip">Try the filters and click any bar right here. Menu items (Dashboard, Daftar Inovasi, Galeri, Alur &amp; Status) open the full demo in a new tab.</p>
+        <p class="live-tip">Click the preview to load the demo here, then try the filters and click any bar. Menu items (Dashboard, Daftar Inovasi, Galeri, Alur &amp; Status) open the full demo in a new tab.</p>
         <a class="print-only" href="projects/innovation-hub/index.html"><img src="assets/exp/innovation-hub-demo.webp" width="1600" height="1000" alt="Innovation Hub Dashboard live demo" loading="lazy"></a>
         <div class="btns" style="margin-top:16px">
           <a class="btn primary" href="projects/innovation-hub/index.html" target="_blank" rel="noopener">Open full live demo <svg class="ico"><use href="#i-ext"/></svg></a>
@@ -872,9 +882,9 @@ html:not(.js) .reveal{opacity:1;transform:none}
         <div class="chips"><span class="chip">Google Sheets</span><span class="chip">Apps Script</span><span class="chip">HTML · CSS · JavaScript</span><span class="chip">Budget reconciliation</span></div>
         <div class="browser tall">
           <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>rizkaayudwisugiharto27-hue.github.io/projects/si-rekap-perjadin/</span></div>
-          <iframe src="projects/si-rekap-perjadin/index.html" title="SI-REKAP PERJADIN — live demo with real 2026 data, anonymized" loading="lazy"></iframe>
+          <button class="demo-load" type="button" data-src="projects/si-rekap-perjadin/index.html" data-title="SI-REKAP PERJADIN — live demo with real 2026 data, anonymized"><img src="assets/exp/si-rekap-perjadin-demo.webp" alt="" loading="lazy"><span class="btn primary">▶ Try the live demo here</span></button>
         </div>
-        <p class="live-tip">Use the sidebar inside the frame: Beranda, Input Perjadin, Data Perjadin (edit &amp; delete), Data Master and Laporan all work here.</p>
+        <p class="live-tip">Click the preview to load the demo here, then use its sidebar: Beranda, Input Perjadin, Data Perjadin (edit &amp; delete), Data Master and Laporan all work here.</p>
         <a class="print-only" href="projects/si-rekap-perjadin/index.html"><img src="assets/exp/si-rekap-perjadin-demo.webp" width="1600" height="1001" alt="SI-REKAP PERJADIN live demo" loading="lazy"></a>
         <div class="btns" style="margin-top:16px">
           <a class="btn primary" href="projects/si-rekap-perjadin/index.html" target="_blank" rel="noopener">Open full live demo <svg class="ico"><use href="#i-ext"/></svg></a>
@@ -1000,7 +1010,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
           <span class="edu-logo"><img src="assets/logo-umy.webp" width="167" height="164" alt="Logo Universitas Muhammadiyah Yogyakarta" loading="lazy"></span>
           <div>
             <h3>Universitas Muhammadiyah Yogyakarta</h3>
-            <p class="role">Bachelor of International Economics · GPA 3.84 / 4.00</p>
+            <p class="role">Bachelor of Economics · International Class · GPA 3.84 / 4.00</p>
           </div>
         </div>
         <ul class="edu-more">
@@ -1062,15 +1072,15 @@ html:not(.js) .reveal{opacity:1;transform:none}
 <section id="contact" class="dark contact">
   <div class="wrap">
     <h2>Looking for a role in strategic planning &amp; corporate finance</h2>
-    <p class="sub">Open to roles in corporate planning, budgeting, financial analysis and business research. <b style="color:#fff">Available to start immediately</b> and open to placement anywhere in Indonesia. The fastest way to reach me is email or WhatsApp.</p>
+    <p class="sub">Open to roles in corporate planning, budgeting, financial analysis and business research. <b style="color:#fff">Ready to start a full-time role immediately</b> and open to placement anywhere in Indonesia. The fastest way to reach me is email or WhatsApp.</p>
     <a class="mail" href="mailto:rizkaayudwisugiharto27@gmail.com">rizkaayudwisugiharto27@gmail.com</a>
     <div class="contact-grid">
       <a class="ccontact" href="https://wa.me/6285257422314" target="_blank" rel="noopener"><small>WhatsApp</small><b>0852-5742-2314</b></a>
       <a class="ccontact" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener"><small>LinkedIn</small><b>Rizka Ayu Dwi Sugiharto</b></a>
       <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
       <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><small>Portfolio · 3 pages</small><b>Summary (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=25" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=7" target="_blank" rel="noopener"><small>Portfolio · 3 pages</small><b>Summary (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=26" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
     </div>
     <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>
@@ -1107,6 +1117,8 @@ html:not(.js) .reveal{opacity:1;transform:none}
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target);}});},{threshold:.12});
     els.forEach(function(el){io.observe(el);});
   } else els.forEach(show);
+  document.querySelectorAll('.demo-load').forEach(function(b){b.addEventListener('click',function(){
+    var f=document.createElement('iframe');f.src=b.dataset.src;f.title=b.dataset.title;b.replaceWith(f);f.focus();});});
   window.addEventListener('beforeprint',function(){els.forEach(show);document.querySelectorAll('details.fold').forEach(function(d){d.open=true;});});
 
   // Tabs

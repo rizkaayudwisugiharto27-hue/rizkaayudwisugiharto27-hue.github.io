@@ -8,6 +8,7 @@ Run:  python tools/anonymize-perjadin-data.py sheet-export.json
 
 Kept (the real recap):  register ID, year/month, bureau, trip type, activity, number of staff, grade, duration,
                         dates, destination, transport, every cost component and total, hotel, file status.
+Skipped:                form test submissions (WEB_INPUT rows with a total cost of Rp 0).
 Removed / masked:       staff names (-> "Pegawai 001" codes), NIPs (they encode date of birth), SPM numbers,
                         and leadership titles ("Kepala ..." -> "Pejabat Struktural") that would identify one person.
 Cleaned:                Rupiah text such as "3.440.000" -> 3440000, Sheets date serials such as 46114 -> 2026-02-04,
@@ -65,6 +66,11 @@ def mask_jabatan(v):
     return "\n".join("Pejabat Struktural" if re.match(r"\s*kepala\b", l, re.I) else l for l in lines)
 
 
+def is_test_entry(r):
+    """Form test submissions: typed through the web form with no cost at all (Rp 0) and no real activity text."""
+    return clean(r.get("SOURCE_SHEET")) == "WEB_INPUT" and money(r.get("TOTAL_BIAYA")) == 0
+
+
 class Codes:
     """Same person -> same code, across every trip."""
     def __init__(self, prefix):
@@ -94,6 +100,8 @@ def main(src):
     db_hdr = [clean(h) for h in sheet["DB_REKAP_PERJADIN"][0]]
     trips = []
     for r in rows(sheet["DB_REKAP_PERJADIN"]):
+        if is_test_entry(r):
+            continue
         names = [re.sub(r"^\s*\d+\.\s*", "", n).strip() for n in clean(r["NAMA_PEGAWAI_RAW"]).split("\n")]
         names = [n for n in names if n]
         coded = [staff(n) for n in names]

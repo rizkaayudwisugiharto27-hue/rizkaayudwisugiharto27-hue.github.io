@@ -226,6 +226,11 @@
 (function () {
   if (window.self === window.top) return;
   document.documentElement.classList.add("embedded");
+  // open on the section named in the link (e.g. #dashboard) once the data has rendered
+  window.addEventListener("load", function () {
+    var el = location.hash && document.getElementById(location.hash.slice(1));
+    if (el) setTimeout(function () { el.scrollIntoView(); }, 400);
+  });
   document.addEventListener("click", function (e) {
     var a = e.target.closest("#navlinks a, .logo, .hero-cta a");
     if (!a) return;
