@@ -77,6 +77,14 @@ ul,ol{padding:0;list-style:none}
 .hero h1{font-size:clamp(2.4rem,5.6vw,4rem);font-weight:900;line-height:1.02;letter-spacing:-.03em}
 .tagline{font-size:1.05rem;color:var(--on-dark);margin:16px 0 26px;max-width:46ch}
 .kicker b{color:#fff}
+.avail{display:flex;align-items:center;gap:8px;color:var(--on-dark-2);font-size:.88rem;font-weight:600;margin:-12px 0 24px}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0 4px;max-width:880px}
+.ba>div{border:1px solid var(--line-dark);border-radius:10px;padding:12px 14px;background:var(--g-900)}
+.ba>div:last-child{border-color:#41b883;background:rgba(65,184,131,.08)}
+.ba span{display:block;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-3);margin-bottom:4px}
+.ba>div:last-child span{color:#7fd6a8}
+.ba p{color:var(--on-dark-2);font-size:.9rem}
+.ba b{color:#fff}
 .btns{display:flex;flex-wrap:wrap;gap:10px}
 .portrait{position:relative;width:100%;aspect-ratio:1;justify-self:end}
 .portrait::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:2px dotted var(--g-500)}
@@ -362,6 +370,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
   .facts{grid-template-columns:repeat(3,1fr)}
   .more,.skills{grid-template-columns:1fr}
   .mcard.wide{grid-template-columns:1fr}
+  .ba{grid-template-columns:1fr}
   .browser iframe{height:540px}
   .browser.tall iframe{height:620px}
   .live{padding:16px}
@@ -448,16 +457,17 @@ html:not(.js) .reveal{opacity:1;transform:none}
         <p class="kicker">Open to <b>Corporate Planning</b> &amp; <b>Financial Analyst</b> roles · fresh graduate, GPA 3.84</p>
         <h1>Rizka Ayu<br>Dwi Sugiharto</h1>
         <p class="tagline">3 internships in strategic planning, finance and supply chain at Pelindo, Kemenimipas and Pertamina, turning planning and financial data into clear decisions.</p>
+        <p class="avail"><svg class="ico"><use href="#i-pin"/></svg>Available to start immediately · open to placement anywhere in Indonesia</p>
         <div class="btns">
           <a class="btn primary" href="#contact">Contact me</a>
           <a class="btn" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download CV</a>
-          <a class="btn" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=2" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Portfolio Summary (PDF)</a>
+          <a class="btn" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=3" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Portfolio Summary (PDF)</a>
           <a class="btn" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
       <figure class="portrait">
         <div class="pring"><img src="assets/rizka-about.webp" width="608" height="772" alt="Photo of Rizka Ayu Dwi Sugiharto" fetchpriority="high"></div>
-        <figcaption>Open to work</figcaption>
+        <figcaption>Available immediately</figcaption>
       </figure>
     </div>
 
@@ -545,7 +555,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
           <li>Validated <b>200+</b> financial documents, including payment orders (SPM), grants, bank accounts and official travel documents.</li>
           <li>Assisted in preparing the annual budget plan (<b>RKA</b>), contributing to a <b>15%</b> improvement in forecasting accuracy.</li>
           <li>Supported monthly reconciliation and annual financial reporting with <b>100% on-time</b> submission.</li>
-          <li>Built the team innovation <a class="link" href="#case-sirekap">SI-REKAP PERJADIN</a>, a travel-expense recap web app with real-time budget absorption dashboards.</li>
+          <li>Built the team innovation <a class="link" href="#case-sirekap">SI-REKAP PERJADIN</a>, a travel-expense recap web app replacing manual input that took <b>3–4 days for ~50 files</b>.</li>
         </ul>
         <p class="result"><svg class="ico"><use href="#i-award"/></svg><span>Completed the internship with an “Excellent” (Sangat Baik) rating</span></p>
         <div class="thumbs">
@@ -822,6 +832,10 @@ html:not(.js) .reveal{opacity:1;transform:none}
           <span class="badge-live">LIVE DEMO</span>
         </div>
         <p>Google Sheets + Apps Script web app that turns the company’s innovation data bank into a live monitoring dashboard: filters, KPIs, charts, a unit × category matrix, a searchable list with CSV export, a gallery and status history. The original reads the Sheet in real time and is internal; the demo below runs the same code on the <b>real innovation bank (453 ideas), anonymized</b> — no names, teams or internal descriptions. Try the filters or click a bar. <i>(Interface in Indonesian, as used at the company.)</i></p>
+        <div class="ba">
+          <div><span>Before</span><p>Ideas were collected only when an innovation competition was running, and stayed in separate files afterwards.</p></div>
+          <div><span>After</span><p>Any employee can submit an idea at any time, and managers and staff can see every idea, its status and which ones need follow-up — <b>453 ideas</b> from 2022 onward in one place.</p></div>
+        </div>
         <div class="chips"><span class="chip">Google Sheets</span><span class="chip">Apps Script</span><span class="chip">HTML · CSS · JavaScript</span><span class="chip">Data visualization</span></div>
         <div class="browser">
           <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>rizkaayudwisugiharto27-hue.github.io/projects/innovation-hub/</span></div>
@@ -841,7 +855,11 @@ html:not(.js) .reveal{opacity:1;transform:none}
           </div>
           <span class="badge-live">LIVE DEMO</span>
         </div>
-        <p>Team innovation at the Bureau of Planning and Finance: a Google Sheets + Apps Script web app that replaces manual Excel recaps of official travel (perjadin) with a reconciliation dashboard — document status per bureau, monthly trend, input/edit forms, master data and a printable report. The demo below runs the original code on <b>simulated data</b> (no ministry data); what you add or edit is saved only in your browser. <i>(Interface in Indonesian, as used at the ministry.)</i></p>
+        <p>Team innovation at the Bureau of Planning and Finance: a Google Sheets + Apps Script web app that replaces manual typing of official travel (perjadin) files into Google Sheets with a form-based input and a reconciliation dashboard — document status per bureau, monthly trend, input/edit forms, master data and a printable report. The demo below runs the original code on <b>simulated data</b> (no ministry data); what you add or edit is saved only in your browser. <i>(Interface in Indonesian, as used at the ministry.)</i></p>
+        <div class="ba">
+          <div><span>Before</span><p>Every travel file was typed into Google Sheets by hand — about <b>50 files took 3–4 days</b> of manual input.</p></div>
+          <div><span>After</span><p>Each file is entered once through a validated form; the recap, document status per bureau and the printable report update automatically.</p></div>
+        </div>
         <div class="chips"><span class="chip">Google Sheets</span><span class="chip">Apps Script</span><span class="chip">HTML · CSS · JavaScript</span><span class="chip">Budget reconciliation</span></div>
         <div class="browser tall">
           <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>rizkaayudwisugiharto27-hue.github.io/projects/si-rekap-perjadin/</span></div>
@@ -1035,15 +1053,15 @@ html:not(.js) .reveal{opacity:1;transform:none}
 <section id="contact" class="dark contact">
   <div class="wrap">
     <h2>Looking for a role in strategic planning &amp; corporate finance</h2>
-    <p class="sub">Open to roles in corporate planning, budgeting, financial analysis and business research. The fastest way to reach me is email or WhatsApp.</p>
+    <p class="sub">Open to roles in corporate planning, budgeting, financial analysis and business research. <b style="color:#fff">Available to start immediately</b> and open to placement anywhere in Indonesia. The fastest way to reach me is email or WhatsApp.</p>
     <a class="mail" href="mailto:rizkaayudwisugiharto27@gmail.com">rizkaayudwisugiharto27@gmail.com</a>
     <div class="contact-grid">
       <a class="ccontact" href="https://wa.me/6285257422314" target="_blank" rel="noopener"><small>WhatsApp</small><b>0852-5742-2314</b></a>
       <a class="ccontact" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener"><small>LinkedIn</small><b>Rizka Ayu Dwi Sugiharto</b></a>
       <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
       <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=2" target="_blank" rel="noopener"><small>Portfolio · 3 pages</small><b>Summary (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=17" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=3" target="_blank" rel="noopener"><small>Portfolio · 3 pages</small><b>Summary (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=18" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
     </div>
     <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>
