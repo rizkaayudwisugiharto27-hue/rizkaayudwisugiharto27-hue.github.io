@@ -29,7 +29,7 @@
   --g-950:#0b1729; --g-900:#10223b; --g-850:#172d4b; --g-800:#1e3a5f; --g-700:#2f5d8a; --g-600:#3d6a99; --g-500:#6b7a90; --g-300:#b4c3d6; --g-200:#d5dfeb; --g-100:#e8eef5; --g-50:#f4f7fa;
   --ink:#0f1b2d; --ink-2:#4a5568; --ink-3:#5f6b7d; --line:#d8e0ea;
   --on-dark:#f3f6fa; --on-dark-2:#c2cfdf; --on-dark-3:#93a4ba; --line-dark:#2c4a70;
-  --accent:#1e3a5f; --bar:#1e3a5f; --bar-2:#9fb5cf; --good:#2f6b4f; --good-2:#4f9a72; --good-bg:#edf4ef; --good-line:#9cc4ab; --gold:#c9a227;
+  --accent:#1e3a5f; --bar:#1e3a5f; --bar-2:#9fb5cf; --good:#2f6b4f; --good-2:#4f9a72; --good-bg:#edf4ef; --good-line:#9cc4ab; --gold:#c9a227; --gold-ink:#8a6d10;
   --f:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif; --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
   --max:1120px; --gutter:20px;
 }
@@ -103,7 +103,10 @@ section{padding:72px 0}
 .dark{background:var(--g-900);color:var(--on-dark)}
 .sec-head{margin-bottom:32px;max-width:760px}
 .sec-head h2{font-size:clamp(1.9rem,4vw,2.5rem);font-weight:800;letter-spacing:-.02em;line-height:1.15}
-.sec-head h2::before{content:"";display:block;width:44px;height:6px;background:var(--gold);margin-bottom:14px}
+body{counter-reset:sec}
+.sec-head,.contact h2{counter-increment:sec}
+.sec-head h2::before,.contact h2::before{content:counter(sec,decimal-leading-zero);display:block;width:fit-content;padding-right:58px;background:linear-gradient(var(--gold),var(--gold)) right center/44px 3px no-repeat;font-size:.78rem;font-weight:800;letter-spacing:.22em;line-height:1;color:var(--gold-ink);margin-bottom:14px}
+.dark .sec-head h2::before,.contact h2::before{color:var(--gold)}
 .sec-head p{margin-top:10px;color:var(--ink-2);max-width:64ch}
 #projects .sec-head,#projects .sec-head p,#experience .sec-head,#experience .sec-head p{max-width:none}
 /* Long text is justified; on narrow screens hyphenation keeps the word gaps even */
@@ -146,6 +149,10 @@ section{padding:72px 0}
 .lead-cap{max-width:520px;font-size:.78rem;color:var(--ink-3);margin-bottom:16px}
 .log-body ul.pts li{position:relative;padding-left:20px;margin-bottom:8px;color:var(--ink)}
 .log-body ul.pts li::before{content:"";position:absolute;left:2px;top:.65em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.kpi-strip{display:grid;grid-template-columns:repeat(var(--n,3),minmax(0,1fr));gap:10px;margin:0 0 18px;max-width:calc(var(--n,3) * 250px)}
+.kpi-strip div{background:#fff;border:1px solid var(--line);border-top:3px solid var(--g-800);border-radius:8px;padding:10px 12px}
+.kpi-strip b{display:block;font-size:1.35rem;font-weight:800;color:var(--g-800);line-height:1.1;letter-spacing:-.01em}
+.kpi-strip span{display:block;font-size:.76rem;color:var(--ink-2);line-height:1.35;margin-top:4px}
 .result{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--g-300);border-radius:8px;padding:8px 14px;font-weight:700;font-size:.88rem;margin:10px 0 4px}
 .thumbs{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .thumb{width:140px;height:96px;padding:0;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff;cursor:zoom-in}
@@ -332,6 +339,9 @@ section{padding:72px 0}
 .ccard small{display:block;margin-top:3px;font-size:.74rem;color:var(--ink-3);font-weight:600}
 
 /* ===== Contact ===== */
+.contact{position:relative;overflow:hidden}
+.contact>.wrap{position:relative}
+.contact-deco{top:auto;bottom:18px;height:150px;width:46%;opacity:.55}
 .contact h2{font-size:clamp(2rem,4.6vw,3rem);font-weight:800;line-height:1.08;letter-spacing:-.02em}
 .contact .sub{color:var(--on-dark-2);margin:14px 0 26px}
 .mail{display:inline-block;font-size:clamp(1.05rem,2.6vw,1.6rem);font-weight:800;color:#fff;text-decoration:none;border-bottom:2px solid var(--g-300);word-break:break-all;margin-bottom:22px}
@@ -387,6 +397,10 @@ html:not(.js) .reveal{opacity:1;transform:none}
   .log-meta{flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 12px}
   .co-logo{flex-basis:100%;width:150px;margin-bottom:4px}
   .co-logo img{height:52px}
+  .kpi-strip{gap:6px}
+  .kpi-strip div{padding:8px}
+  .kpi-strip b{font-size:1.05rem}
+  .kpi-strip span{font-size:.68rem}
   .facts{grid-template-columns:repeat(3,1fr)}
   .more,.skills{grid-template-columns:1fr}
   .mcard.wide{grid-template-columns:1fr}
@@ -474,7 +488,7 @@ body{line-height:1.7}
   h2,h3,h4,.sec-head,.log-meta{break-after:avoid}
   .panel[hidden]{display:block!important;margin-top:14px}
   .cap[hidden]{display:block!important}
-  .lead,.thumbs,.panel,.award,.ccard,.sk,.focus li,.mcard,.findings tr,.kpis,.p-charts>div,.split>div{break-inside:avoid}
+  .kpi-strip,.lead,.thumbs,.panel,.award,.ccard,.sk,.focus li,.mcard,.findings tr,.kpis,.p-charts>div,.split>div{break-inside:avoid}
   .is-out .hbar .f{width:var(--w)}.is-out .hbar .v{opacity:1}.is-out .vbar{height:var(--h)}.is-out .vbar i{opacity:1}
   .hbar .f,.vbar{transition:none}
 }
@@ -583,6 +597,7 @@ body{line-height:1.7}
       <div class="log-body">
         <h3>PT Pelindo Sinergi Lokaseva</h3>
         <p class="role">Strategic Planning Intern</p>
+        <div class="kpi-strip"><div><b>50%</b><span>faster quarterly RJPP progress reports</span></div><div><b>~90%</b><span>of the Industry Outlook research done independently</span></div><div><b>453</b><span>ideas brought into the Innovation Hub</span></div></div>
         <figure class="lead"><button class="lb-open" data-group="pel" data-src="assets/exp/pelindo-team-event.webp" data-cap="With the PT Pelindo Sinergi Lokaseva team at the Board of Directors farewell &amp; welcome event" style="all:unset;cursor:zoom-in;display:block"><img src="assets/exp/pelindo-team-event.webp" width="1600" height="883" alt="With the PT Pelindo Sinergi Lokaseva team at the Board of Directors farewell and welcome event" style="--ratio:16/9;--focus:50% 45%" loading="lazy"></button></figure>
         <p class="lead-cap">With the team at the Board of Directors farewell &amp; welcome event (“Pisah Sambut Direksi”). Part of the Pelindo Group (Danantara Indonesia).</p>
         <ul class="pts">
@@ -593,7 +608,6 @@ body{line-height:1.7}
           <li>Prepared data and presentation materials for the Board of Directors at ASEAN Port &amp; Logistics 2026 (8 July 2026).</li>
           <li>Built the <a class="link" href="#case-innovation">Innovation Hub</a> dashboard (Google Sheets + Apps Script), bringing <b>453 ideas</b> from 2022 onward into one live view so any employee can submit an idea at any time, not only during competitions.</li>
         </ul>
-        <p class="result"><svg class="ico"><use href="#i-award"/></svg><span>Quarterly RJPP progress reports delivered 50% faster</span></p>
         <p class="lead-cap" style="margin:10px 0 0;max-width:none">Work sample: <a class="link" href="#case-outlook">Industry Outlook 2026 — port benchmark, vessel trends &amp; ARDL regression ↓</a></p>
         <div class="thumbs">
           <button class="thumb" data-group="pel" data-src="assets/exp/pelindo-presenting.webp" data-cap="Presenting to the team"><img src="assets/exp/pelindo-presenting-thumb.webp" alt="Presenting to the team" loading="lazy"></button>
@@ -615,6 +629,7 @@ body{line-height:1.7}
       <div class="log-body">
         <h3>Kementerian Imigrasi dan Pemasyarakatan</h3>
         <p class="role">Finance &amp; Budget Administration Intern · Bureau of Planning and Finance</p>
+        <div class="kpi-strip"><div><b>600+</b><span>financial &amp; partnership records organized</span></div><div><b>200+</b><span>financial documents validated</span></div><div><b>100%</b><span>on-time reconciliation &amp; reporting</span></div></div>
         <figure class="lead"><button class="lb-open" data-group="kem" data-src="assets/exp/kemenimipas-team.webp" data-cap="With fellow interns at the ministry’s Eid al-Fitr gathering" style="all:unset;cursor:zoom-in;display:block"><img src="assets/exp/kemenimipas-team.webp" width="1600" height="900" alt="With fellow interns at the Kementerian Imigrasi dan Pemasyarakatan" style="--ratio:16/9" loading="lazy"></button></figure>
         <p class="lead-cap">With fellow interns at the ministry’s Eid al-Fitr gathering (“Silaturahmi Hari Raya Idul Fitri”).</p>
         <ul class="pts">
@@ -645,6 +660,7 @@ body{line-height:1.7}
       <div class="log-body">
         <h3>PT Pertamina Training &amp; Consulting</h3>
         <p class="role">Administrative Representative – Supply Chain Planning</p>
+        <div class="kpi-strip"><div><b>120+</b><span>fuel locations monitored in 8 regions</span></div><div><b>95%</b><span>daily distribution data accuracy</span></div><div><b>60%</b><span>higher reporting efficiency</span></div></div>
         <figure class="lead"><button class="lb-open" data-group="ptc" data-src="assets/pertamina-distribution.webp" data-cap="Fuel distribution schedule monitoring in DELMIA Quintiq" style="all:unset;cursor:zoom-in;display:block"><img src="assets/pertamina-distribution.webp" alt="Fuel distribution schedule monitoring in DELMIA Quintiq" style="--ratio:2/1" loading="lazy"></button></figure>
         <p class="lead-cap">Monitoring national fuel distribution schedules in DELMIA Quintiq.</p>
         <ul class="pts">
@@ -673,6 +689,7 @@ body{line-height:1.7}
       <div class="log-body">
         <h3>International Conference on Sustainable Innovation (ICoSI) &amp; International Conference on Islamic Economics and Financial Inclusion (ICIEFI) 2024</h3>
         <p class="role">Liaison Officer (LO)</p>
+        <div class="kpi-strip" style="--n:2"><div><b>100+</b><span>participants coordinated</span></div><div><b>90%</b><span>positive feedback</span></div></div>
         <ul class="pts">
           <li>Coordinated communication and schedules for <b>100+ participants</b> during a one-day academic conference.</li>
           <li>Managed participant logistics and coordination throughout a <b>2-month</b> pre-event preparation period.</li>
@@ -696,6 +713,7 @@ body{line-height:1.7}
       <div class="log-body">
         <h3>Himpunan Mahasiswa Ilmu Ekonomi (HIMIE)</h3>
         <p class="role">Secretary, Entrepreneurship Division</p>
+        <div class="kpi-strip" style="--n:2"><div><b>50+</b><span>letters &amp; documents managed</span></div><div><b>15</b><span>SOPs developed</span></div></div>
         <ul class="pts">
           <li>Managed <b>50+</b> letters and administrative documents for a 30+ member division.</li>
           <li>Developed <b>15 SOPs</b> to streamline division workflow and document approval.</li>
@@ -1121,6 +1139,12 @@ body{line-height:1.7}
 <!-- ===================== CONTACT ===================== -->
 <div class="stripe" aria-hidden="true"></div>
 <section id="contact" class="dark contact">
+  <svg class="deco contact-deco" viewBox="0 0 600 160" aria-hidden="true" fill="none">
+    <path d="M0 140 L120 120 L220 126 L330 82 L440 64 L600 24" stroke="#5f84ad" stroke-width="3"/>
+    <path d="M0 156 L150 148 L300 144 L450 130 L600 118" stroke="#35577f" stroke-width="2.5" stroke-dasharray="10 8"/>
+    <circle cx="330" cy="82" r="8" stroke="#c9a227" stroke-width="3" fill="#10223b"/>
+    <circle cx="540" cy="38" r="8" stroke="#c9a227" stroke-width="3" fill="#10223b"/>
+  </svg>
   <div class="wrap">
     <h2>Looking for a role in strategic planning &amp; corporate finance</h2>
     <p class="sub">Open to roles in corporate planning, budgeting, financial analysis and business research. <b style="color:#fff">Ready to start a full-time role immediately</b> and open to placement anywhere in Indonesia. The fastest way to reach me is email or WhatsApp.</p>
@@ -1131,7 +1155,7 @@ body{line-height:1.7}
       <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
       <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
       <a class="ccontact" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=13" target="_blank" rel="noopener"><small>Portfolio · 3 pages</small><b>Summary (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=43" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=44" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
     </div>
     <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>
