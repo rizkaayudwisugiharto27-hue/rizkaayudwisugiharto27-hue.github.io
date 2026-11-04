@@ -22,15 +22,15 @@
 <meta name="twitter:image" content="https://rizkaayudwisugiharto27-hue.github.io/assets/og-cover.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
 <style>
-/* ===== Tokens: navy with a soft-gold highlight ===== */
+/* ===== Tokens: navy with a soft-gold highlight, annual-report style ===== */
 :root{
   --g-950:#0b1729; --g-900:#10223b; --g-850:#172d4b; --g-800:#1e3a5f; --g-700:#2f5d8a; --g-600:#3d6a99; --g-500:#6b7a90; --g-300:#b4c3d6; --g-200:#d5dfeb; --g-100:#e8eef5; --g-50:#f4f7fa;
   --ink:#0f1b2d; --ink-2:#4a5568; --ink-3:#5f6b7d; --line:#d8e0ea;
   --on-dark:#f3f6fa; --on-dark-2:#c2cfdf; --on-dark-3:#93a4ba; --line-dark:#2c4a70;
   --accent:#1e3a5f; --bar:#1e3a5f; --bar-2:#9fb5cf; --good:#2f6b4f; --gold:#c9a227;
-  --f:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif; --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
   --max:1120px; --gutter:20px;
 }
 *{box-sizing:border-box}
@@ -319,7 +319,7 @@ section{padding:72px 0}
 .fold>summary:hover{background:var(--g-800);color:#fff}
 .dark .fold>summary{border-color:var(--g-300);color:#fff}
 .dark .fold>summary:hover{background:#fff;color:var(--g-950)}
-.dark .fold.in-panel{margin-top:4px}
+.fold.in-panel{margin-top:4px}
 .dark .fold.in-panel>summary{color:var(--g-900);border-color:var(--g-300);background:#fff}
 .dark .fold.in-panel>summary:hover{background:var(--g-900);color:#fff}
 .cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:14px}
@@ -416,6 +416,49 @@ html:not(.js) .reveal{opacity:1;transform:none}
 }
 
 /* ===== Print (used to build the Download Portfolio PDF) ===== */
+/* ===== Annual-report style: serif headings, gold rules, light report section ===== */
+body{line-height:1.7}
+.hero h1,.sec-head h2,.log-body h3,.case h3,.live h4,.award h3,.contact h2,.sk h3,.ready-title,.sub-h,.edu-row h3,.ccard h3{font-family:var(--serif);font-weight:700;letter-spacing:-.01em}
+.hero h1{font-size:clamp(2.6rem,5.8vw,4.2rem);line-height:1.04}
+.sec-head h2{font-size:clamp(2rem,4vw,2.7rem)}
+.sec-head h2::before{width:56px;height:3px}
+.stripe{height:3px;background:var(--gold)}
+.award::after{width:4px;background:var(--gold)}
+.focus li{border:0;border-left:4px solid var(--gold);box-shadow:0 1px 2px rgba(16,34,59,.06),0 6px 20px rgba(16,34,59,.07)}
+.when{background:transparent;color:var(--g-800);border:1.5px solid var(--g-800);padding:3px 11px}
+.kh{position:relative;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(201,162,39,.55);margin-top:-24px}
+.kh div{padding:22px 20px 30px 0}
+.kh div+div{padding-left:22px;border-left:1px solid var(--line-dark)}
+.kh b{display:block;font-family:var(--serif);font-size:2.1rem;font-weight:700;color:#fff;line-height:1.1}
+.kh span{display:block;margin-top:6px;font-size:.8rem;color:var(--on-dark-2);font-weight:500}
+@media (max-width:760px){.kh{grid-template-columns:repeat(2,1fr)}.kh div{padding:16px 12px 18px 0}.kh div+div{padding-left:14px}.kh div:nth-child(3){padding-left:0;border-left:0}.kh b{font-size:1.6rem}}
+/* Projects: light report section */
+.reports{background:#fff;color:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.reports .case{border-bottom-color:var(--line)}
+.reports .case .lede,.reports .cap{color:var(--ink)}
+.reports .cap b,.reports .case .lede b{color:var(--ink)}
+.reports .case .note{color:var(--ink-2)}
+.reports .chip{border-color:var(--line);color:var(--ink-2);background:var(--g-50)}
+.reports .tab{border-color:var(--line);color:var(--g-800);background:#fff}
+.reports .tab[aria-selected="true"]{background:var(--g-800);color:#fff;border-color:var(--g-800)}
+.reports .panel{border:1px solid var(--line);box-shadow:0 1px 2px rgba(16,34,59,.05),0 10px 28px rgba(16,34,59,.07)}
+.reports .findings th{color:var(--ink-3);border-bottom-color:var(--line)}
+.reports .findings td{color:var(--ink-2);border-bottom-color:var(--line)}
+.reports .findings td:first-child,.reports .findings b{color:var(--ink)}
+.reports .live{background:#fff;border-color:var(--line);box-shadow:0 1px 2px rgba(16,34,59,.05),0 10px 28px rgba(16,34,59,.07)}
+.reports .live .k,.reports .live-tip{color:var(--ink-3)}
+.reports .live>p{color:var(--ink-2)}
+.reports .live>p b,.reports .ba b{color:var(--ink)}
+.reports .ba>div{background:var(--g-50);border-color:var(--line)}
+.reports .ba>div:last-child{background:#eef8f2;border-color:#41b883}
+.reports .ba span{color:var(--ink-3)}
+.reports .ba>div:last-child span{color:#1f6b45}
+.reports .ba p{color:var(--ink-2)}
+.reports .browser{border-color:var(--line)}
+.reports .btn.primary{background:var(--g-800);color:#fff;border-color:var(--g-800)}
+.reports .btn.primary:hover{background:var(--g-900);border-color:var(--g-900)}
+.reports .demo-load .btn{background:#fff;color:var(--g-950);border-color:#fff}
+@media (max-width:640px){.reports .findings td:not(:first-child)::before{color:var(--ink)}.reports .findings tr{border-bottom-color:var(--line)}}
 @media print{
   @page{size:A4;margin:12mm}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
@@ -481,7 +524,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
         <div class="btns">
           <a class="btn primary" href="#contact">Contact me</a>
           <a class="btn" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Download CV</a>
-          <a class="btn" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=12" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Portfolio Summary (PDF)</a>
+          <a class="btn" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=13" target="_blank" rel="noopener"><svg class="ico"><use href="#i-down"/></svg>Portfolio Summary (PDF)</a>
           <a class="btn" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
@@ -489,6 +532,12 @@ html:not(.js) .reveal{opacity:1;transform:none}
         <div class="pring"><img src="assets/rizka-about.webp" width="608" height="772" alt="Photo of Rizka Ayu Dwi Sugiharto" fetchpriority="high"></div>
         <figcaption>Available immediately</figcaption>
       </figure>
+    </div>
+    <div class="kh" aria-label="Key highlights">
+      <div><b>3</b><span>Internships at an SOE, a ministry and Pertamina</span></div>
+      <div><b>3.84</b><span>GPA out of 4.00, Universitas Muhammadiyah Yogyakarta</span></div>
+      <div><b>453</b><span>Ideas in the Innovation Hub dashboard I built</span></div>
+      <div><b>50%</b><span>Faster quarterly RJPP progress reports at Pelindo</span></div>
     </div>
 
   </div>
@@ -503,11 +552,6 @@ html:not(.js) .reveal{opacity:1;transform:none}
       <div class="prose reveal">
         <p>I work where the analysis meets the tools. I can build the economic case, such as an industry outlook, an ARDL model or a financing comparison, <b>and</b> the spreadsheet or dashboard that keeps those numbers up to date for the people who decide.</p>
         <p>I like turning scattered data into one clear picture: plan-versus-realization reports, budget reconciliation, KPI monitoring. I’m careful with official documents and deadlines: at the ministry, reconciliation and annual reports went in <b>100% on time</b>. I also learn new systems quickly, from DELMIA Quintiq to Apps Script.</p>
-        <div class="facts">
-          <div class="fact"><b>3</b><span>Internships</span></div>
-          <div class="fact"><b>3.84</b><span>GPA (out of 4.00)</span></div>
-          <div class="fact"><b>583</b><span>English (EPT) score</span></div>
-        </div>
       </div>
       <div class="reveal">
         <h3 class="ready-title">What I can deliver right away</h3>
@@ -669,7 +713,7 @@ html:not(.js) .reveal{opacity:1;transform:none}
 </section>
 
 <!-- ===================== PROJECTS (dark) ===================== -->
-<section id="projects" class="dark">
+<section id="projects" class="reports">
   <div class="wrap">
     <div class="sec-head">
       <h2>Projects &amp; work samples</h2>
@@ -1086,8 +1130,8 @@ html:not(.js) .reveal{opacity:1;transform:none}
       <a class="ccontact" href="https://www.linkedin.com/in/rizkaayudwi/" target="_blank" rel="noopener"><small>LinkedIn</small><b>Rizka Ayu Dwi Sugiharto</b></a>
       <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
       <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=12" target="_blank" rel="noopener"><small>Portfolio · 3 pages</small><b>Summary (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=41" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=13" target="_blank" rel="noopener"><small>Portfolio · 3 pages</small><b>Summary (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=42" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
     </div>
     <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>
