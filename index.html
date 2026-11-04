@@ -151,6 +151,11 @@ body{counter-reset:sec}
 .log-body ul.pts li::before{content:"";position:absolute;left:2px;top:.65em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
 .result{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--g-300);border-radius:8px;padding:8px 14px;font-weight:700;font-size:.88rem;margin:10px 0 4px}
 .thumbs{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.work-h{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin:18px 0 -6px}
+.thumbs.work{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.thumb.wide{width:auto;height:auto;display:flex;flex-direction:column;text-align:left;background:#fff}
+.thumb.wide img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top left;border-bottom:1px solid var(--line)}
+.thumb.wide span{display:block;padding:7px 9px;font:600 .74rem/1.35 var(--f);color:var(--ink-2)}
 .thumb{width:140px;height:96px;padding:0;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff;cursor:zoom-in}
 .thumb img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .3s}
 .thumb.contain{background:var(--g-100)}
@@ -408,6 +413,8 @@ html:not(.js) .reveal{opacity:1;transform:none}
   .findings td{border:0;padding:3px 0}
   .findings td:not(:first-child)::before{content:attr(data-label) ": ";font-weight:700;color:#fff}
   .thumb{width:calc(50% - 4px)}
+  .thumbs.work{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .thumb.wide{width:auto}
   .demo-load img{height:220px}
 }
 @media (max-width:720px){.thesis-btn{min-height:40px;padding:8px 14px;margin:6px 0 0}.brand{padding:10px 0}.mail{padding:6px 0}}
@@ -586,6 +593,16 @@ body{line-height:1.7}
           <li>Built the <a class="link" href="#case-innovation">Innovation Hub</a> dashboard (Google Sheets + Apps Script), bringing <b>453 ideas</b> from 2022 onward into one live view so any employee can submit an idea at any time, not only during competitions.</li>
         </ul>
         <p class="lead-cap" style="margin:10px 0 0;max-width:none">Work sample: <a class="link" href="#case-outlook">Industry Outlook 2026: port benchmark, vessel trends &amp; ARDL regression ↓</a></p>
+        <p class="work-h">Work documentation</p>
+        <div class="thumbs work">
+          <button class="thumb wide" data-group="pelwork" data-src="assets/exp/pelindo-work-rjpp-rkm.webp" data-cap="Quarterly RJPP monitoring: RKM realization by directorate (Sep 2026)"><img src="assets/exp/pelindo-work-rjpp-rkm-thumb.webp" alt="Quarterly RJPP monitoring: RKM realization by directorate (Sep 2026)" loading="lazy"><span>Quarterly RJPP 2026 monitoring</span></button>
+          <button class="thumb wide" data-group="pelwork" data-src="assets/exp/pelindo-work-rjpp-initiatives.webp" data-cap="RJPP 2025–2030 strategic initiative roadmap"><img src="assets/exp/pelindo-work-rjpp-initiatives-thumb.webp" alt="RJPP 2025–2030 strategic initiative roadmap" loading="lazy"><span>RJPP strategic initiative roadmap</span></button>
+          <button class="thumb wide" data-group="pelwork" data-src="assets/exp/pelindo-work-finance-tw3.webp" data-cap="Q3 2026 financial realization vs RKAP and RJPP targets"><img src="assets/exp/pelindo-work-finance-tw3-thumb.webp" alt="Q3 2026 financial realization vs RKAP and RJPP targets" loading="lazy"><span>Q3 2026 financial realization</span></button>
+          <button class="thumb wide" data-group="pelwork" data-src="assets/exp/pelindo-work-kijing.webp" data-cap="Terminal Kijing supporting area profile (feasibility study review)"><img src="assets/exp/pelindo-work-kijing-thumb.webp" alt="Terminal Kijing supporting area profile (feasibility study review)" loading="lazy"><span>Terminal Kijing area profile</span></button>
+          <button class="thumb wide" data-group="pelwork" data-src="assets/exp/pelindo-work-freight-ports.webp" data-cap="Industry Outlook 2026: domestic sea freight at main ports"><img src="assets/exp/pelindo-work-freight-ports-thumb.webp" alt="Industry Outlook 2026: domestic sea freight at main ports" loading="lazy"><span>Outlook: sea freight at main ports</span></button>
+          <button class="thumb wide" data-group="pelwork" data-src="assets/exp/pelindo-work-sea-cargo.webp" data-cap="Industry Outlook 2026: domestic sea cargo volume"><img src="assets/exp/pelindo-work-sea-cargo-thumb.webp" alt="Industry Outlook 2026: domestic sea cargo volume" loading="lazy"><span>Outlook: domestic sea cargo</span></button>
+        </div>
+        <p class="work-h">Activity photos</p>
         <div class="thumbs">
           <button class="thumb" data-group="pel" data-src="assets/exp/pelindo-presenting.webp" data-cap="Presenting to the team"><img src="assets/exp/pelindo-presenting-thumb.webp" alt="Presenting to the team" loading="lazy"></button>
           <button class="thumb" data-group="pel" data-src="assets/exp/pelindo-terminal.webp" data-cap="Site visit at a container terminal"><img src="assets/exp/pelindo-terminal-thumb.webp" alt="Site visit at a container terminal" loading="lazy"></button>
@@ -1128,7 +1145,7 @@ body{line-height:1.7}
       <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
       <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
       <a class="ccontact" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=14" target="_blank" rel="noopener"><small>Portfolio · 3 pages</small><b>Summary (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=49" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=50" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
     </div>
     <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>
