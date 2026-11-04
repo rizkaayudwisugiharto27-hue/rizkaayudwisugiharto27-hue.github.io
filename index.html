@@ -152,7 +152,7 @@ body{counter-reset:sec}
 .result{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--g-300);border-radius:8px;padding:8px 14px;font-weight:700;font-size:.88rem;margin:10px 0 4px}
 .thumbs{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .work-h{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin:18px 0 -6px}
-.thumbs.work{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.thumbs.work{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
 .thumb.wide{width:auto;height:auto;display:flex;flex-direction:column;text-align:left;background:#fff}
 .thumb.wide img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top left;border-bottom:1px solid var(--line)}
 .thumb.wide span{display:block;padding:7px 9px;font:600 .74rem/1.35 var(--f);color:var(--ink-2)}
@@ -170,6 +170,8 @@ body{counter-reset:sec}
 .case:last-of-type{border-bottom:0;margin-bottom:0}
 .case h3{font-size:clamp(1.4rem,2.6vw,1.75rem);font-weight:800;letter-spacing:-.01em;line-height:1.2}
 .case .lede{color:var(--on-dark);margin:12px 0}
+.myrole{border-left:3px solid var(--gold);background:var(--g-50);padding:8px 12px;margin:10px 0 14px;font-size:.88rem;color:var(--ink-2);border-radius:0 6px 6px 0}
+.myrole b{color:var(--ink)}
 .case .note{border-left:3px solid var(--g-500);padding:4px 0 4px 14px;color:var(--on-dark-2);font-style:italic;font-size:.92rem;margin:14px 0}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}
 .chip{border:1px solid var(--line-dark);color:var(--on-dark-2);border-radius:999px;padding:4px 12px;font-size:.78rem;font-weight:600}
@@ -599,8 +601,6 @@ body{line-height:1.7}
           <button class="thumb wide" data-group="pelwork" data-src="assets/exp/pelindo-work-rjpp-initiatives.webp" data-cap="RJPP 2025–2030 strategic initiative roadmap"><img src="assets/exp/pelindo-work-rjpp-initiatives-thumb.webp" alt="RJPP 2025–2030 strategic initiative roadmap" loading="lazy"><span>RJPP strategic initiative roadmap</span></button>
           <button class="thumb wide" data-group="pelwork" data-src="assets/exp/pelindo-work-finance-tw3.webp" data-cap="Q3 2026 financial realization vs RKAP and RJPP targets"><img src="assets/exp/pelindo-work-finance-tw3-thumb.webp" alt="Q3 2026 financial realization vs RKAP and RJPP targets" loading="lazy"><span>Q3 2026 financial realization</span></button>
           <button class="thumb wide" data-group="pelwork" data-src="assets/exp/pelindo-work-kijing.webp" data-cap="Terminal Kijing supporting area profile (feasibility study review)"><img src="assets/exp/pelindo-work-kijing-thumb.webp" alt="Terminal Kijing supporting area profile (feasibility study review)" loading="lazy"><span>Terminal Kijing area profile</span></button>
-          <button class="thumb wide" data-group="pelwork" data-src="assets/exp/pelindo-work-freight-ports.webp" data-cap="Industry Outlook 2026: domestic sea freight at main ports"><img src="assets/exp/pelindo-work-freight-ports-thumb.webp" alt="Industry Outlook 2026: domestic sea freight at main ports" loading="lazy"><span>Outlook: sea freight at main ports</span></button>
-          <button class="thumb wide" data-group="pelwork" data-src="assets/exp/pelindo-work-sea-cargo.webp" data-cap="Industry Outlook 2026: domestic sea cargo volume"><img src="assets/exp/pelindo-work-sea-cargo-thumb.webp" alt="Industry Outlook 2026: domestic sea cargo volume" loading="lazy"><span>Outlook: domestic sea cargo</span></button>
         </div>
         <p class="work-h">Activity photos</p>
         <div class="thumbs">
@@ -731,6 +731,7 @@ body{line-height:1.7}
     <article class="case" id="case-outlook">
       <h3>Industry Outlook 2026: PT Pelindo Sinergi Lokaseva</h3>
       <p class="lede">Market and macroeconomic research for the company’s 2026 outlook: a global port benchmark, domestic container vessel trends, and an econometric model of Indonesia’s exports.</p>
+      <p class="myrole"><b>My role:</b> Researched and built the analysis: data from WSC, Lloyd’s List and BPS, the port benchmark, the ARDL model in EViews/Stata and the slides, about 90% of it independently.</p>
       <div class="chips"><span class="chip">Market research</span><span class="chip">Macroeconomic analysis</span><span class="chip">ARDL · EViews / Stata</span><span class="chip">Lloyd’s List · WSC data</span></div>
       <div class="tabs" role="tablist" aria-label="Industry Outlook work samples">
         <button class="tab" role="tab" aria-selected="true" aria-controls="t-ports" id="tb-ports">Port benchmark</button>
@@ -837,6 +838,7 @@ body{line-height:1.7}
     <article class="case" id="case-invest">
       <h3>Investment Scheme Analysis: Profit Sharing vs Phantom Share</h3>
       <p class="lede">Independent case study (skill test) for a Corporate Investment Staff selection: choosing a financing scheme for PT Alpha Nusantara. Delivered as a recommendation deck (PowerPoint) plus an Excel financial model.</p>
+      <p class="myrole"><b>My role:</b> Solo work: built the Excel financial model (3-year projection, investor IRR, cash flow) and wrote the recommendation deck.</p>
       <div class="chips"><span class="chip">Financial modelling · Excel</span><span class="chip">IRR</span><span class="chip">Cash-flow projection</span><span class="chip">Oct 2026</span></div>
       <div class="panel">
         <div class="kpis">
@@ -910,6 +912,7 @@ body{line-height:1.7}
           <span class="badge-live">LIVE DEMO</span>
         </div>
         <p>Google Sheets + Apps Script dashboard that turns the company’s innovation data bank into one live view with filters, KPIs, charts and status history. The demo runs the original code on the <b>real data (453 ideas), anonymized</b>. <i>(Interface in Indonesian.)</i></p>
+        <p class="myrole"><b>My role:</b> Proposed the idea in my final internship presentation and built the web app myself: the Google Sheets data structure, the Apps Script backend and the dashboard.</p>
         <div class="ba">
           <div><span>Before</span><p>Ideas were collected only when an innovation competition was running, and stayed in separate files afterwards.</p></div>
           <div><span>After</span><p>Any employee can submit an idea at any time, and managers and staff can see every idea, its status and which ones need follow-up: <b>453 ideas</b> from 2022 onward in one place.</p></div>
@@ -934,6 +937,7 @@ body{line-height:1.7}
           <span class="badge-live">LIVE DEMO</span>
         </div>
         <p>Team innovation at the Bureau of Planning and Finance: a Google Sheets + Apps Script web app with a validated input form and a reconciliation dashboard for official travel (perjadin) files. The demo runs the original code on the <b>real 2026 recap, anonymized</b>; your edits stay in your browser. <i>(Interface in Indonesian.)</i></p>
+        <p class="myrole"><b>My role:</b> My innovation project with the bureau team: I designed and built the web app (input form, reconciliation dashboard, printable report), now handed over to the ministry’s IT team.</p>
         <div class="ba">
           <div><span>Before</span><p>Every travel file was typed into Google Sheets by hand: about <b>50 files took 3–4 days</b> of manual input.</p></div>
           <div><span>After</span><p>Each file is entered once through a validated form; the recap, document status per bureau and the printable report update automatically. My innovation prototype has been <b>handed over to the ministry’s IT team</b>, which is following it up and developing it further; the time saved will be measured once it is rolled out.</p></div>
@@ -1145,7 +1149,7 @@ body{line-height:1.7}
       <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
       <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
       <a class="ccontact" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=14" target="_blank" rel="noopener"><small>Portfolio · 3 pages</small><b>Summary (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=50" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=51" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
     </div>
     <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>
