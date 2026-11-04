@@ -105,13 +105,13 @@ section{padding:72px 0}
 .sec-head h2{font-size:clamp(1.9rem,4vw,2.5rem);font-weight:800;letter-spacing:-.02em;line-height:1.15}
 body{counter-reset:sec}
 .sec-head,.contact h2{counter-increment:sec}
-.sec-head h2::before,.contact h2::before{content:counter(sec,decimal-leading-zero);display:block;width:fit-content;padding-right:58px;background:linear-gradient(var(--gold),var(--gold)) right center/44px 3px no-repeat;font-size:.78rem;font-weight:800;letter-spacing:.22em;line-height:1;color:var(--gold-ink);margin-bottom:14px}
+.sec-head h2::before,.contact h2::before{content:counter(sec,decimal-leading-zero);display:block;width:fit-content;padding-right:52px;background:linear-gradient(var(--gold),var(--gold)) right center/40px 3px no-repeat;font-size:.78rem;font-weight:800;letter-spacing:.22em;line-height:1;color:var(--gold-ink);margin-bottom:14px}
 .dark .sec-head h2::before,.contact h2::before{color:var(--gold)}
 .sec-head p{margin-top:10px;color:var(--ink-2);max-width:64ch}
 #projects .sec-head,#projects .sec-head p,#experience .sec-head,#experience .sec-head p{max-width:none}
 /* Long text is justified; on narrow screens hyphenation keeps the word gaps even */
 .prose p,.sec-head p,.log-body ul.pts li,.lead-cap,.lede,.live>p,.ba p,.cap,.award p,.focus li span,.sk-wide p,.desc,.live-tip,.panel>p,#contact .sub{text-align:justify}
-@media (max-width:640px){.prose p,.sec-head p,.log-body ul.pts li,.lead-cap,.lede,.live>p,.ba p,.cap,.award p,.focus li span,.sk-wide p,.desc,.live-tip,.panel>p,#contact .sub{-webkit-hyphens:auto;hyphens:auto}}
+@media (max-width:640px){.prose p,.sec-head p,.log-body ul.pts li,.lead-cap,.lede,.live>p,.ba p,.cap,.award p,.focus li span,.sk-wide p,.desc,.live-tip,.panel>p,#contact .sub{text-align:left;-webkit-hyphens:manual;hyphens:manual}}
 .dark .sec-head p{color:var(--on-dark-2)}
 .sub-h{font-size:1.35rem;font-weight:800;margin:48px 0 18px;letter-spacing:-.01em}
 .link{font-weight:700;text-underline-offset:3px;text-decoration-thickness:2px}
@@ -427,7 +427,6 @@ body{line-height:1.7}
 .hero h1,.sec-head h2,.log-body h3,.case h3,.live h4,.award h3,.contact h2,.sk h3,.ready-title,.sub-h,.edu-row h3,.ccard h3{font-family:var(--serif);font-weight:700;letter-spacing:-.01em}
 .hero h1{font-size:clamp(2.6rem,5.8vw,4.2rem);line-height:1.04}
 .sec-head h2{font-size:clamp(2rem,4vw,2.7rem)}
-.sec-head h2::before{width:56px;height:3px}
 .stripe{height:3px;background:var(--gold)}
 .award::after{width:4px;background:var(--gold)}
 .focus li{border:0;border-left:4px solid var(--gold);box-shadow:0 1px 2px rgba(16,34,59,.06),0 6px 20px rgba(16,34,59,.07)}
@@ -893,7 +892,7 @@ body{line-height:1.7}
           </div>
           <span class="badge-live">LIVE DEMO</span>
         </div>
-        <p>Google Sheets + Apps Script web app that turns the company’s innovation data bank into a live monitoring dashboard: filters, KPIs, charts, a unit × category matrix, a searchable list with CSV export, a gallery and status history. The original reads the Sheet in real time and is internal; the demo below runs the same code on the <b>real innovation bank (453 ideas), anonymized</b>, with no names, teams or internal descriptions. Try the filters or click a bar. <i>(Interface in Indonesian, as used at the company.)</i></p>
+        <p>Google Sheets + Apps Script dashboard that turns the company’s innovation data bank into one live view with filters, KPIs, charts and status history. The demo runs the original code on the <b>real data (453 ideas), anonymized</b>. <i>(Interface in Indonesian.)</i></p>
         <div class="ba">
           <div><span>Before</span><p>Ideas were collected only when an innovation competition was running, and stayed in separate files afterwards.</p></div>
           <div><span>After</span><p>Any employee can submit an idea at any time, and managers and staff can see every idea, its status and which ones need follow-up: <b>453 ideas</b> from 2022 onward in one place.</p></div>
@@ -917,7 +916,7 @@ body{line-height:1.7}
           </div>
           <span class="badge-live">LIVE DEMO</span>
         </div>
-        <p>Team innovation at the Bureau of Planning and Finance: a Google Sheets + Apps Script web app that replaces manual typing of official travel (perjadin) files into Google Sheets with a form-based input and a reconciliation dashboard with document status per bureau, monthly trend, input/edit forms, master data and a printable report. The demo below runs the original code on the <b>real 2026 recap</b> (actual trips, dates and amounts), with staff names, NIPs and SPM numbers anonymized; what you add or edit is saved only in your browser. <i>(Interface in Indonesian, as used at the ministry.)</i></p>
+        <p>Team innovation at the Bureau of Planning and Finance: a Google Sheets + Apps Script web app with a validated input form and a reconciliation dashboard for official travel (perjadin) files. The demo runs the original code on the <b>real 2026 recap, anonymized</b>; your edits stay in your browser. <i>(Interface in Indonesian.)</i></p>
         <div class="ba">
           <div><span>Before</span><p>Every travel file was typed into Google Sheets by hand: about <b>50 files took 3–4 days</b> of manual input.</p></div>
           <div><span>After</span><p>Each file is entered once through a validated form; the recap, document status per bureau and the printable report update automatically. My innovation prototype has been <b>handed over to the ministry’s IT team</b>, which is following it up and developing it further; the time saved will be measured once it is rolled out.</p></div>
@@ -1129,7 +1128,7 @@ body{line-height:1.7}
       <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
       <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
       <a class="ccontact" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=14" target="_blank" rel="noopener"><small>Portfolio · 3 pages</small><b>Summary (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=48" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=49" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
     </div>
     <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>
