@@ -250,6 +250,25 @@ body{counter-reset:sec}
 .tbl th{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);font-weight:700;background:var(--g-100)}
 .tbl td.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
 .tbl-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--line)}
+.tbl small.muted{display:block;color:var(--ink-3);font-size:.72rem;font-weight:500}
+.tbl.mx{min-width:760px;font-size:.8rem}
+.tbl.mx th[scope=rowgroup]{background:#fff;text-transform:none;letter-spacing:0;font-size:.8rem;color:var(--ink);border-right:1px solid var(--line);width:150px}
+.tbl.mx .c{text-align:center;width:74px}
+.dot{display:inline-block;width:13px;height:13px;border-radius:50%;vertical-align:middle}
+.dot.O{background:var(--g-800)}
+.dot.H{background:var(--bar-2);box-shadow:inset 0 0 0 2px var(--g-800)}
+.dot.P{background:#fff;box-shadow:inset 0 0 0 2px var(--g-800)}
+.dot.N{background:var(--g-200)}
+.mx-hint{display:none;font-size:.76rem;color:var(--ink-3);margin-top:8px}
+.mx-key{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px;font-size:.78rem;color:var(--ink-2)}
+.mx-key span{display:inline-flex;align-items:center;gap:6px}
+.chain{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;counter-reset:none}
+.chain li{position:relative;background:var(--g-50);border:1px solid var(--line);border-top:3px solid var(--g-800);border-radius:8px;padding:12px 12px 12px}
+.chain .no{position:absolute;top:10px;right:12px;font-weight:800;color:var(--gold-ink);font-size:.8rem}
+.chain b{display:block;font-size:.9rem;padding-right:18px}
+.chain small{display:block;color:var(--ink-3);font-size:.72rem;margin-top:2px}
+.chain em{display:inline-block;font-style:normal;font-weight:700;font-size:.74rem;background:var(--g-800);color:#fff;border-radius:999px;padding:2px 9px;margin:8px 0 6px}
+.chain p{font-size:.78rem;color:var(--ink-2);line-height:1.45}
 .ok{display:inline-block;background:var(--good-bg);color:var(--good);border-radius:999px;padding:2px 10px;font-weight:700;font-size:.78rem}
 .vchart{display:grid;grid-template-columns:repeat(var(--cols),1fr);gap:14px;align-items:end;height:210px;border-bottom:2px solid var(--ink-3);padding:0 4px}
 .vgroup{display:flex;align-items:end;justify-content:center;gap:5px;height:100%}
@@ -416,12 +435,15 @@ html:not(.js) .reveal{opacity:1;transform:none}
   .findings td:not(:first-child)::before{content:attr(data-label) ": ";font-weight:700;color:#fff}
   .thumb{width:calc(50% - 4px)}
   .thumbs.work{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .chain{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mx-hint{display:block}
   .thumb.wide{width:auto}
   .demo-load img{height:220px}
 }
 @media (max-width:720px){.thesis-btn{min-height:40px;padding:8px 14px;margin:6px 0 0}.brand{padding:10px 0}.mail{padding:6px 0}}
 @media (max-width:480px){.nav .wrap{gap:10px}.brand{font-size:.92rem}.cv-t{display:none}}
 @media (max-width:440px){
+  .chain{grid-template-columns:1fr}
   .hbar{grid-template-columns:100px 1fr;font-size:.76rem}
   .vchart,.vlabels{gap:6px}
   .kpis{grid-template-columns:1fr}
@@ -482,6 +504,7 @@ body{line-height:1.7}
   h2,h3,h4,.sec-head,.log-meta{break-after:avoid}
   .panel[hidden]{display:block!important;margin-top:14px}
   .cap[hidden]{display:block!important}
+  .tbl.mx{min-width:0}.mx-hint{display:none!important}
   .lead,.thumbs,.panel,.award,.ccard,.sk,.focus li,.mcard,.findings tr,.kpis,.p-charts>div,.split>div{break-inside:avoid}
   .is-out .hbar .f{width:var(--w)}.is-out .hbar .v{opacity:1}.is-out .vbar{height:var(--h)}.is-out .vbar i{opacity:1}
   .hbar .f,.vbar{transition:none}
@@ -912,16 +935,100 @@ body{line-height:1.7}
 
     <article class="case" id="case-bench">
       <h3>Peer Benchmark: Port Support Services (PSL)</h3>
-      <p class="lede">Benchmark of companies with businesses similar to PSL’s new segments (port industrial zones, terminal support, port access, property, cruise &amp; marina, port utilities), built from each company’s 2025 annual report and audited financial statements.</p>
+      <p class="lede">Who already runs the businesses PSL is moving into: port industrial zones, terminal support, port access, property, cruise &amp; marina and port utilities. Built from each company’s 2025 annual report and audited financial statements.</p>
       <p class="myrole"><b>My role:</b> Solo work from my supervisor’s brief: chose the peers, read the annual reports and financial statements, and built the 35-slide deck (company profiles, service matrix, value chain and financial comparison).</p>
       <div class="chips"><span class="chip">Peer benchmarking</span><span class="chip">Annual report analysis</span><span class="chip">Financial comparison</span><span class="chip">2026</span></div>
-      <div class="panel">
+      <div class="tabs" role="tablist" aria-label="Peer benchmark work samples">
+        <button class="tab" role="tab" aria-selected="true" aria-controls="t-bfin" id="tb-bfin">Peers &amp; margins</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="t-bmx" id="tb-bmx" tabindex="-1">Service matrix</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="t-bchain" id="tb-bchain" tabindex="-1">Value chain</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="t-bslides" id="tb-bslides" tabindex="-1">Original slides</button>
+      </div>
+
+      <div class="panel" role="tabpanel" id="t-bfin" aria-labelledby="tb-bfin">
+        <p class="desc"><b>Stand-alone estates earn the highest margins.</b> Five port and logistics groups plus Jasa Marga (port access), compared on the business line closest to PSL.</p>
         <div class="kpis">
-          <div class="kpi"><b>6</b><span>companies: AD Ports, Rotterdam, DP World, Samudera, AKR + Jasa Marga</span></div>
-          <div class="kpi"><b>14</b><span>service segments mapped (operate, hybrid, partner)</span></div>
+          <div class="kpi"><b>6</b><span>companies: 3 global, 2 Indonesian, plus a toll operator</span></div>
+          <div class="kpi"><b>14</b><span>service segments mapped across all six</span></div>
           <div class="kpi"><b>54.6%</b><span>EBITDA margin of AD Ports’ free-zone cluster (KEZAD)</span></div>
           <div class="kpi hl"><b>28–55%</b><span>Margin of stand-alone estates vs 14–17% when mixed with logistics</span></div>
         </div>
+        <div class="split">
+          <div>
+            <p class="chart-title">Margin of the business closest to PSL<span>% (EBITDA or segment margin, 2025)</span></p>
+            <div class="hbars" data-max="60">
+              <div class="hbar"><span class="n">AD Ports · KEZAD</span><span class="t"><span class="f" data-v="54.6"></span><span class="v">54.6</span></span></div>
+              <div class="hbar"><span class="n">Jasa Marga · toll</span><span class="t"><span class="f alt" data-v="51.3"></span><span class="v">51.3</span></span></div>
+              <div class="hbar"><span class="n">Rotterdam · landlord</span><span class="t"><span class="f" data-v="36.3"></span><span class="v">36.3</span></span></div>
+              <div class="hbar"><span class="n">AKR · JIIPE</span><span class="t"><span class="f" data-v="28.2"></span><span class="v">28.2</span></span></div>
+              <div class="hbar"><span class="n">Samudera · logistics</span><span class="t"><span class="f alt" data-v="16.8"></span><span class="v">16.8</span></span></div>
+              <div class="hbar"><span class="n">DP World · LPEZ</span><span class="t"><span class="f alt" data-v="14.3"></span><span class="v">14.3</span></span></div>
+            </div>
+            <p class="src">Dark bars: stand-alone estates; light bars: toll road, or estates mixed with logistics. Currencies are not converted; compare percentages only.</p>
+          </div>
+          <div>
+            <p class="chart-title">Peer set<span>Revenue 2025 and group EBITDA margin</span></p>
+            <div class="tbl-wrap">
+              <table class="tbl">
+                <thead><tr><th>Company</th><th style="text-align:right">Revenue 2025</th><th style="text-align:right">EBITDA</th></tr></thead>
+                <tbody>
+                  <tr><td>AD Ports <small class="muted">global</small></td><td class="num">AED 20.8 bn</td><td class="num">24.6%</td></tr>
+                  <tr><td>Port of Rotterdam <small class="muted">global</small></td><td class="num">€940 m</td><td class="num">36.3%</td></tr>
+                  <tr><td>DP World <small class="muted">global</small></td><td class="num">US$24.4 bn</td><td class="num">26.3%</td></tr>
+                  <tr><td>Samudera Indonesia <small class="muted">local</small></td><td class="num">US$802 m</td><td class="num">24.0%</td></tr>
+                  <tr><td>AKR Corporindo <small class="muted">local</small></td><td class="num">Rp46.0 tn</td><td class="num">8.0%</td></tr>
+                  <tr><td>Jasa Marga <small class="muted">port access</small></td><td class="num">Rp29.9 tn</td><td class="num">43.0%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <p class="src">Sources: 2025 annual reports and audited financial statements of AD Ports Group, Port of Rotterdam, DP World, Samudera Indonesia, AKR Corporindo and Jasa Marga.</p>
+      </div>
+
+      <div class="panel" role="tabpanel" id="t-bmx" aria-labelledby="tb-bmx" hidden>
+        <p class="desc"><b>Who runs which service, and how.</b> Each of PSL’s segments broken into 14 services, mapped for every peer as operated in-house, hybrid, via partner or not operated.</p>
+        <div class="tbl-wrap">
+          <table class="tbl mx">
+            <thead><tr><th>PSL segment</th><th>Service</th><th class="c">AD Ports</th><th class="c">Rotterdam</th><th class="c">DP World</th><th class="c">Samudera</th><th class="c">AKR</th><th class="c">Jasa Marga</th></tr></thead>
+            <tbody>
+                  <tr><th scope="rowgroup" rowspan="2">Port Industrial Zone</th><td>Industrial land lease / free zone</td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td></tr>
+                  <tr><td>Ready-built / built-to-suit warehouses</td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td></tr>
+                  <tr><th scope="rowgroup" rowspan="4">Terminal Support Zone</th><td>Port terminal operation</td><td class="c"><i class="dot H" title="Hybrid: in-house + partner"></i><span class="sr-only">Hybrid: in-house + partner</span></td><td class="c"><i class="dot P" title="Via partner"></i><span class="sr-only">Via partner</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot H" title="Hybrid: in-house + partner"></i><span class="sr-only">Hybrid: in-house + partner</span></td><td class="c"><i class="dot H" title="Hybrid: in-house + partner"></i><span class="sr-only">Hybrid: in-house + partner</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td></tr>
+                  <tr><td>Container depot / CFS</td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td></tr>
+                  <tr><td>Forwarding &amp; contract logistics</td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td></tr>
+                  <tr><td>Trucking, rail &amp; dry port</td><td class="c"><i class="dot H" title="Hybrid: in-house + partner"></i><span class="sr-only">Hybrid: in-house + partner</span></td><td class="c"><i class="dot P" title="Via partner"></i><span class="sr-only">Via partner</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td></tr>
+                  <tr><th scope="rowgroup" rowspan="1">Port Access</th><td>Toll road / port access</td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot H" title="Hybrid: in-house + partner"></i><span class="sr-only">Hybrid: in-house + partner</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td></tr>
+                  <tr><th scope="rowgroup" rowspan="5">Property, Cruise &amp; Marina</th><td>Residential &amp; commercial property</td><td class="c"><i class="dot P" title="Via partner"></i><span class="sr-only">Via partner</span></td><td class="c"><i class="dot P" title="Via partner"></i><span class="sr-only">Via partner</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot P" title="Via partner"></i><span class="sr-only">Via partner</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td></tr>
+                  <tr><td>Worker housing</td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td></tr>
+                  <tr><td>Cruise terminal</td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot P" title="Via partner"></i><span class="sr-only">Via partner</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td></tr>
+                  <tr><td>Marina</td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td></tr>
+                  <tr><td>Destination &amp; tourism</td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td></tr>
+                  <tr><th scope="rowgroup" rowspan="1">Port Utility</th><td>Gas &amp; estate utilities</td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot H" title="Hybrid: in-house + partner"></i><span class="sr-only">Hybrid: in-house + partner</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot N" title="Not operated"></i><span class="sr-only">Not operated</span></td></tr>
+                  <tr><th scope="rowgroup" rowspan="1">Ecosystem Development</th><td>Tenant services, licensing &amp; digital</td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot P" title="Via partner"></i><span class="sr-only">Via partner</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot P" title="Via partner"></i><span class="sr-only">Via partner</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td><td class="c"><i class="dot O" title="Operates in-house"></i><span class="sr-only">Operates in-house</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mx-hint">Swipe the table sideways to see all six companies.</p>
+        <p class="mx-key"><span><i class="dot O"></i>In-house</span><span><i class="dot H"></i>Hybrid</span><span><i class="dot P"></i>Via partner</span><span><i class="dot N"></i>Not operated</span></p>
+      </div>
+
+      <div class="panel" role="tabpanel" id="t-bchain" aria-labelledby="tb-bchain" hidden>
+        <p class="desc"><b>From land to tenant services.</b> The middle of the chain (warehouses, terminals, logistics) is run by almost every peer; the differences sit upstream (land, utilities) and downstream (property, digital).</p>
+        <ol class="chain">
+          <li><span class="no">1</span><b>Land &amp; estates</b><small>Port Industrial Zone</small><em>4 of 5</em><p>KEZAD 550 km² · Rotterdam long leases · Jafza + 10 zones · JIIPE 1,761 ha</p></li>
+          <li><span class="no">2</span><b>Estate utilities</b><small>Port Utility</small><em>3 of 5</em><p>KEZAD gas network · Rotterdam pipelines &amp; shore power (partner) · JIIPE 40 MVA, water, gas</p></li>
+          <li><span class="no">3</span><b>Warehouses &amp; depots</b><small>Industrial / Terminal Support</small><em>4 of 5</em><p>KEZAD warehouses &amp; CFS · DP World CFS · Samudera depots · AKR warehousing</p></li>
+          <li><span class="no">4</span><b>Terminals</b><small>Terminal Support Zone</small><em>5 of 5</em><p>DP World 60+ terminals · AD Ports JVs · Samudera TPK Palaran · JIIPE port</p></li>
+          <li><span class="no">5</span><b>Logistics &amp; trucking</b><small>Terminal Support Zone</small><em>4 of 5</em><p>Noatum · DP World forwarding &amp; rail · Samudera 3PL · AKR tank trucks</p></li>
+          <li><span class="no">6</span><b>Toll access</b><small>Port Access</small><em>1 of 5 + Jasa Marga</em><p>Jasa Marga: 28 toll sections incl. Belawan, Priok, Patimban access</p></li>
+          <li><span class="no">7</span><b>Property, cruise &amp; marina</b><small>Property, Cruise &amp; Marina</small><em>1–2 of 5</em><p>P&amp;O Marinas · AD Ports cruise &amp; worker housing · JIIPE housing</p></li>
+          <li><span class="no">8</span><b>Tenant &amp; digital services</b><small>Ecosystem Development</small><em>5 of 5</em><p>Maqta Gateway · Jafza licensing · AKR one-stop licensing · Portbase</p></li>
+        </ol>
+      </div>
+
+      <div class="panel" role="tabpanel" id="t-bslides" aria-labelledby="tb-bslides" hidden>
+        <p class="desc"><b>Slides from the 35-slide deck.</b> Click a slide to enlarge it.</p>
         <div class="thumbs work">
           <button class="thumb wide" data-group="bench" data-src="assets/exp/bench-peers.webp" data-cap="Peer selection: five port & logistics groups plus a toll operator"><img src="assets/exp/bench-peers-thumb.webp" alt="Peer selection: five port & logistics groups plus a toll operator" loading="lazy"><span>Peer selection</span></button>
           <button class="thumb wide" data-group="bench" data-src="assets/exp/bench-service-matrix.webp" data-cap="Service matrix: 14 service segments across the six companies"><img src="assets/exp/bench-service-matrix-thumb.webp" alt="Service matrix: 14 service segments across the six companies" loading="lazy"><span>Service matrix</span></button>
@@ -933,7 +1040,22 @@ body{line-height:1.7}
           <button class="thumb wide" data-group="bench" data-src="assets/exp/bench-akr.webp" data-cap="Portfolio map: AKR Corporindo (JIIPE)"><img src="assets/exp/bench-akr-thumb.webp" alt="Portfolio map: AKR Corporindo (JIIPE)" loading="lazy"><span>AKR (JIIPE)</span></button>
         </div>
       </div>
-      <p class="cap"><b>Key finding:</b> long-term land leases and bundled utilities give the steadiest, highest-margin income among the peers.</p>
+      <p class="cap" data-cap-for="t-bfin"><b>Margins:</b> stand-alone estates (KEZAD, Rotterdam, JIIPE) earn 28–55%, close to toll roads (51%); estates mixed into logistics earn 14–17%.</p>
+      <p class="cap" data-cap-for="t-bmx" hidden><b>Service matrix:</b> land, warehouses, terminals, depots and logistics are core for 4–5 of 5 peers; marina, cruise and worker housing are niche (1–2).</p>
+      <p class="cap" data-cap-for="t-bchain" hidden><b>Value chain:</b> terminals and tenant services are run by all five peers; toll access only by Jasa Marga.</p>
+      <p class="cap" data-cap-for="t-bslides" hidden><b>Original deck:</b> peer selection, service matrix, value chain, financial comparison and four company portfolio maps.</p>
+
+      <details class="fold"><summary>Key findings (4)</summary>
+      <table class="findings">
+        <thead><tr><th>Area</th><th>Finding from the peers</th><th>What it suggests</th></tr></thead>
+        <tbody>
+          <tr><td>Land leases</td><td data-label="Finding">KEZAD leases land and assets for 20–50 years at a <b>54.6%</b> EBITDA margin; Rotterdam has only <b>639 ha</b> left, most of it on long lease.</td><td data-label="What it suggests">Long-term leases give the most stable, recurring income.</td></tr>
+          <tr><td>Utilities</td><td data-label="Finding">KEZAD runs a <b>100+ km</b> gas network; JIIPE supplies <b>40 MVA</b> power, water treatment and piped gas to tenants.</td><td data-label="What it suggests">Utilities sold together with land raise income per tenant.</td></tr>
+          <tr><td>Business mix</td><td data-label="Finding">Estates run on their own earn <b>28–55%</b>; mixed into logistics (DP World, Samudera) they earn <b>14–17%</b>.</td><td data-label="What it suggests">Report and manage the estate business as its own unit.</td></tr>
+          <tr><td>Niche services</td><td data-label="Finding">Marina, cruise and worker housing are run by only <b>1–2</b> of 5 peers, mostly through partners.</td><td data-label="What it suggests">Treat them as add-ons through partners, not core lines.</td></tr>
+        </tbody>
+      </table>
+      </details>
     </article>
 
     <div id="more-work">
@@ -1184,7 +1306,7 @@ body{line-height:1.7}
       <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
       <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
       <a class="ccontact" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=15" target="_blank" rel="noopener"><small>Portfolio · 3 pages</small><b>Summary (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=56" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=57" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
     </div>
     <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>
