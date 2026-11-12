@@ -109,9 +109,6 @@ body{counter-reset:sec}
 .dark .sec-head h2::before,.contact h2::before{color:var(--gold)}
 .sec-head p{margin-top:10px;color:var(--ink-2);max-width:64ch}
 #projects .sec-head,#projects .sec-head p,#experience .sec-head,#experience .sec-head p{max-width:none}
-/* Long text is justified; on narrow screens hyphenation keeps the word gaps even */
-.prose p,.sec-head p,.log-body ul.pts li,.lead-cap,.lede,.live>p,.ba p,.cap,.award p,.focus li span,.sk-wide p,.desc,.live-tip,.panel>p,#contact .sub{text-align:justify}
-@media (max-width:640px){.prose p,.sec-head p,.log-body ul.pts li,.lead-cap,.lede,.live>p,.ba p,.cap,.award p,.focus li span,.sk-wide p,.desc,.live-tip,.panel>p,#contact .sub{text-align:left;-webkit-hyphens:manual;hyphens:manual}}
 .dark .sec-head p{color:var(--on-dark-2)}
 .sub-h{font-size:1.35rem;font-weight:800;margin:48px 0 18px;letter-spacing:-.01em}
 .link{font-weight:700;text-underline-offset:3px;text-decoration-thickness:2px}
@@ -321,6 +318,9 @@ body{counter-reset:sec}
 .cg{margin-top:26px}
 .cg h4{font-size:1rem;font-weight:800;margin-bottom:12px}
 .fold{margin-top:22px}
+.fold.pts-more{margin:4px 0 12px}
+.fold.pts-more>summary{min-height:34px;padding:6px 14px;font-size:.82rem}
+.fold.pts-more[open]>summary{margin-bottom:8px}
 .fold>summary{display:inline-flex;align-items:center;gap:8px;cursor:pointer;list-style:none;font-weight:700;font-size:.9rem;padding:9px 16px;border-radius:999px;border:1.5px solid var(--g-700);color:var(--g-800);min-height:40px}
 .fold>summary::-webkit-details-marker{display:none}
 .fold>summary::after{content:"+";font-size:1.1rem;line-height:1}
@@ -588,12 +588,16 @@ body{line-height:1.7}
         <p class="lead-cap">With the team at the Board of Directors farewell &amp; welcome event (“Pisah Sambut Direksi”). Part of the Pelindo Group (Danantara Indonesia).</p>
         <ul class="pts">
           <li>Monitored quarterly <b>RJPP 2026</b> implementation, completing progress reports <b>50% faster</b>, and helped draft RJPP 2026–2030.</li>
-          <li>Conducted a comparative analysis of Terminal Kijing’s financial realization to support management performance evaluation.</li>
           <li>Conducted market research and macroeconomic analysis for the Industry Outlook 2026, handling about 90% of the research and analysis independently.</li>
-          <li>Analyzed the impact of geopolitics, exchange rates and the BI Rate on export–import performance using <b>ARDL regression</b>.</li>
-          <li>Prepared data and presentation materials for the Board of Directors at ASEAN Port &amp; Logistics 2026 (8 July 2026).</li>
           <li>Built the <a class="link" href="#case-innovation">Innovation Hub</a> dashboard (Google Sheets + Apps Script), bringing <b>453 ideas</b> from 2022 onward into one live view so any employee can submit an idea at any time, not only during competitions.</li>
+          <li>Prepared data and presentation materials for the Board of Directors at ASEAN Port &amp; Logistics 2026 (8 July 2026).</li>
         </ul>
+        <details class="fold pts-more"><summary>Show 2 more</summary>
+        <ul class="pts">
+          <li>Conducted a comparative analysis of Terminal Kijing’s financial realization to support management performance evaluation.</li>
+          <li>Analyzed the impact of geopolitics, exchange rates and the BI Rate on export–import performance using <b>ARDL regression</b>.</li>
+        </ul>
+        </details>
         <p class="lead-cap" style="margin:10px 0 0;max-width:none">Work sample: <a class="link" href="#case-outlook">Industry Outlook 2026: port benchmark, vessel trends &amp; ARDL regression ↓</a></p>
         <p class="work-h">Work documentation · Industry Outlook 2026 (public data)</p>
         <div class="thumbs work">
@@ -628,10 +632,14 @@ body{line-height:1.7}
         <ul class="pts">
           <li>Organized <b>600+</b> financial and partnership records, improving data accessibility and reporting efficiency by <b>20%</b>.</li>
           <li>Validated <b>200+</b> financial documents, including payment orders (SPM), grants, bank accounts and official travel documents.</li>
-          <li>Assisted in preparing the annual budget plan (<b>RKA</b>), contributing to a <b>15%</b> improvement in forecasting accuracy.</li>
           <li>Supported monthly reconciliation and annual financial reporting with <b>100% on-time</b> submission.</li>
           <li>Built my own innovation, <a class="link" href="#case-sirekap">SI-REKAP PERJADIN</a>, a travel-expense recap web app replacing manual input that took <b>3–4 days for ~50 files</b>; now being further developed by the ministry’s IT team.</li>
         </ul>
+        <details class="fold pts-more"><summary>Show 1 more</summary>
+        <ul class="pts">
+          <li>Assisted in preparing the annual budget plan (<b>RKA</b>), contributing to a <b>15%</b> improvement in forecasting accuracy.</li>
+        </ul>
+        </details>
         <p class="result"><svg class="ico"><use href="#i-award"/></svg><span>Completed the internship with an “Excellent” (Sangat Baik) rating</span></p>
         <div class="thumbs">
           <button class="thumb" data-group="kem" data-src="assets/exp/kemenimipas-meeting.webp" data-cap="Meeting at the Bureau of Planning and Finance"><img src="assets/exp/kemenimipas-meeting-thumb.webp" alt="Meeting at the Bureau of Planning and Finance" loading="lazy"></button>
@@ -1149,7 +1157,7 @@ body{line-height:1.7}
       <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
       <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
       <a class="ccontact" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=15" target="_blank" rel="noopener"><small>Portfolio · 3 pages</small><b>Summary (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=54" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=55" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
     </div>
     <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>
