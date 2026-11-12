@@ -769,6 +769,7 @@ body{line-height:1.7}
         <button class="tab" role="tab" aria-selected="true" aria-controls="t-ports" id="tb-ports">Port benchmark</button>
         <button class="tab" role="tab" aria-selected="false" aria-controls="t-vessel" id="tb-vessel" tabindex="-1">Vessel activity</button>
         <button class="tab" role="tab" aria-selected="false" aria-controls="t-ardl" id="tb-ardl" tabindex="-1">ARDL regression</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="t-oslides" id="tb-oslides" tabindex="-1">Original slides</button>
       </div>
 
       <div class="panel" role="tabpanel" id="t-ports" aria-labelledby="tb-ports">
@@ -850,8 +851,21 @@ body{line-height:1.7}
           </div>
         </div>
       </div>
+      <div class="panel" role="tabpanel" id="t-oslides" aria-labelledby="tb-oslides" hidden>
+        <p class="desc"><b>Slides from the Industry Outlook 2026 deck.</b> Click a slide to enlarge it.</p>
+        <div class="thumbs work">
+          <button class="thumb wide" data-group="outlook" data-src="assets/exp/outlook-trend.webp" data-cap="Global trend: supporting zones at the top container ports"><img src="assets/exp/outlook-trend-thumb.webp" alt="Global trend: supporting zones at the top container ports" loading="lazy"><span>Top-port supporting zones</span></button>
+          <button class="thumb wide" data-group="outlook" data-src="assets/exp/outlook-why-zones.webp" data-cap="Why ports need supporting zones"><img src="assets/exp/outlook-why-zones-thumb.webp" alt="Why ports need supporting zones" loading="lazy"><span>Why supporting zones</span></button>
+          <button class="thumb wide" data-group="outlook" data-src="assets/exp/outlook-vessels.webp" data-cap="Container vessel activity by island (Lloyd’s List)"><img src="assets/exp/outlook-vessels-thumb.webp" alt="Container vessel activity by island (Lloyd’s List)" loading="lazy"><span>Vessel activity</span></button>
+          <button class="thumb wide" data-group="outlook" data-src="assets/exp/outlook-portcalls.webp" data-cap="Container port calls, yearly and monthly"><img src="assets/exp/outlook-portcalls-thumb.webp" alt="Container port calls, yearly and monthly" loading="lazy"><span>Container port calls</span></button>
+          <button class="thumb wide" data-group="outlook" data-src="assets/exp/outlook-freight-ports.webp" data-cap="Domestic sea freight at the main ports (BPS)"><img src="assets/exp/outlook-freight-ports-thumb.webp" alt="Domestic sea freight at the main ports (BPS)" loading="lazy"><span>Sea freight at main ports</span></button>
+          <button class="thumb wide" data-group="outlook" data-src="assets/exp/outlook-sea-cargo.webp" data-cap="Domestic sea cargo volume (BPS)"><img src="assets/exp/outlook-sea-cargo-thumb.webp" alt="Domestic sea cargo volume (BPS)" loading="lazy"><span>Domestic sea cargo</span></button>
+          <button class="thumb wide" data-group="outlook" data-src="assets/exp/outlook-ardl.webp" data-cap="ARDL result: exports vs exchange rate &amp; BI Rate"><img src="assets/exp/outlook-ardl-thumb.webp" alt="ARDL result: exports vs exchange rate &amp; BI Rate" loading="lazy"><span>ARDL regression</span></button>
+        </div>
+      </div>
       <p class="cap" data-cap-for="t-ports"><b>Port benchmark:</b> all 10 of the top container ports reviewed have a logistics, industrial or free-trade zone linked to the port.</p>
       <p class="cap" data-cap-for="t-vessel" hidden><b>Vessel activity:</b> Java’s share of national container port calls fell from 69% (2016) to 47% (6M 2026).</p>
+      <p class="cap" data-cap-for="t-oslides" hidden><b>Original deck:</b> port benchmark, vessel and cargo trends from Lloyd’s List and BPS, and the ARDL result slide.</p>
       <p class="cap" data-cap-for="t-ardl" hidden><b>Model result:</b> F-statistic 6.783 exceeds the 5% upper bound (4.428), so both rates have a significant long-run effect on exports.</p>
 
       <details class="fold"><summary>Key findings (4)</summary>
@@ -872,7 +886,11 @@ body{line-height:1.7}
       <p class="lede">Independent case study (skill test) for a Corporate Investment Staff selection: choosing a financing scheme for PT Alpha Nusantara. Delivered as a recommendation deck (PowerPoint) plus an Excel financial model.</p>
       <p class="myrole"><b>My role:</b> Solo work: built the Excel financial model (3-year projection, investor IRR, cash flow) and wrote the recommendation deck.</p>
       <div class="chips"><span class="chip">Financial modelling · Excel</span><span class="chip">IRR</span><span class="chip">Cash-flow projection</span><span class="chip">Oct 2026</span></div>
-      <div class="panel">
+      <div class="tabs" role="tablist" aria-label="Investment case work samples">
+        <button class="tab" role="tab" aria-selected="true" aria-controls="t-imodel" id="tb-imodel">Model &amp; charts</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="t-islides" id="tb-islides" tabindex="-1">Original slides</button>
+      </div>
+      <div class="panel" role="tabpanel" id="t-imodel" aria-labelledby="tb-imodel">
         <div class="kpis">
           <div class="kpi"><b>+41.7%</b><span>Projected revenue growth in 3 years (Rp12 bn → Rp17 bn)</span></div>
           <div class="kpi"><b>72%</b><span>of net profit currently absorbed by bank installments</span></div>
@@ -917,6 +935,19 @@ body{line-height:1.7}
           </div>
         </div>
         </details>
+      </div>
+      <div class="panel" role="tabpanel" id="t-islides" aria-labelledby="tb-islides" hidden>
+        <p class="desc"><b>Slides from the recommendation deck</b> (14 slides plus the Excel model). Click a slide to enlarge it.</p>
+        <div class="thumbs work">
+          <button class="thumb wide" data-group="invest" data-src="assets/exp/invest-cover.webp" data-cap="Cover: Profit Sharing vs Phantom Share"><img src="assets/exp/invest-cover-thumb.webp" alt="Cover: Profit Sharing vs Phantom Share" loading="lazy"><span>Cover</span></button>
+          <button class="thumb wide" data-group="invest" data-src="assets/exp/invest-summary.webp" data-cap="Executive summary"><img src="assets/exp/invest-summary-thumb.webp" alt="Executive summary" loading="lazy"><span>Executive summary</span></button>
+          <button class="thumb wide" data-group="invest" data-src="assets/exp/invest-projection.webp" data-cap="Revenue &amp; EBITDA projection"><img src="assets/exp/invest-projection-thumb.webp" alt="Revenue &amp; EBITDA projection" loading="lazy"><span>Revenue &amp; EBITDA projection</span></button>
+          <button class="thumb wide" data-group="invest" data-src="assets/exp/invest-diagnosis.webp" data-cap="Diagnosis of the company’s finances"><img src="assets/exp/invest-diagnosis-thumb.webp" alt="Diagnosis of the company’s finances" loading="lazy"><span>Financial diagnosis</span></button>
+          <button class="thumb wide" data-group="invest" data-src="assets/exp/invest-simulation.webp" data-cap="Simulation of the two financing schemes"><img src="assets/exp/invest-simulation-thumb.webp" alt="Simulation of the two financing schemes" loading="lazy"><span>Scheme simulation</span></button>
+          <button class="thumb wide" data-group="invest" data-src="assets/exp/invest-recommendation.webp" data-cap="Recommendation: phantom share"><img src="assets/exp/invest-recommendation-thumb.webp" alt="Recommendation: phantom share" loading="lazy"><span>Recommendation</span></button>
+          <button class="thumb wide" data-group="invest" data-src="assets/exp/invest-risks.webp" data-cap="Key risks &amp; mitigation"><img src="assets/exp/invest-risks-thumb.webp" alt="Key risks &amp; mitigation" loading="lazy"><span>Risks &amp; mitigation</span></button>
+          <button class="thumb wide" data-group="invest" data-src="assets/exp/invest-structure.webp" data-cap="Recommended investment structure"><img src="assets/exp/invest-structure-thumb.webp" alt="Recommended investment structure" loading="lazy"><span>Investment structure</span></button>
+        </div>
       </div>
       <p class="cap"><b>Recommendation:</b> Phantom share. Investor returns are almost the same, but the company keeps more cash during the 3 years.</p>
 
@@ -1306,7 +1337,7 @@ body{line-height:1.7}
       <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
       <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf?v=6" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
       <a class="ccontact" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=15" target="_blank" rel="noopener"><small>Portfolio · 3 pages</small><b>Summary (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=57" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=58" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
     </div>
     <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>
