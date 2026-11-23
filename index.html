@@ -505,7 +505,7 @@ body{line-height:1.7}
   .panel[hidden]{display:block!important;margin-top:14px}
   .cap[hidden]{display:block!important}
   .tbl.mx{min-width:0}.mx-hint{display:none!important}
-  #t-oslides,#t-bslides,#t-islides,p.cap[data-cap-for="t-oslides"],p.cap[data-cap-for="t-bslides"],p.cap[data-cap-for="t-islides"]{display:none!important}
+  #t-oslides,#t-bslides,#t-islides,p.cap[data-cap-for="t-oslides"][hidden],p.cap[data-cap-for="t-bslides"][hidden],p.cap[data-cap-for="t-islides"][hidden]{display:none!important}
   .lead,.thumbs,.panel,.award,.ccard,.sk,.focus li,.mcard,.findings tr,.kpis,.p-charts>div,.split>div{break-inside:avoid}
   .is-out .hbar .f{width:var(--w)}.is-out .hbar .v{opacity:1}.is-out .vbar{height:var(--h)}.is-out .vbar i{opacity:1}
   .hbar .f,.vbar{transition:none}
@@ -758,9 +758,64 @@ body{line-height:1.7}
   <div class="wrap">
     <div class="sec-head">
       <h2>Projects &amp; work samples</h2>
-      <p>Industry research and a peer benchmark from my Pelindo internship, an independent investment case study, and two dashboard web apps, redrawn here from the original slides.</p>
+      <p>Two dashboard web apps you can try live, then industry research and a peer benchmark from my Pelindo internship and an independent investment case study, redrawn from the original slides.</p>
     </div>
 
+    <div id="more-work">
+      <h3 class="sub-h" style="margin-top:0">Dashboards &amp; web apps</h3>
+      <article class="live reveal" id="case-innovation">
+        <div class="live-head">
+          <div>
+            <span class="k">2026 · Pelindo Sinergi Lokaseva</span>
+            <h4>Innovation Hub Dashboard</h4>
+          </div>
+          <span class="badge-live">LIVE DEMO</span>
+        </div>
+        <p>Google Sheets + Apps Script dashboard that turns the company’s innovation data bank into one live view with filters, KPIs, charts and status history. The demo runs the original code on the <b>real data (453 ideas), anonymized</b>. <i>(Interface in Indonesian.)</i></p>
+        <p class="myrole"><b>My role:</b> Proposed the idea in my final internship presentation and built the web app myself: the Google Sheets data structure, the Apps Script backend and the dashboard.</p>
+        <div class="ba">
+          <div><span>Before</span><p>Ideas were collected only when an innovation competition was running, and stayed in separate files afterwards.</p></div>
+          <div><span>After</span><p>Any employee can submit an idea at any time, and managers and staff can see every idea, its status and which ones need follow-up: <b>453 ideas</b> from 2022 onward in one place.</p></div>
+        </div>
+        <div class="chips"><span class="chip">Google Sheets</span><span class="chip">Apps Script</span><span class="chip">HTML · CSS · JavaScript</span><span class="chip">Data visualization</span></div>
+        <div class="browser">
+          <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>rizkaayudwisugiharto27-hue.github.io/projects/innovation-hub/</span></div>
+          <button class="demo-load" type="button" data-src="projects/innovation-hub/index.html#dashboard" data-title="Innovation Hub Dashboard: live demo with anonymized data"><img src="assets/exp/innovation-hub-demo.webp" alt="" loading="lazy"><span class="btn primary">▶ Try the live demo here</span></button>
+        </div>
+        <p class="live-tip">Click the preview to load the demo here, then try the filters and click any bar. Menu items (Dashboard, Daftar Inovasi, Galeri, Alur &amp; Status) open the full demo in a new tab.</p>
+        <a class="print-only" href="projects/innovation-hub/index.html"><img src="assets/exp/innovation-hub-demo.webp" width="1600" height="1000" alt="Innovation Hub Dashboard live demo" loading="lazy"></a>
+        <div class="btns" style="margin-top:16px">
+          <a class="btn primary" href="projects/innovation-hub/index.html" target="_blank" rel="noopener">Open full live demo <svg class="ico"><use href="#i-ext"/></svg></a>
+        </div>
+      </article>
+      <article class="live reveal" id="case-sirekap">
+        <div class="live-head">
+          <div>
+            <span class="k">2026 · Kemenimipas</span>
+            <h4>SI-REKAP PERJADIN – Travel Expense Recap System</h4>
+          </div>
+          <span class="badge-live">LIVE DEMO</span>
+        </div>
+        <p>My innovation at the Bureau of Planning and Finance: a Google Sheets + Apps Script web app with a validated input form and a reconciliation dashboard for official travel (perjadin) files. The demo runs the original code on the <b>real 2026 recap, anonymized</b>; your edits stay in your browser. <i>(Interface in Indonesian.)</i></p>
+        <p class="myrole"><b>My role:</b> Designed and built the whole web app myself (input form, reconciliation dashboard, printable report); it has now been handed over to the ministry’s IT team.</p>
+        <div class="ba">
+          <div><span>Before</span><p>Every travel file was typed into Google Sheets by hand: about <b>50 files took 3–4 days</b> of manual input.</p></div>
+          <div><span>After</span><p>Each file is entered once through a validated form; the recap, document status per bureau and the printable report update automatically. My innovation prototype has been <b>handed over to the ministry’s IT team</b>, which is following it up and developing it further; the time saved will be measured once it is rolled out.</p></div>
+        </div>
+        <div class="chips"><span class="chip">Google Sheets</span><span class="chip">Apps Script</span><span class="chip">HTML · CSS · JavaScript</span><span class="chip">Budget reconciliation</span></div>
+        <div class="browser tall">
+          <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>rizkaayudwisugiharto27-hue.github.io/projects/si-rekap-perjadin/</span></div>
+          <button class="demo-load" type="button" data-src="projects/si-rekap-perjadin/index.html" data-title="SI-REKAP PERJADIN: live demo with real 2026 data, anonymized"><img src="assets/exp/si-rekap-perjadin-demo.webp" alt="" loading="lazy"><span class="btn primary">▶ Try the live demo here</span></button>
+        </div>
+        <p class="live-tip">Click the preview to load the demo here, then use its sidebar: Beranda, Input Perjadin, Data Perjadin (edit &amp; delete), Data Master and Laporan all work here.</p>
+        <a class="print-only" href="projects/si-rekap-perjadin/index.html"><img src="assets/exp/si-rekap-perjadin-demo.webp" width="1600" height="1001" alt="SI-REKAP PERJADIN live demo" loading="lazy"></a>
+        <div class="btns" style="margin-top:16px">
+          <a class="btn primary" href="projects/si-rekap-perjadin/index.html" target="_blank" rel="noopener">Open full live demo <svg class="ico"><use href="#i-ext"/></svg></a>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="sub-h">Research &amp; case studies</h3>
     <article class="case" id="case-outlook">
       <h3>Industry Outlook 2026: PT Pelindo Sinergi Lokaseva</h3>
       <p class="lede">Market and macroeconomic research for the company’s 2026 outlook: a global port benchmark, domestic container vessel trends, and an econometric model of Indonesia’s exports.</p>
@@ -861,12 +916,11 @@ body{line-height:1.7}
           <button class="thumb wide" data-group="outlook" data-src="assets/exp/outlook-portcalls.webp" data-cap="Container port calls, yearly and monthly"><img src="assets/exp/outlook-portcalls-thumb.webp" alt="Container port calls, yearly and monthly" loading="lazy"><span>Container port calls</span></button>
           <button class="thumb wide" data-group="outlook" data-src="assets/exp/outlook-freight-ports.webp" data-cap="Domestic sea freight at the main ports (BPS)"><img src="assets/exp/outlook-freight-ports-thumb.webp" alt="Domestic sea freight at the main ports (BPS)" loading="lazy"><span>Sea freight at main ports</span></button>
           <button class="thumb wide" data-group="outlook" data-src="assets/exp/outlook-sea-cargo.webp" data-cap="Domestic sea cargo volume (BPS)"><img src="assets/exp/outlook-sea-cargo-thumb.webp" alt="Domestic sea cargo volume (BPS)" loading="lazy"><span>Domestic sea cargo</span></button>
-          <button class="thumb wide" data-group="outlook" data-src="assets/exp/outlook-ardl.webp" data-cap="ARDL result: exports vs exchange rate &amp; BI Rate"><img src="assets/exp/outlook-ardl-thumb.webp" alt="ARDL result: exports vs exchange rate &amp; BI Rate" loading="lazy"><span>ARDL regression</span></button>
         </div>
       </div>
       <p class="cap" data-cap-for="t-ports"><b>Port benchmark:</b> all 10 of the top container ports reviewed have a logistics, industrial or free-trade zone linked to the port.</p>
       <p class="cap" data-cap-for="t-vessel" hidden><b>Vessel activity:</b> Java’s share of national container port calls fell from 69% (2016) to 47% (6M 2026).</p>
-      <p class="cap" data-cap-for="t-oslides" hidden><b>Original deck:</b> port benchmark, vessel and cargo trends from Lloyd’s List and BPS, and the ARDL result slide.</p>
+      <p class="cap" data-cap-for="t-oslides" hidden><b>Original deck:</b> port benchmark, and vessel and cargo trends from Lloyd’s List and BPS.</p>
       <p class="cap" data-cap-for="t-ardl" hidden><b>Model result:</b> F-statistic 6.783 exceeds the 5% upper bound (4.428), so both rates have a significant long-run effect on exports.</p>
 
       <details class="fold"><summary>Key findings (4)</summary>
@@ -1182,59 +1236,6 @@ body{line-height:1.7}
       </details>
     </article>
 
-    <div id="more-work">
-      <h3 class="sub-h" style="margin-top:8px">Dashboards &amp; web apps</h3>
-      <article class="live reveal" id="case-innovation">
-        <div class="live-head">
-          <div>
-            <span class="k">2026 · Pelindo Sinergi Lokaseva</span>
-            <h4>Innovation Hub Dashboard</h4>
-          </div>
-          <span class="badge-live">LIVE DEMO</span>
-        </div>
-        <p>Google Sheets + Apps Script dashboard that turns the company’s innovation data bank into one live view with filters, KPIs, charts and status history. The demo runs the original code on the <b>real data (453 ideas), anonymized</b>. <i>(Interface in Indonesian.)</i></p>
-        <p class="myrole"><b>My role:</b> Proposed the idea in my final internship presentation and built the web app myself: the Google Sheets data structure, the Apps Script backend and the dashboard.</p>
-        <div class="ba">
-          <div><span>Before</span><p>Ideas were collected only when an innovation competition was running, and stayed in separate files afterwards.</p></div>
-          <div><span>After</span><p>Any employee can submit an idea at any time, and managers and staff can see every idea, its status and which ones need follow-up: <b>453 ideas</b> from 2022 onward in one place.</p></div>
-        </div>
-        <div class="chips"><span class="chip">Google Sheets</span><span class="chip">Apps Script</span><span class="chip">HTML · CSS · JavaScript</span><span class="chip">Data visualization</span></div>
-        <div class="browser">
-          <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>rizkaayudwisugiharto27-hue.github.io/projects/innovation-hub/</span></div>
-          <button class="demo-load" type="button" data-src="projects/innovation-hub/index.html#dashboard" data-title="Innovation Hub Dashboard: live demo with anonymized data"><img src="assets/exp/innovation-hub-demo.webp" alt="" loading="lazy"><span class="btn primary">▶ Try the live demo here</span></button>
-        </div>
-        <p class="live-tip">Click the preview to load the demo here, then try the filters and click any bar. Menu items (Dashboard, Daftar Inovasi, Galeri, Alur &amp; Status) open the full demo in a new tab.</p>
-        <a class="print-only" href="projects/innovation-hub/index.html"><img src="assets/exp/innovation-hub-demo.webp" width="1600" height="1000" alt="Innovation Hub Dashboard live demo" loading="lazy"></a>
-        <div class="btns" style="margin-top:16px">
-          <a class="btn primary" href="projects/innovation-hub/index.html" target="_blank" rel="noopener">Open full live demo <svg class="ico"><use href="#i-ext"/></svg></a>
-        </div>
-      </article>
-      <article class="live reveal" id="case-sirekap">
-        <div class="live-head">
-          <div>
-            <span class="k">2026 · Kemenimipas</span>
-            <h4>SI-REKAP PERJADIN – Travel Expense Recap System</h4>
-          </div>
-          <span class="badge-live">LIVE DEMO</span>
-        </div>
-        <p>My innovation at the Bureau of Planning and Finance: a Google Sheets + Apps Script web app with a validated input form and a reconciliation dashboard for official travel (perjadin) files. The demo runs the original code on the <b>real 2026 recap, anonymized</b>; your edits stay in your browser. <i>(Interface in Indonesian.)</i></p>
-        <p class="myrole"><b>My role:</b> Designed and built the whole web app myself (input form, reconciliation dashboard, printable report); it has now been handed over to the ministry’s IT team.</p>
-        <div class="ba">
-          <div><span>Before</span><p>Every travel file was typed into Google Sheets by hand: about <b>50 files took 3–4 days</b> of manual input.</p></div>
-          <div><span>After</span><p>Each file is entered once through a validated form; the recap, document status per bureau and the printable report update automatically. My innovation prototype has been <b>handed over to the ministry’s IT team</b>, which is following it up and developing it further; the time saved will be measured once it is rolled out.</p></div>
-        </div>
-        <div class="chips"><span class="chip">Google Sheets</span><span class="chip">Apps Script</span><span class="chip">HTML · CSS · JavaScript</span><span class="chip">Budget reconciliation</span></div>
-        <div class="browser tall">
-          <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>rizkaayudwisugiharto27-hue.github.io/projects/si-rekap-perjadin/</span></div>
-          <button class="demo-load" type="button" data-src="projects/si-rekap-perjadin/index.html" data-title="SI-REKAP PERJADIN: live demo with real 2026 data, anonymized"><img src="assets/exp/si-rekap-perjadin-demo.webp" alt="" loading="lazy"><span class="btn primary">▶ Try the live demo here</span></button>
-        </div>
-        <p class="live-tip">Click the preview to load the demo here, then use its sidebar: Beranda, Input Perjadin, Data Perjadin (edit &amp; delete), Data Master and Laporan all work here.</p>
-        <a class="print-only" href="projects/si-rekap-perjadin/index.html"><img src="assets/exp/si-rekap-perjadin-demo.webp" width="1600" height="1001" alt="SI-REKAP PERJADIN live demo" loading="lazy"></a>
-        <div class="btns" style="margin-top:16px">
-          <a class="btn primary" href="projects/si-rekap-perjadin/index.html" target="_blank" rel="noopener">Open full live demo <svg class="ico"><use href="#i-ext"/></svg></a>
-        </div>
-      </article>
-    </div>
   </div>
 </section>
 
@@ -1430,7 +1431,7 @@ body{line-height:1.7}
       <a class="ccontact" href="https://www.instagram.com/rizkaayudwi" target="_blank" rel="noopener"><small>Instagram</small><b>@rizkaayudwi</b></a>
       <a class="ccontact" href="assets/CV-Rizka-Ayu-Dwi-Sugiharto.pdf?v=11" target="_blank" rel="noopener"><small>CV</small><b>Download CV (PDF)</b></a>
       <a class="ccontact" href="assets/Portfolio-Summary-Rizka-Ayu-Dwi-Sugiharto.pdf?v=17" target="_blank" rel="noopener"><small>Portfolio · 3 pages</small><b>Summary (PDF)</b></a>
-      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=61" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
+      <a class="ccontact" href="assets/Portfolio-Rizka-Ayu-Dwi-Sugiharto.pdf?v=62" target="_blank" rel="noopener"><small>Portfolio · full</small><b>Full portfolio (PDF)</b></a>
     </div>
     <p class="loc"><svg class="ico"><use href="#i-pin"/></svg>South Jakarta, Indonesia</p>
   </div>
